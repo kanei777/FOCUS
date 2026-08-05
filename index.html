@@ -1,1240 +1,625 @@
-{% comment %}
-==================================================
-FOCUS COMMUNITY
-JOIN / PRICE / CAPACITY SECTION
-
-Shopify Custom Liquid
-
-DESIGN
-・FOCUS LP 黒 × 白 × 青紫
-・Discord感は前面に出さない
-・FOCUSという「環境」への参加を訴求
-・月額 2,980円
-・470+ MEMBERS
-・定員制 / 進捗表示
-・CTA → Discord参加ページ
-・スクロールフェード
-・常時上品な光 / グラデーションエフェクト
-・PC / TABLET / MOBILE
-
-IMPORTANT
-・focus_join_url をFOCUS用Discord参加ページへ変更
-・focus_member_count_api がある場合のみURLを設定
-==================================================
-{% endcomment %}
-
-
-{% assign focus_join_url = "https://neocarnivore.github.io/Discord/" %}
-
-{% assign focus_monthly_price = "2,980" %}
-
-{% assign focus_member_count = 470 %}
-
-{% assign focus_member_limit = 500 %}
-
-{% assign focus_member_count_api = "" %}
-
-
-<div id="focusJoinConnectedV1">
-
-  <!-- ==================================================
-       PRICE / JOIN
-  ================================================== -->
-
-  <section
-    id="focusJoinPriceV1"
-    data-member-count-api="{{ focus_member_count_api }}"
-    data-default-member-count="{{ focus_member_count }}"
-    data-member-limit="{{ focus_member_limit }}"
-  >
-
-    <div class="focus-join-price__ambient" aria-hidden="true">
-      <span class="focus-join-price__ambient-one"></span>
-      <span class="focus-join-price__ambient-two"></span>
-    </div>
-
-
-    <div class="focus-join-price__wrap focus-join-reveal">
-
-      <!-- TOP META -->
-
-      <div class="focus-join-price__meta">
-
-        <div class="focus-join-price__meta-left">
-          <span class="focus-join-price__live-dot"></span>
-
-          <span>
-            FOCUS MEMBERSHIP
-          </span>
-        </div>
-
-        <span class="focus-join-price__meta-right">
-          SELF DEVELOPMENT COMMUNITY
-        </span>
-
-      </div>
-
-
-      <!-- MAIN -->
-
-      <div class="focus-join-price__main">
-
-        <!-- COPY -->
-
-        <div class="focus-join-price__copy">
-
-          <p class="focus-join-price__eyebrow">
-            CHANGE YOURSELF. CHANGE YOUR LIFE.
-          </p>
-
-          <h2 class="focus-join-price__title">
-
-            本気で変わるための、<br>
-
-            <span>
-              環境に入る。
-            </span>
-
-          </h2>
-
-          <p class="focus-join-price__description">
-            ビジネス、恋愛、身体、外見、英語、自己規律。<br>
-            人生を変える6つの領域を、FOCUSで。
-          </p>
-
-
-          <div class="focus-join-price__areas">
-
-            <span>BUSINESS</span>
-            <span>LOVE</span>
-            <span>BODY</span>
-            <span>APPEARANCE</span>
-            <span>ENGLISH</span>
-            <span>DISCIPLINE</span>
-
-          </div>
-
-        </div>
-
-
-        <!-- PRICE -->
-
-        <div class="focus-join-price__pricing">
-
-          <p class="focus-join-price__pricing-label">
-            MONTHLY MEMBERSHIP
-          </p>
-
-          <div class="focus-join-price__price">
-
-            <span class="focus-join-price__yen">
-              ¥
-            </span>
-
-            <strong>
-              {{ focus_monthly_price }}
-            </strong>
-
-            <span class="focus-join-price__month">
-              / 月
-            </span>
-
-          </div>
-
-          <p class="focus-join-price__tax">
-            税込
-          </p>
-
-
-          <!-- MEMBERS -->
-
-          <div class="focus-join-price__members">
-
-            <div class="focus-join-price__members-top">
-
-              <div class="focus-join-price__members-current">
-
-                <span class="focus-join-price__members-label">
-                  CURRENT MEMBERS
-                </span>
-
-                <div>
-
-                  <strong id="focusJoinMemberCountV1">
-                    {{ focus_member_count }}
-                  </strong>
-
-                  <span>
-                    +
-                  </span>
-
-                </div>
-
-              </div>
-
-
-              <div class="focus-join-price__members-limit">
-
-                <span>
-                  LIMIT
-                </span>
-
-                <strong>
-                  {{ focus_member_limit }}
-                </strong>
-
-              </div>
-
-            </div>
-
-
-            <div
-              class="focus-join-price__progress"
-              aria-hidden="true"
-            >
-
-              <span
-                id="focusJoinMemberProgressV1"
-                class="focus-join-price__progress-fill"
-              ></span>
-
-            </div>
-
-
-            <div class="focus-join-price__capacity-copy">
-
-              <span class="focus-join-price__capacity-dot"></span>
-
-              <span>
-                現在、参加枠を限定して募集しています。
-              </span>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- CTA -->
-
-        <div class="focus-join-price__action">
-
-          <div class="focus-join-price__cta-glow" aria-hidden="true"></div>
-
-          <a
-            href="{{ focus_join_url }}"
-            class="focus-join-price__button"
-            id="focusJoinButtonV1"
-          >
-
-            <span
-              class="focus-join-price__button-shine"
-              aria-hidden="true"
-            ></span>
-
-            <span class="focus-join-price__button-content">
-
-              <span class="focus-join-price__button-copy">
-
-                <small>
-                  START YOUR CHANGE
-                </small>
-
-                <strong>
-                  FOCUSに参加する
-                </strong>
-
-              </span>
-
-
-              <span
-                class="focus-join-price__button-arrow"
-                aria-hidden="true"
-              >
-
-                <svg viewBox="0 0 24 24">
-
-                  <path
-                    d="m9 5 7 7-7 7"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-
-                </svg>
-
-              </span>
-
-            </span>
-
-          </a>
-
-
-          <div class="focus-join-price__action-meta">
-
-            <span>
-              いつでも解約できます
-            </span>
-
-            <i></i>
-
-            <span>
-              24H ACCESS
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ==================================================
-       NEXT MESSAGE
-  ================================================== -->
-
-  <section id="focusJoinMessageV1">
-
-    <div class="focus-join-message__inner">
-
-      <div class="focus-join-message__line focus-join-reveal">
-        <span></span>
-      </div>
-
-
-      <div class="focus-join-message__content focus-join-reveal">
-
-        <p class="focus-join-message__eyebrow">
-          THE ENVIRONMENT CHANGES YOU
-        </p>
-
-
-        <h2>
-
-          一人で変わろうとする<br>
-          必要はありません。
-
-          <span class="focus-join-message__accent">
-
-            <span class="focus-join-message__accent-glow"></span>
-
-            <strong>
-              変わり続ける環境へ。
-            </strong>
-
-          </span>
-
-        </h2>
-
-
-        <p class="focus-join-message__description">
-          同じように自分を高めようとしている人間がいる。<br>
-          学び、行動し、共有し、また次へ進む。<br>
-          FOCUSは、そのための場所です。
-        </p>
-
-      </div>
-
-
-      <!-- ENVIRONMENT CARD -->
-
-      <div class="focus-join-environment focus-join-reveal">
-
-        <div class="focus-join-environment__glow"></div>
-
-
-        <div class="focus-join-environment__top">
-
-          <div>
-
-            <span class="focus-join-environment__status-dot"></span>
-
-            <span>
-              FOCUS / ACTIVE
-            </span>
-
-          </div>
-
-          <span>
-            24 HOURS
-          </span>
-
-        </div>
-
-
-        <div class="focus-join-environment__center">
-
-          <div class="focus-join-environment__brand">
-
-            <span>
-              SELF DEVELOPMENT
-            </span>
-
-            <strong>
-              FOCUS
-            </strong>
-
-            <small>
-              COMMUNITY
-            </small>
-
-          </div>
-
-
-          <div class="focus-join-environment__orbit" aria-hidden="true">
-
-            <span class="focus-join-environment__orbit-line"></span>
-
-            <span class="focus-join-environment__orbit-dot dot-one"></span>
-            <span class="focus-join-environment__orbit-dot dot-two"></span>
-            <span class="focus-join-environment__orbit-dot dot-three"></span>
-
-          </div>
-
-        </div>
-
-
-        <div class="focus-join-environment__areas">
-
-          <div>
-            <span>01</span>
-            <strong>BUSINESS</strong>
-          </div>
-
-          <div>
-            <span>02</span>
-            <strong>LOVE</strong>
-          </div>
-
-          <div>
-            <span>03</span>
-            <strong>BODY</strong>
-          </div>
-
-          <div>
-            <span>04</span>
-            <strong>APPEARANCE</strong>
-          </div>
-
-          <div>
-            <span>05</span>
-            <strong>ENGLISH</strong>
-          </div>
-
-          <div>
-            <span>06</span>
-            <strong>DISCIPLINE</strong>
-          </div>
-
-        </div>
-
-
-        <div class="focus-join-environment__bottom">
-
-          <span>
-            BUILD YOURSELF.
-          </span>
-
-          <i></i>
-
-          <span>
-            LIVE FREE.
-          </span>
-
-        </div>
-
-      </div>
-
-
-      <!-- BOTTOM CTA -->
-
-      <div class="focus-join-bottom focus-join-reveal">
-
-        <p>
-          すでに
-          <strong>
-            <span id="focusJoinBottomCountV1">
-              {{ focus_member_count }}
-            </span>名以上
-          </strong>
-          のメンバーが、<br>
-          本気で変わるために集まっています。
-        </p>
-
-
-        <a
-          href="{{ focus_join_url }}"
-          class="focus-join-bottom__button"
-        >
-
-          <span>
-            FOCUSに参加する
-          </span>
-
-          <svg viewBox="0 0 24 24">
-
-            <path
-              d="m9 5 7 7-7 7"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-
-          </svg>
-
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-</div>
-
-
+<!doctype html>
+<html lang="ja">
+<head>
+
+<meta charset="utf-8">
+
+<meta
+  name="viewport"
+  content="width=device-width,initial-scale=1,viewport-fit=cover"
+>
+
+<meta
+  name="theme-color"
+  content="#0a0a0d"
+>
+
+<title>FOCUS | Join Community</title>
 
 <style>
 
 /* ==================================================
-   GLOBAL
+   RESET
 ================================================== */
 
-#focusJoinConnectedV1,
-#focusJoinConnectedV1 *{
+:root{
+  color-scheme:light;
+}
+
+*{
   box-sizing:border-box;
 }
 
-#focusJoinConnectedV1{
+html,
+body{
   width:100%;
   margin:0;
   padding:0;
-  overflow:hidden;
+}
 
-  color:#f7f7fb;
+html{
+  scroll-behavior:smooth;
+}
 
-  background:
-    #08080b;
+body{
+  overflow-x:hidden;
+  background:#fff;
+  color:#0d0d0f;
 
   font-family:
     -apple-system,
     BlinkMacSystemFont,
     "Helvetica Neue",
     "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
     "Yu Gothic",
     YuGothic,
     Meiryo,
     sans-serif;
+
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
 }
 
-#focusJoinConnectedV1 a{
+a{
+  color:inherit;
   text-decoration:none;
   -webkit-tap-highlight-color:transparent;
 }
 
+button{
+  font:inherit;
+}
+
 
 /* ==================================================
-   PRICE SECTION
+   ROOT
 ================================================== */
 
-#focusJoinPriceV1{
-  position:relative;
-
+#focusJoinPage{
   width:100%;
+  overflow:hidden;
+  background:#fff;
+}
 
+
+/* ==================================================
+   INTRO
+================================================== */
+
+.focus-intro{
+  position:relative;
+  width:100%;
   padding:
-    70px
+    max(58px,env(safe-area-inset-top))
     20px
-    130px;
+    64px;
 
   overflow:hidden;
 
   background:
     radial-gradient(
-      circle at 50% 15%,
-      rgba(93,76,255,.15),
-      transparent 31%
-    ),
-    radial-gradient(
-      circle at 93% 70%,
-      rgba(74,48,255,.08),
+      circle at 80% 8%,
+      rgba(111,99,220,.11),
       transparent 27%
     ),
-    #08080b;
-}
-
-
-/* ambient */
-
-.focus-join-price__ambient{
-  position:absolute;
-  inset:0;
-
-  pointer-events:none;
-}
-
-.focus-join-price__ambient-one{
-  position:absolute;
-
-  top:5%;
-  left:50%;
-
-  width:620px;
-  height:620px;
-
-  border-radius:50%;
-
-  background:
     radial-gradient(
-      circle,
-      rgba(91,74,255,.12),
-      transparent 68%
-    );
-
-  filter:blur(20px);
-
-  transform:
-    translateX(-50%);
-
-  animation:
-    focusJoinAmbientOne
-    8s
-    ease-in-out
-    infinite;
+      circle at 4% 70%,
+      rgba(111,99,220,.055),
+      transparent 28%
+    ),
+    #fff;
 }
 
-.focus-join-price__ambient-two{
-  position:absolute;
-
-  right:-180px;
-  bottom:-200px;
-
-  width:500px;
-  height:500px;
-
-  border-radius:50%;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(121,91,255,.10),
-      transparent 68%
-    );
-
-  filter:blur(25px);
-
-  animation:
-    focusJoinAmbientTwo
-    10s
-    ease-in-out
-    infinite;
-}
-
-
-/* outer */
-
-.focus-join-price__wrap{
-  position:relative;
-  z-index:2;
-
-  width:min(100%,1180px);
-
+.focus-intro-inner{
+  width:min(100%,640px);
   margin:0 auto;
-
-  padding:1px;
-
-  border-radius:34px;
-
-  background:
-    linear-gradient(
-      125deg,
-      rgba(255,255,255,.19),
-      rgba(103,84,255,.72),
-      rgba(255,255,255,.09),
-      rgba(87,68,255,.48),
-      rgba(255,255,255,.16)
-    );
-
-  background-size:
-    220% 220%;
-
-  box-shadow:
-    0 40px 100px rgba(0,0,0,.40),
-    0 0 80px rgba(76,56,255,.08);
-
-  animation:
-    focusJoinBorderFlow
-    7s
-    ease-in-out
-    infinite;
 }
 
 
-/* meta */
+/* ==================================================
+   EYEBROW
+================================================== */
 
-.focus-join-price__meta{
-  display:flex;
+.focus-eyebrow{
+  display:inline-block;
 
-  align-items:center;
-  justify-content:space-between;
+  margin-bottom:18px;
+  padding-bottom:7px;
 
-  gap:20px;
+  border-bottom:
+    1px solid rgba(0,0,0,.16);
 
-  padding:
-    15px
-    25px;
+  color:rgba(0,0,0,.45);
 
-  border-radius:
-    33px
-    33px
-    0
-    0;
-
-  color:
-    rgba(255,255,255,.50);
-
-  background:
-    #0e0e13;
-
-  font-size:8px;
-
+  font-size:10px;
   line-height:1.4;
-
-  letter-spacing:.17em;
-
+  letter-spacing:.20em;
   font-weight:800;
 }
 
-.focus-join-price__meta-left{
-  display:flex;
 
-  align-items:center;
+/* ==================================================
+   TITLE
+================================================== */
 
-  gap:9px;
-}
-
-.focus-join-price__live-dot{
-  position:relative;
-
-  width:6px;
-  height:6px;
-
-  border-radius:50%;
-
-  background:#766cff;
-
-  box-shadow:
-    0 0 12px rgba(118,108,255,.95);
-}
-
-.focus-join-price__live-dot::after{
-  content:"";
-
-  position:absolute;
-
-  inset:-5px;
-
-  border:
-    1px solid
-    rgba(118,108,255,.45);
-
-  border-radius:50%;
-
-  animation:
-    focusJoinPulse
-    2.2s
-    ease-out
-    infinite;
-}
-
-
-/* main */
-
-.focus-join-price__main{
-  position:relative;
-
-  display:grid;
-
-  grid-template-columns:
-    1.25fr
-    .7fr
-    .78fr;
-
-  align-items:center;
-
-  gap:45px;
-
-  padding:
-    58px
-    52px
-    55px;
-
-  overflow:hidden;
-
-  border-radius:
-    0
-    0
-    33px
-    33px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #101015 0%,
-      #0a0a0e 52%,
-      #0d0c14 100%
-    );
-}
-
-.focus-join-price__main::before{
-  content:"";
-
-  position:absolute;
-
-  top:-250px;
-  left:-180px;
-
-  width:500px;
-  height:500px;
-
-  border-radius:50%;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(105,83,255,.12),
-      transparent 68%
-    );
-
-  pointer-events:none;
-}
-
-.focus-join-price__main > *{
-  position:relative;
-  z-index:2;
-}
-
-
-/* copy */
-
-.focus-join-price__eyebrow{
-  margin:
-    0
-    0
-    17px;
-
-  color:#8278ff;
-
-  font-size:9px;
-
-  line-height:1.5;
-
-  letter-spacing:.16em;
-
-  font-weight:850;
-}
-
-.focus-join-price__title{
+.focus-title{
   margin:0;
 
-  color:#fff;
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
 
-  font-size:
-    clamp(
-      37px,
-      4.2vw,
-      56px
-    );
-
-  line-height:1.13;
-
-  letter-spacing:-.055em;
-
-  font-weight:900;
+  letter-spacing:-.05em;
 }
 
-.focus-join-price__title > span{
-  position:relative;
+.focus-title-small{
+  display:block;
 
+  margin-bottom:8px;
+
+  color:#161619;
+
+  font-size:clamp(28px,6vw,46px);
+  line-height:1.2;
+  font-weight:700;
+}
+
+.focus-title-main{
+  display:block;
+
+  color:#0d0d0f;
+
+  font-size:clamp(47px,10vw,78px);
+  line-height:1;
+  font-weight:700;
+}
+
+.focus-title-accent{
   display:inline-block;
 
-  margin-top:4px;
+  margin-top:8px;
+  padding:0 .04em .07em;
 
-  padding-right:.05em;
+  font-size:clamp(40px,8.7vw,67px);
+  line-height:1.06;
+  font-weight:700;
 
   background:
     linear-gradient(
-      110deg,
-      #ffffff 0%,
-      #dcd8ff 25%,
-      #8075ff 54%,
-      #c8c3ff 74%,
-      #ffffff 100%
+      115deg,
+      #1b1b1f 0%,
+      #292c4e 20%,
+      #434a9d 42%,
+      #7770d3 60%,
+      #5c56b8 79%,
+      #1b1b1f 100%
     );
 
-  background-size:
-    220% 220%;
+  background-size:180% 180%;
 
   -webkit-background-clip:text;
   background-clip:text;
 
   color:transparent;
-
-  -webkit-text-fill-color:
-    transparent;
+  -webkit-text-fill-color:transparent;
 
   filter:
     drop-shadow(
-      0
-      8px
-      24px
-      rgba(91,75,255,.18)
+      0 2px 1px rgba(255,255,255,.75)
+    )
+    drop-shadow(
+      0 7px 14px rgba(70,60,170,.14)
     );
 
   animation:
-    focusJoinTextFlow
-    5s
-    ease-in-out
-    infinite;
-}
-
-.focus-join-price__description{
-  margin:
-    23px
-    0
-    0;
-
-  color:
-    rgba(255,255,255,.55);
-
-  font-size:11px;
-
-  line-height:1.9;
-
-  letter-spacing:.01em;
-}
-
-
-/* areas */
-
-.focus-join-price__areas{
-  display:flex;
-
-  flex-wrap:wrap;
-
-  gap:
-    6px
-    7px;
-
-  margin-top:24px;
-}
-
-.focus-join-price__areas span{
-  display:inline-flex;
-
-  align-items:center;
-
-  min-height:23px;
-
-  padding:
-    5px
-    9px;
-
-  border:
-    1px solid
-    rgba(255,255,255,.09);
-
-  border-radius:999px;
-
-  color:
-    rgba(255,255,255,.48);
-
-  background:
-    rgba(255,255,255,.025);
-
-  font-size:7px;
-
-  line-height:1;
-
-  letter-spacing:.12em;
-
-  font-weight:800;
+    focusGradient 4s ease-in-out infinite;
 }
 
 
 /* ==================================================
-   PRICE
+   NAMEPLATE
 ================================================== */
 
-.focus-join-price__pricing{
-  min-width:200px;
+.focus-nameplate{
+  position:relative;
 
-  text-align:center;
-}
+  margin-top:35px;
+  padding:19px 19px 21px;
 
-.focus-join-price__pricing-label{
-  margin:0;
-
-  color:
-    rgba(255,255,255,.39);
-
-  font-size:8px;
-
-  line-height:1.4;
-
-  letter-spacing:.16em;
-
-  font-weight:800;
-}
-
-.focus-join-price__price{
-  display:flex;
-
-  align-items:flex-end;
-  justify-content:center;
-
-  gap:5px;
-
-  margin-top:10px;
-}
-
-.focus-join-price__yen{
-  margin-bottom:13px;
-
-  color:
-    rgba(255,255,255,.70);
-
-  font-size:18px;
-
-  font-weight:800;
-}
-
-.focus-join-price__price strong{
-  display:block;
-
-  padding-bottom:3px;
+  overflow:hidden;
 
   color:#fff;
 
-  font-size:
-    clamp(
-      51px,
-      5vw,
-      69px
+  background:
+    radial-gradient(
+      circle at 15% 0%,
+      rgba(111,99,220,.22),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #09090c 0%,
+      #181820 52%,
+      #08080a 100%
     );
 
-  line-height:1;
-
-  letter-spacing:-.065em;
-
-  font-weight:950;
-
-  text-shadow:
-    0 0 28px
-    rgba(110,90,255,.14);
+  box-shadow:
+    0 18px 38px rgba(0,0,0,.13),
+    0 0 28px rgba(90,78,210,.08);
 }
 
-.focus-join-price__month{
-  margin-bottom:11px;
+.focus-nameplate::before{
+  content:"";
 
-  color:
-    rgba(255,255,255,.50);
+  position:absolute;
+  inset:8px;
 
-  font-size:11px;
+  border:
+    1px solid rgba(255,255,255,.10);
 
-  font-weight:750;
+  pointer-events:none;
 }
 
-.focus-join-price__tax{
-  margin:
-    4px
-    0
-    0;
+.focus-nameplate-top{
+  position:relative;
+  z-index:2;
 
-  color:
-    rgba(255,255,255,.28);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  gap:15px;
+
+  color:rgba(255,255,255,.58);
 
   font-size:8px;
+  line-height:1.4;
+  letter-spacing:.17em;
+  font-weight:800;
 }
 
+.focus-nameplate-line{
+  position:relative;
+  z-index:2;
 
-/* members */
-
-.focus-join-price__members{
   width:100%;
+  height:1px;
 
-  max-width:205px;
+  margin:13px 0 17px;
 
-  margin:
-    27px
-    auto
-    0;
-
-  padding-top:19px;
-
-  border-top:
-    1px solid
-    rgba(255,255,255,.08);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.58),
+      rgba(255,255,255,.06)
+    );
 }
 
-.focus-join-price__members-top{
-  display:flex;
+.focus-nameplate-main{
+  position:relative;
+  z-index:2;
 
-  align-items:flex-end;
+  margin:0 0 11px;
+
+  color:#fff;
+
+  font-size:clamp(52px,11vw,82px);
+  line-height:.92;
+  letter-spacing:-.08em;
+  font-weight:900;
+
+  text-shadow:
+    0 0 20px rgba(111,99,220,.18);
+}
+
+.focus-nameplate-bottom{
+  position:relative;
+  z-index:2;
+
+  display:flex;
+  align-items:center;
   justify-content:space-between;
 
   gap:15px;
 }
 
-.focus-join-price__members-current{
-  text-align:left;
+.focus-nameplate-bottom strong{
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
+
+  font-size:19px;
+  font-weight:700;
 }
 
-.focus-join-price__members-label{
-  display:block;
+.focus-nameplate-bottom span{
+  color:rgba(255,255,255,.52);
 
-  margin-bottom:5px;
+  font-size:7px;
+  letter-spacing:.17em;
+  font-weight:800;
 
-  color:
-    rgba(255,255,255,.32);
-
-  font-size:6px;
-
-  line-height:1.2;
-
-  letter-spacing:.15em;
-
-  font-weight:850;
-}
-
-.focus-join-price__members-current > div{
-  display:flex;
-
-  align-items:baseline;
-
-  gap:2px;
-}
-
-.focus-join-price__members-current strong{
-  display:inline-block;
-
-  background:
-    linear-gradient(
-      115deg,
-      #ffffff,
-      #9188ff,
-      #ffffff
-    );
-
-  background-size:
-    180% 180%;
-
-  -webkit-background-clip:text;
-  background-clip:text;
-
-  color:transparent;
-
-  -webkit-text-fill-color:
-    transparent;
-
-  font-size:28px;
-
-  line-height:1;
-
-  letter-spacing:-.045em;
-
-  font-weight:950;
-
-  filter:
-    drop-shadow(
-      0
-      4px
-      10px
-      rgba(91,75,255,.25)
-    );
-
-  animation:
-    focusJoinTextFlow
-    5s
-    ease-in-out
-    infinite;
-}
-
-.focus-join-price__members-current > div > span{
-  color:#8177ff;
-
-  font-size:13px;
-
-  font-weight:900;
-}
-
-.focus-join-price__members-limit{
   text-align:right;
 }
 
-.focus-join-price__members-limit span{
+
+/* ==================================================
+   BRIDGE
+================================================== */
+
+.focus-bridge{
+  position:relative;
+
+  width:100%;
+  height:145px;
+}
+
+.focus-bridge-line{
+  position:absolute;
+
+  top:0;
+  left:50%;
+
+  width:1px;
+  height:100%;
+
+  transform:translateX(-50%);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(111,99,220,.05),
+      rgba(111,99,220,.75),
+      rgba(111,99,220,.15)
+    );
+}
+
+.focus-bridge-dot{
+  position:absolute;
+
+  top:0;
+  left:50%;
+
+  width:7px;
+  height:7px;
+
+  border-radius:50%;
+
+  background:#fff;
+
+  border:
+    1px solid rgba(111,99,220,.50);
+
+  box-shadow:
+    0 0 0 5px rgba(111,99,220,.055),
+    0 0 18px rgba(111,99,220,.25);
+
+  transform:translateX(-50%);
+}
+
+
+/* ==================================================
+   OFFER
+================================================== */
+
+.focus-offer-section{
+  width:100%;
+  padding:0 20px 85px;
+
+  background:#fff;
+}
+
+.focus-offer{
+  position:relative;
+
+  width:min(100%,780px);
+  margin:0 auto;
+
+  overflow:hidden;
+
+  border:
+    1px solid rgba(14,14,18,.09);
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(111,99,220,.10),
+      transparent 34%
+    ),
+    #fff;
+
+  box-shadow:
+    0 28px 70px rgba(15,15,22,.08);
+}
+
+
+/* ==================================================
+   OFFER HEADER
+================================================== */
+
+.focus-offer-head{
+  padding:29px 27px 25px;
+
+  border-bottom:
+    1px solid rgba(0,0,0,.08);
+}
+
+.focus-offer-kicker{
+  display:flex;
+  align-items:center;
+
+  gap:9px;
+
+  margin-bottom:11px;
+
+  color:#665dcc;
+
+  font-size:8px;
+  line-height:1.4;
+  letter-spacing:.20em;
+  font-weight:900;
+}
+
+.focus-offer-kicker-dot{
+  width:6px;
+  height:6px;
+
+  border-radius:50%;
+
+  background:#756be0;
+
+  box-shadow:
+    0 0 12px rgba(117,107,224,.55);
+
+  animation:
+    focusPulse 1.7s ease-in-out infinite;
+}
+
+.focus-offer-title{
+  margin:0;
+
+  color:#111114;
+
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
+
+  font-size:clamp(29px,6vw,45px);
+  line-height:1.24;
+  letter-spacing:-.045em;
+  font-weight:700;
+}
+
+.focus-offer-title strong{
+  color:#5f56bf;
+  font-weight:700;
+}
+
+.focus-offer-description{
+  margin:16px 0 0;
+
+  color:#68686e;
+
+  font-size:12px;
+  line-height:1.9;
+  font-weight:500;
+}
+
+
+/* ==================================================
+   MEMBER LIMIT
+================================================== */
+
+.focus-capacity{
+  padding:27px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(248,248,251,.9),
+      #fff
+    );
+}
+
+.focus-capacity-top{
+  display:flex;
+
+  align-items:flex-end;
+  justify-content:space-between;
+
+  gap:20px;
+}
+
+.focus-capacity-current-label,
+.focus-capacity-limit-label{
   display:block;
 
   margin-bottom:5px;
 
-  color:
-    rgba(255,255,255,.28);
+  color:#87878e;
 
-  font-size:6px;
-
-  letter-spacing:.15em;
-
-  font-weight:800;
+  font-size:8px;
+  letter-spacing:.14em;
+  font-weight:900;
 }
 
-.focus-join-price__members-limit strong{
-  color:
-    rgba(255,255,255,.60);
+.focus-capacity-current-value{
+  display:flex;
+  align-items:flex-end;
 
-  font-size:16px;
+  gap:5px;
+}
 
-  line-height:1;
+.focus-capacity-current-value strong{
+  display:block;
 
+  padding-right:.05em;
+
+  color:#111114;
+
+  font-size:clamp(45px,9vw,65px);
+  line-height:.95;
+  letter-spacing:-.07em;
+  font-weight:950;
+}
+
+.focus-capacity-current-value span{
+  margin-bottom:7px;
+
+  color:#333338;
+
+  font-size:14px;
   font-weight:850;
 }
 
+.focus-capacity-limit{
+  text-align:right;
+}
 
-/* progress */
+.focus-capacity-limit-value{
+  color:#44444a;
 
-.focus-join-price__progress{
+  font-size:20px;
+  line-height:1;
+  font-weight:900;
+}
+
+.focus-capacity-limit-value small{
+  font-size:10px;
+}
+
+
+/* ==================================================
+   PROGRESS
+================================================== */
+
+.focus-progress{
   position:relative;
 
   width:100%;
-  height:4px;
+  height:7px;
 
-  margin-top:10px;
+  margin-top:18px;
 
-  overflow:visible;
+  overflow:hidden;
 
   border-radius:999px;
 
   background:
-    rgba(255,255,255,.07);
+    rgba(91,82,185,.10);
 }
 
-.focus-join-price__progress-fill{
+.focus-progress-fill{
   position:absolute;
 
   top:0;
   left:0;
 
-  display:block;
-
-  width:0%;
+  width:94%;
   height:100%;
 
   border-radius:inherit;
@@ -1242,28 +627,29 @@ IMPORTANT
   background:
     linear-gradient(
       90deg,
-      #4a3cff,
-      #8177ff,
-      #c4beff
+      #292c4e,
+      #514ba1,
+      #8177e5
     );
 
   box-shadow:
-    0 0 11px
-    rgba(112,95,255,.48);
+    0 0 14px rgba(111,99,220,.35);
 
-  transition:
-    width
-    1.2s
-    cubic-bezier(.22,.8,.24,1);
+  transform-origin:left center;
+
+  animation:
+    focusProgressReveal 1.6s
+    cubic-bezier(.22,.75,.28,1)
+    both;
 }
 
-.focus-join-price__progress-fill::after{
+.focus-progress-fill::after{
   content:"";
 
   position:absolute;
 
   top:50%;
-  right:-2px;
+  right:1px;
 
   width:7px;
   height:7px;
@@ -1273,50 +659,223 @@ IMPORTANT
   background:#fff;
 
   box-shadow:
-    0 0 0 3px
-    rgba(118,108,255,.16),
-    0 0 13px
-    rgba(118,108,255,.85);
+    0 0 0 2px rgba(117,107,224,.45),
+    0 0 11px rgba(117,107,224,.75);
 
-  transform:
-    translateY(-50%);
+  transform:translateY(-50%);
 }
 
 
-/* capacity */
+/* ==================================================
+   REMAINING
+================================================== */
 
-.focus-join-price__capacity-copy{
+.focus-remaining{
   display:flex;
 
   align-items:center;
+  justify-content:space-between;
 
-  gap:6px;
+  gap:15px;
 
-  margin-top:10px;
-
-  color:
-    rgba(255,255,255,.37);
-
-  font-size:7px;
-
-  line-height:1.5;
-
-  text-align:left;
+  margin-top:12px;
 }
 
-.focus-join-price__capacity-dot{
-  flex:0 0 auto;
+.focus-remaining-copy{
+  color:#77777e;
 
-  width:5px;
-  height:5px;
+  font-size:9px;
+  line-height:1.5;
+  font-weight:750;
+}
 
-  border-radius:50%;
+.focus-remaining-number{
+  display:flex;
+  align-items:baseline;
 
-  background:#766cff;
+  gap:4px;
 
-  box-shadow:
-    0 0 8px
-    rgba(118,108,255,.8);
+  color:#5c54bd;
+
+  font-weight:900;
+}
+
+.focus-remaining-number span{
+  font-size:10px;
+}
+
+.focus-remaining-number strong{
+  font-size:23px;
+  line-height:1;
+  letter-spacing:-.05em;
+}
+
+.focus-remaining-number small{
+  font-size:9px;
+}
+
+
+/* ==================================================
+   PRICE
+================================================== */
+
+.focus-price-area{
+  padding:31px 27px 29px;
+
+  border-top:
+    1px solid rgba(0,0,0,.07);
+
+  text-align:center;
+}
+
+
+/* REGULAR */
+
+.focus-regular-price{
+  position:relative;
+
+  display:inline-flex;
+
+  align-items:baseline;
+
+  gap:5px;
+
+  color:#8a8a90;
+}
+
+.focus-regular-price::after{
+  content:"";
+
+  position:absolute;
+
+  top:52%;
+  left:-7px;
+
+  width:calc(100% + 14px);
+  height:2px;
+
+  background:#1c1c20;
+
+  transform:rotate(-4deg);
+}
+
+.focus-regular-label{
+  font-size:10px;
+  font-weight:800;
+}
+
+.focus-regular-value{
+  font-size:23px;
+  line-height:1;
+  letter-spacing:-.04em;
+  font-weight:850;
+}
+
+.focus-regular-yen{
+  font-size:10px;
+  font-weight:800;
+}
+
+
+/* SPECIAL LABEL */
+
+.focus-special-label{
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  gap:10px;
+
+  margin-top:20px;
+
+  color:#6259c5;
+
+  font-size:9px;
+  letter-spacing:.16em;
+  font-weight:900;
+}
+
+.focus-special-label::before,
+.focus-special-label::after{
+  content:"";
+
+  width:28px;
+  height:1px;
+
+  background:
+    rgba(98,89,197,.35);
+}
+
+
+/* CURRENT PRICE */
+
+.focus-current-price{
+  display:flex;
+
+  align-items:flex-end;
+  justify-content:center;
+
+  gap:7px;
+
+  margin-top:3px;
+}
+
+.focus-current-price strong{
+  display:block;
+
+  padding:0 4px 4px;
+
+  font-size:clamp(67px,14vw,98px);
+  line-height:1;
+  letter-spacing:-.075em;
+  font-weight:950;
+
+  background:
+    linear-gradient(
+      115deg,
+      #1b1b1f 0%,
+      #34375e 20%,
+      #4e50a3 43%,
+      #8279dd 61%,
+      #5d56b9 80%,
+      #1b1b1f 100%
+    );
+
+  background-size:180% 180%;
+
+  -webkit-background-clip:text;
+  background-clip:text;
+
+  color:transparent;
+  -webkit-text-fill-color:transparent;
+
+  filter:
+    drop-shadow(
+      0 8px 18px rgba(76,65,180,.13)
+    );
+
+  animation:
+    focusGradient 4s ease-in-out infinite;
+}
+
+.focus-current-price span{
+  margin-bottom:13px;
+
+  color:#222227;
+
+  font-size:19px;
+  font-weight:900;
+}
+
+.focus-price-month{
+  margin-top:1px;
+
+  color:#909097;
+
+  font-size:9px;
+  line-height:1.5;
+  font-weight:700;
 }
 
 
@@ -1324,181 +883,168 @@ IMPORTANT
    CTA
 ================================================== */
 
-.focus-join-price__action{
-  position:relative;
+.focus-action{
+  padding:
+    0 27px 31px;
 }
 
-.focus-join-price__cta-glow{
+.focus-button-glow{
   position:absolute;
 
-  top:50%;
   left:50%;
 
-  width:130%;
-  height:130px;
+  width:80%;
+  height:110px;
 
   background:
     radial-gradient(
       ellipse,
-      rgba(91,73,255,.18),
-      transparent 69%
+      rgba(99,89,205,.20),
+      transparent 70%
     );
 
-  filter:blur(14px);
+  filter:blur(20px);
 
-  transform:
-    translate(-50%,-50%);
+  transform:translateX(-50%);
 
   pointer-events:none;
 }
 
-.focus-join-price__button{
-  position:relative;
-
-  display:block;
-
-  width:100%;
-
-  min-height:72px;
-
-  padding:1px;
-
-  overflow:hidden;
-
-  border:
-    1px solid
-    rgba(139,126,255,.45);
-
-  border-radius:18px;
-
-  color:#fff;
-
-  background:
-    linear-gradient(
-      115deg,
-      #3526e6 0%,
-      #5847ff 28%,
-      #7769ff 52%,
-      #4b39ef 77%,
-      #2c20d5 100%
-    );
-
-  background-size:
-    220% 220%;
-
-  box-shadow:
-    0 20px 45px
-    rgba(49,34,230,.26),
-    0 0 30px
-    rgba(97,78,255,.09),
-    inset 0 1px 0
-    rgba(255,255,255,.30);
-
-  isolation:isolate;
-
-  transition:
-    transform .25s ease,
-    box-shadow .25s ease,
-    filter .25s ease;
-
-  animation:
-    focusJoinButtonFlow
-    5s
-    ease-in-out
-    infinite;
-}
-
-.focus-join-price__button-shine{
-  position:absolute;
-
-  z-index:1;
-
-  top:-80%;
-  left:-35%;
-
-  width:25%;
-  height:260%;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      rgba(255,255,255,.34),
-      transparent
-    );
-
-  transform:
-    rotate(19deg);
-
-  pointer-events:none;
-
-  animation:
-    focusJoinButtonShine
-    4.8s
-    ease-in-out
-    infinite;
-}
-
-.focus-join-price__button-content{
+.focus-button{
   position:relative;
   z-index:2;
 
   display:grid;
 
   grid-template-columns:
-    1fr
+    42px
+    minmax(0,1fr)
     42px;
 
   width:100%;
-  min-height:70px;
+  min-height:72px;
 
   align-items:center;
 
-  gap:10px;
+  gap:12px;
 
-  padding:
-    11px
-    12px
-    11px
-    21px;
+  padding:8px 11px;
+
+  overflow:hidden;
+
+  border:
+    1px solid rgba(255,255,255,.10);
+
+  border-radius:999px;
+
+  color:#fff;
+
+  background:
+    radial-gradient(
+      circle at 30% 0%,
+      rgba(126,115,231,.28),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #08080a 0%,
+      #17171d 48%,
+      #0b0b0e 100%
+    );
+
+  box-shadow:
+    0 18px 36px rgba(0,0,0,.20),
+    0 0 26px rgba(94,82,214,.13),
+    inset 0 1px 0 rgba(255,255,255,.12);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
 }
 
-.focus-join-price__button-copy{
+.focus-button-shine{
+  position:absolute;
+
+  top:-60%;
+  left:-35%;
+
+  width:22%;
+  height:220%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.24),
+      transparent
+    );
+
+  transform:rotate(18deg);
+
+  animation:
+    focusButtonShine 4.5s ease-in-out infinite;
+}
+
+.focus-button-mark{
   display:flex;
 
-  flex-direction:column;
+  width:42px;
+  height:42px;
 
-  gap:3px;
+  align-items:center;
+  justify-content:center;
 
-  text-align:left;
+  border:
+    1px solid rgba(255,255,255,.13);
+
+  border-radius:50%;
+
+  color:#aaa1ff;
+
+  background:
+    rgba(111,99,220,.10);
+
+  font-size:14px;
+  font-weight:900;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.10);
 }
 
-.focus-join-price__button-copy small{
-  color:
-    rgba(255,255,255,.57);
+.focus-button-text{
+  position:relative;
+  z-index:2;
 
-  font-size:6px;
+  min-width:0;
 
-  line-height:1.3;
-
-  letter-spacing:.17em;
-
-  font-weight:850;
+  text-align:center;
 }
 
-.focus-join-price__button-copy strong{
+.focus-button-text strong{
+  display:block;
+
   color:#fff;
 
   font-size:15px;
-
-  line-height:1.3;
-
-  letter-spacing:.01em;
-
-  font-weight:900;
+  line-height:1.4;
+  letter-spacing:.02em;
+  font-weight:850;
 }
 
-.focus-join-price__button-arrow{
+.focus-button-text small{
+  display:block;
+
+  margin-top:3px;
+
+  color:rgba(255,255,255,.43);
+
+  font-size:7px;
+  line-height:1.4;
+  letter-spacing:.14em;
+  font-weight:800;
+}
+
+.focus-button-arrow{
   display:flex;
 
   width:42px;
@@ -1509,256 +1055,143 @@ IMPORTANT
 
   border-radius:50%;
 
-  color:#4c3cf0;
+  color:#272339;
 
   background:#fff;
 
   box-shadow:
-    0 8px 20px
-    rgba(24,15,130,.27);
+    0 7px 18px rgba(0,0,0,.22);
 
   transition:
     transform .25s ease;
 }
 
-.focus-join-price__button-arrow svg{
-  width:18px;
-  height:18px;
+.focus-button-arrow svg{
+  width:19px;
+  height:19px;
 }
 
-.focus-join-price__action-meta{
-  display:flex;
+.focus-cancel{
+  margin:13px 0 0;
 
-  align-items:center;
-  justify-content:center;
+  color:#929299;
 
-  gap:8px;
-
-  margin-top:13px;
-
-  color:
-    rgba(255,255,255,.31);
-
-  font-size:7px;
-
-  letter-spacing:.08em;
-}
-
-.focus-join-price__action-meta i{
-  width:2px;
-  height:2px;
-
-  border-radius:50%;
-
-  background:
-    rgba(255,255,255,.28);
-}
-
-
-/* ==================================================
-   MESSAGE SECTION
-================================================== */
-
-#focusJoinMessageV1{
-  position:relative;
-
-  width:100%;
-
-  padding:
-    20px
-    20px
-    0;
-
-  overflow:hidden;
-
-  background:
-    linear-gradient(
-      180deg,
-      #08080b 0%,
-      #09090d 100%
-    );
-}
-
-.focus-join-message__inner{
-  width:min(100%,1180px);
-
-  margin:0 auto;
-}
-
-
-/* line */
-
-.focus-join-message__line{
-  position:relative;
-
-  width:1px;
-  height:100px;
-
-  margin:
-    0
-    auto
-    65px;
-
-  overflow:hidden;
-
-  background:
-    rgba(255,255,255,.07);
-}
-
-.focus-join-message__line span{
-  position:absolute;
-
-  top:-100%;
-  left:0;
-
-  width:100%;
-  height:100%;
-
-  background:
-    linear-gradient(
-      180deg,
-      transparent,
-      #766cff,
-      #fff,
-      transparent
-    );
-
-  animation:
-    focusJoinLineMove
-    3.4s
-    ease-in-out
-    infinite;
-}
-
-
-/* message */
-
-.focus-join-message__content{
-  max-width:850px;
-
-  margin:0 auto;
+  font-size:9px;
+  line-height:1.6;
 
   text-align:center;
 }
 
-.focus-join-message__eyebrow{
-  margin:
-    0
-    0
-    22px;
 
-  color:#766cff;
+/* ==================================================
+   MESSAGE
+================================================== */
 
-  font-size:8px;
+.focus-message{
+  position:relative;
 
-  line-height:1.4;
+  width:100%;
 
-  letter-spacing:.22em;
+  padding:78px 20px 90px;
 
-  font-weight:850;
+  overflow:hidden;
+
+  background:#fff;
 }
 
-.focus-join-message__content h2{
-  margin:0;
+.focus-message-inner{
+  position:relative;
 
-  color:#fff;
+  width:min(100%,760px);
 
-  font-size:
-    clamp(
-      42px,
-      6.5vw,
-      80px
-    );
+  margin:0 auto;
+}
 
-  line-height:1.13;
+.focus-message-label{
+  display:flex;
 
-  letter-spacing:-.065em;
+  align-items:center;
 
+  gap:10px;
+
+  margin-bottom:20px;
+
+  color:rgba(0,0,0,.40);
+
+  font-size:8px;
+  letter-spacing:.20em;
   font-weight:900;
 }
 
-.focus-join-message__accent{
-  position:relative;
+.focus-message-label::after{
+  content:"";
 
-  display:inline-block;
-
-  margin-top:9px;
-}
-
-.focus-join-message__accent strong{
-  position:relative;
-  z-index:2;
-
-  display:inline-block;
+  width:60px;
+  height:1px;
 
   background:
     linear-gradient(
-      110deg,
-      #fff 0%,
-      #9a91ff 30%,
-      #6e5eff 52%,
-      #c7c2ff 75%,
-      #fff 100%
+      90deg,
+      rgba(0,0,0,.25),
+      transparent
+    );
+}
+
+.focus-message-title{
+  position:relative;
+
+  margin:0;
+
+  color:#101013;
+
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
+
+  font-size:clamp(39px,7vw,72px);
+  line-height:1.23;
+  letter-spacing:-.055em;
+  font-weight:700;
+}
+
+.focus-message-title span{
+  display:inline-block;
+
+  padding:0 .04em .05em;
+
+  background:
+    linear-gradient(
+      115deg,
+      #1b1b1f,
+      #363967,
+      #6962c3,
+      #8177dc,
+      #373861,
+      #1b1b1f
     );
 
-  background-size:
-    220% 220%;
+  background-size:180% 180%;
 
   -webkit-background-clip:text;
   background-clip:text;
 
   color:transparent;
-
-  -webkit-text-fill-color:
-    transparent;
+  -webkit-text-fill-color:transparent;
 
   animation:
-    focusJoinTextFlow
-    5s
-    ease-in-out
-    infinite;
+    focusGradient 4s ease-in-out infinite;
 }
 
-.focus-join-message__accent-glow{
-  position:absolute;
+.focus-message-description{
+  max-width:510px;
 
-  top:50%;
-  left:50%;
+  margin:27px 0 0;
 
-  width:110%;
-  height:80%;
+  color:#707077;
 
-  border-radius:50%;
-
-  background:
-    radial-gradient(
-      ellipse,
-      rgba(97,78,255,.18),
-      transparent 70%
-    );
-
-  filter:blur(20px);
-
-  transform:
-    translate(-50%,-50%);
-
-  pointer-events:none;
-}
-
-.focus-join-message__description{
-  margin:
-    32px
-    0
-    0;
-
-  color:
-    rgba(255,255,255,.48);
-
-  font-size:11px;
-
+  font-size:12px;
   line-height:2;
-
-  letter-spacing:.01em;
 }
 
 
@@ -1766,589 +1199,598 @@ IMPORTANT
    ENVIRONMENT
 ================================================== */
 
-.focus-join-environment{
+.focus-environment{
+  width:100%;
+
+  padding:0 20px 95px;
+
+  background:#fff;
+}
+
+.focus-environment-inner{
   position:relative;
 
-  width:min(100%,900px);
+  width:min(100%,760px);
 
-  margin:
-    90px
-    auto
-    0;
+  margin:0 auto;
 
-  padding:
-    25px
-    28px
-    28px;
+  padding:30px 27px;
 
   overflow:hidden;
 
-  border:
-    1px solid
-    rgba(255,255,255,.10);
-
-  border-radius:28px;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255,255,255,.035),
-      rgba(255,255,255,.012)
-    );
-
-  box-shadow:
-    0 30px 90px
-    rgba(0,0,0,.30),
-    inset 0 1px 0
-    rgba(255,255,255,.04);
-
-  animation:
-    focusJoinEnvironmentFloat
-    7s
-    ease-in-out
-    infinite;
-}
-
-.focus-join-environment__glow{
-  position:absolute;
-
-  top:15%;
-  left:50%;
-
-  width:500px;
-  height:350px;
-
-  border-radius:50%;
+  color:#fff;
 
   background:
     radial-gradient(
-      circle,
-      rgba(91,72,255,.15),
-      transparent 67%
-    );
-
-  filter:blur(18px);
-
-  transform:
-    translateX(-50%);
-
-  pointer-events:none;
-}
-
-.focus-join-environment__top{
-  position:relative;
-  z-index:2;
-
-  display:flex;
-
-  align-items:center;
-  justify-content:space-between;
-
-  gap:20px;
-
-  color:
-    rgba(255,255,255,.32);
-
-  font-size:7px;
-
-  letter-spacing:.15em;
-
-  font-weight:800;
-}
-
-.focus-join-environment__top > div{
-  display:flex;
-
-  align-items:center;
-
-  gap:8px;
-}
-
-.focus-join-environment__status-dot{
-  width:6px;
-  height:6px;
-
-  border-radius:50%;
-
-  background:#766cff;
-
-  box-shadow:
-    0 0 12px
-    rgba(118,108,255,.9);
-}
-
-
-/* center */
-
-.focus-join-environment__center{
-  position:relative;
-  z-index:2;
-
-  display:flex;
-
-  min-height:260px;
-
-  align-items:center;
-  justify-content:center;
-
-  padding:
-    35px
-    0
-    25px;
-}
-
-.focus-join-environment__brand{
-  position:relative;
-  z-index:4;
-
-  display:flex;
-
-  flex-direction:column;
-
-  align-items:center;
-}
-
-.focus-join-environment__brand > span{
-  color:
-    rgba(255,255,255,.38);
-
-  font-size:7px;
-
-  letter-spacing:.25em;
-
-  font-weight:800;
-}
-
-.focus-join-environment__brand strong{
-  margin-top:8px;
-
-  background:
+      circle at 100% 0%,
+      rgba(111,99,220,.23),
+      transparent 37%
+    ),
     linear-gradient(
-      110deg,
-      #fff,
-      #8479ff,
-      #fff
+      145deg,
+      #08080a,
+      #19191f
     );
-
-  background-size:
-    200% 200%;
-
-  -webkit-background-clip:text;
-  background-clip:text;
-
-  color:transparent;
-
-  -webkit-text-fill-color:
-    transparent;
-
-  font-size:
-    clamp(
-      57px,
-      9vw,
-      105px
-    );
-
-  line-height:.95;
-
-  letter-spacing:-.075em;
-
-  font-weight:950;
-
-  filter:
-    drop-shadow(
-      0
-      12px
-      30px
-      rgba(83,64,255,.16)
-    );
-
-  animation:
-    focusJoinTextFlow
-    5s
-    ease-in-out
-    infinite;
-}
-
-.focus-join-environment__brand small{
-  margin-top:12px;
-
-  color:
-    rgba(255,255,255,.27);
-
-  font-size:7px;
-
-  letter-spacing:.35em;
-
-  font-weight:800;
-}
-
-
-/* orbit */
-
-.focus-join-environment__orbit{
-  position:absolute;
-
-  top:50%;
-  left:50%;
-
-  width:330px;
-  height:170px;
-
-  border:
-    1px solid
-    rgba(118,108,255,.16);
-
-  border-radius:50%;
-
-  transform:
-    translate(-50%,-50%)
-    rotate(-8deg);
-
-  animation:
-    focusJoinOrbit
-    13s
-    linear
-    infinite;
-}
-
-.focus-join-environment__orbit-line{
-  position:absolute;
-
-  inset:12px;
-
-  border:
-    1px solid
-    rgba(255,255,255,.035);
-
-  border-radius:50%;
-}
-
-.focus-join-environment__orbit-dot{
-  position:absolute;
-
-  width:6px;
-  height:6px;
-
-  border-radius:50%;
-
-  background:#8177ff;
 
   box-shadow:
-    0 0 12px
-    rgba(118,108,255,.85);
+    0 22px 48px rgba(0,0,0,.15);
 }
 
-.focus-join-environment__orbit-dot.dot-one{
-  top:7%;
-  left:25%;
-}
-
-.focus-join-environment__orbit-dot.dot-two{
-  right:4%;
-  bottom:35%;
-}
-
-.focus-join-environment__orbit-dot.dot-three{
-  bottom:3%;
-  left:37%;
-}
-
-
-/* areas */
-
-.focus-join-environment__areas{
-  position:relative;
-  z-index:2;
-
-  display:grid;
-
-  grid-template-columns:
-    repeat(6,1fr);
-
-  gap:7px;
-}
-
-.focus-join-environment__areas > div{
-  display:flex;
-
-  min-height:55px;
-
-  flex-direction:column;
-
-  justify-content:center;
-
-  gap:5px;
-
-  padding:
-    9px
-    10px;
-
-  border:
-    1px solid
-    rgba(255,255,255,.06);
-
-  border-radius:11px;
-
-  background:
-    rgba(255,255,255,.018);
-
-  transition:
-    border-color .25s ease,
-    background .25s ease,
-    transform .25s ease;
-}
-
-.focus-join-environment__areas span{
-  color:#766cff;
-
-  font-size:7px;
-
-  font-weight:900;
-}
-
-.focus-join-environment__areas strong{
-  color:
-    rgba(255,255,255,.52);
-
-  font-size:7px;
-
-  letter-spacing:.07em;
-
-  font-weight:800;
-}
-
-
-/* bottom */
-
-.focus-join-environment__bottom{
-  position:relative;
-  z-index:2;
-
-  display:flex;
-
-  align-items:center;
-  justify-content:center;
-
-  gap:10px;
-
-  margin-top:19px;
-
-  color:
-    rgba(255,255,255,.24);
-
-  font-size:6px;
-
-  letter-spacing:.19em;
-
-  font-weight:800;
-}
-
-.focus-join-environment__bottom i{
-  width:20px;
-  height:1px;
-
-  background:
-    rgba(255,255,255,.12);
-}
-
-
-/* ==================================================
-   BOTTOM
-================================================== */
-
-.focus-join-bottom{
-  width:min(100%,650px);
-
-  margin:
-    90px
-    auto
-    0;
-
-  padding-bottom:0;
-
-  text-align:center;
-}
-
-.focus-join-bottom p{
-  margin:0;
-
-  color:
-    rgba(255,255,255,.54);
-
-  font-size:
-    clamp(
-      16px,
-      2.2vw,
-      20px
-    );
-
-  line-height:1.8;
-
-  font-weight:650;
-}
-
-.focus-join-bottom p strong{
-  color:#fff;
-
-  font-weight:900;
-}
-
-.focus-join-bottom p strong span{
-  display:inline-block;
-
-  color:#8d83ff;
-
-  font-size:1.25em;
-
-  animation:
-    focusJoinMemberFloat
-    3.5s
-    ease-in-out
-    infinite;
-}
-
-
-/* bottom button */
-
-.focus-join-bottom__button{
-  position:relative;
-
-  display:flex;
-
-  width:min(100%,430px);
-
-  min-height:66px;
-
-  margin:
-    31px
-    auto
-    0;
-
-  align-items:center;
-  justify-content:center;
-
-  gap:20px;
-
-  overflow:hidden;
-
-  border:
-    1px solid
-    rgba(121,107,255,.38);
-
-  border-radius:999px;
-
-  color:#fff;
-
-  background:
-    linear-gradient(
-      115deg,
-      #3324dc,
-      #5b49ff,
-      #766cff,
-      #4635e8
-    );
-
-  background-size:
-    200% 200%;
-
-  box-shadow:
-    0 18px 40px
-    rgba(49,34,230,.23),
-    inset 0 1px 0
-    rgba(255,255,255,.25);
-
-  font-size:14px;
-
-  font-weight:900;
-
-  animation:
-    focusJoinButtonFlow
-    5s
-    ease-in-out
-    infinite;
-
-  transition:
-    transform .25s ease,
-    box-shadow .25s ease;
-}
-
-.focus-join-bottom__button::before{
+.focus-environment-inner::before{
   content:"";
 
   position:absolute;
 
-  top:-80%;
-  left:-35%;
+  top:-60px;
+  right:-50px;
 
-  width:22%;
-  height:260%;
+  width:160px;
+  height:160px;
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  border-radius:50%;
+}
+
+.focus-environment-inner::after{
+  content:"";
+
+  position:absolute;
+
+  top:-28px;
+  right:-20px;
+
+  width:90px;
+  height:90px;
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  border-radius:50%;
+}
+
+.focus-environment-top{
+  position:relative;
+  z-index:2;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:9px;
+
+  color:rgba(255,255,255,.43);
+
+  font-size:8px;
+  letter-spacing:.20em;
+  font-weight:900;
+}
+
+.focus-online-dot{
+  position:relative;
+
+  width:7px;
+  height:7px;
+
+  border-radius:50%;
+
+  background:#8b80ed;
+
+  box-shadow:
+    0 0 14px rgba(139,128,237,.7);
+}
+
+.focus-online-dot::after{
+  content:"";
+
+  position:absolute;
+  inset:-5px;
+
+  border:
+    1px solid rgba(139,128,237,.55);
+
+  border-radius:50%;
+
+  animation:
+    focusOnlinePulse 2s ease-out infinite;
+}
+
+.focus-environment-line{
+  position:relative;
+  z-index:2;
+
+  width:100%;
+  height:1px;
+
+  margin:14px 0 21px;
 
   background:
     linear-gradient(
       90deg,
-      transparent,
-      rgba(255,255,255,.30),
-      transparent
+      rgba(255,255,255,.38),
+      rgba(255,255,255,.03)
     );
-
-  transform:
-    rotate(18deg);
-
-  animation:
-    focusJoinButtonShine
-    5s
-    ease-in-out
-    infinite;
 }
 
-.focus-join-bottom__button span,
-.focus-join-bottom__button svg{
+.focus-environment-title{
   position:relative;
   z-index:2;
+
+  margin:0;
+
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
+
+  font-size:clamp(29px,6vw,45px);
+  line-height:1.32;
+  letter-spacing:-.04em;
+  font-weight:700;
 }
 
-.focus-join-bottom__button svg{
+.focus-environment-title span{
+  color:#aca5ff;
+}
+
+.focus-environment-copy{
+  position:relative;
+  z-index:2;
+
+  margin:17px 0 0;
+
+  color:rgba(255,255,255,.57);
+
+  font-size:11px;
+  line-height:1.9;
+}
+
+.focus-environment-button{
+  position:relative;
+  z-index:2;
+
+  display:flex;
+
+  width:100%;
+  min-height:61px;
+
+  margin-top:25px;
+
+  padding:12px 18px;
+
+  align-items:center;
+  justify-content:center;
+
+  gap:12px;
+
+  border:
+    1px solid rgba(139,128,237,.35);
+
+  color:#fff;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(91,82,185,.30),
+      rgba(111,99,220,.46),
+      rgba(91,82,185,.30)
+    );
+
+  box-shadow:
+    0 12px 26px rgba(0,0,0,.16),
+    inset 0 1px 0 rgba(255,255,255,.10);
+
+  font-size:13px;
+  line-height:1.4;
+  font-weight:850;
+
+  transition:
+    transform .25s ease,
+    background .25s ease;
+}
+
+.focus-environment-button svg{
   width:18px;
   height:18px;
 }
 
 
 /* ==================================================
-   REVEAL
+   DISCORD PAGE
 ================================================== */
 
-.focus-join-reveal{
-  opacity:0;
+#focusDiscord{
+  width:100%;
 
-  filter:blur(5px);
+  padding:
+    80px 20px
+    max(90px,calc(70px + env(safe-area-inset-bottom)));
 
-  transform:
-    translateY(28px);
+  background:
+    radial-gradient(
+      circle at 50% 5%,
+      rgba(111,99,220,.12),
+      transparent 31%
+    ),
+    #fff;
 
-  transition:
-    opacity
-    1s
-    ease,
-    transform
-    1.05s
-    cubic-bezier(.22,1,.36,1),
-    filter
-    1s
-    ease;
-
-  will-change:
-    opacity,
-    transform,
-    filter;
+  text-align:center;
 }
 
-.focus-join-reveal.show{
-  opacity:1;
+.focus-discord-inner{
+  width:min(100%,580px);
+  margin:0 auto;
+}
 
-  filter:blur(0);
+.focus-discord-mark{
+  position:relative;
+
+  display:flex;
+
+  width:82px;
+  height:82px;
+
+  margin:0 auto 28px;
+
+  align-items:center;
+  justify-content:center;
+
+  overflow:hidden;
+
+  color:#fff;
+
+  background:
+    radial-gradient(
+      circle at 30% 15%,
+      rgba(126,115,231,.35),
+      transparent 38%
+    ),
+    linear-gradient(
+      145deg,
+      #09090c,
+      #1b1b23
+    );
+
+  box-shadow:
+    0 18px 40px rgba(0,0,0,.18),
+    0 0 30px rgba(111,99,220,.16);
+
+  animation:
+    focusFloat 6s ease-in-out infinite;
+}
+
+.focus-discord-mark::before{
+  content:"F";
+
+  font-size:42px;
+  line-height:1;
+  letter-spacing:-.08em;
+  font-weight:950;
+}
+
+.focus-discord-eyebrow{
+  margin:0 0 11px;
+
+  color:#655cc7;
+
+  font-size:9px;
+  letter-spacing:.18em;
+  font-weight:900;
+}
+
+.focus-discord-title{
+  margin:0;
+
+  color:#111114;
+
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
+
+  font-size:clamp(36px,8vw,57px);
+  line-height:1.2;
+  letter-spacing:-.055em;
+  font-weight:700;
+}
+
+.focus-discord-title span{
+  display:inline-block;
+
+  background:
+    linear-gradient(
+      115deg,
+      #252530,
+      #45478b,
+      #7770d3,
+      #514c9e
+    );
+
+  -webkit-background-clip:text;
+  background-clip:text;
+
+  color:transparent;
+  -webkit-text-fill-color:transparent;
+}
+
+.focus-discord-description{
+  margin:20px auto 0;
+
+  color:#74747b;
+
+  font-size:12px;
+  line-height:1.9;
+}
+
+.focus-discord-action{
+  position:relative;
+
+  margin-top:35px;
+}
+
+.focus-discord-action::before{
+  content:"";
+
+  position:absolute;
+
+  top:50%;
+  left:50%;
+
+  width:100%;
+  height:120px;
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(111,99,220,.17),
+      transparent 70%
+    );
+
+  filter:blur(20px);
+
+  transform:translate(-50%,-50%);
+}
+
+.focus-discord-button{
+  position:relative;
+  z-index:2;
+
+  display:grid;
+
+  grid-template-columns:
+    42px
+    minmax(0,1fr)
+    42px;
+
+  width:100%;
+  min-height:72px;
+
+  padding:8px 11px;
+
+  align-items:center;
+
+  gap:10px;
+
+  overflow:hidden;
+
+  border-radius:999px;
+
+  color:#fff;
+
+  background:
+    radial-gradient(
+      circle at 30% 0%,
+      rgba(126,115,231,.30),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #08080a,
+      #18181f,
+      #0b0b0e
+    );
+
+  box-shadow:
+    0 18px 38px rgba(0,0,0,.22),
+    0 0 25px rgba(111,99,220,.13),
+    inset 0 1px 0 rgba(255,255,255,.12);
+
+  font-size:15px;
+  font-weight:850;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.focus-discord-button-icon{
+  display:flex;
+
+  width:42px;
+  height:42px;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  color:#aaa1ff;
+
+  background:
+    rgba(111,99,220,.11);
+
+  border:
+    1px solid rgba(255,255,255,.11);
+}
+
+.focus-discord-button-icon svg{
+  width:23px;
+  height:23px;
+}
+
+.focus-discord-button-arrow{
+  display:flex;
+
+  width:42px;
+  height:42px;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  color:#292533;
+  background:#fff;
+}
+
+.focus-discord-button-arrow svg{
+  width:19px;
+  height:19px;
+}
+
+.focus-discord-note{
+  margin:13px 0 0;
+
+  color:#9999a0;
+
+  font-size:9px;
+  line-height:1.6;
+}
+
+
+/* ==================================================
+   FADE
+================================================== */
+
+.focus-reveal{
+  opacity:0;
 
   transform:
-    translateY(0);
+    translateY(32px);
+
+  transition:
+    opacity .85s ease,
+    transform .85s
+    cubic-bezier(.2,.75,.25,1);
+}
+
+.focus-reveal.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+
+/* ==================================================
+   ANIMATIONS
+================================================== */
+
+@keyframes focusGradient{
+
+  0%,
+  100%{
+    background-position:0% 50%;
+  }
+
+  50%{
+    background-position:100% 50%;
+  }
+
+}
+
+@keyframes focusPulse{
+
+  0%,
+  100%{
+    opacity:1;
+    transform:scale(1);
+  }
+
+  50%{
+    opacity:.45;
+    transform:scale(.72);
+  }
+
+}
+
+@keyframes focusProgressReveal{
+
+  from{
+    transform:scaleX(0);
+  }
+
+  to{
+    transform:scaleX(1);
+  }
+
+}
+
+@keyframes focusButtonShine{
+
+  0%,
+  55%{
+    left:-35%;
+    opacity:0;
+  }
+
+  65%{
+    opacity:1;
+  }
+
+  84%,
+  100%{
+    left:115%;
+    opacity:0;
+  }
+
+}
+
+@keyframes focusOnlinePulse{
+
+  0%{
+    opacity:.9;
+    transform:scale(.6);
+  }
+
+  70%,
+  100%{
+    opacity:0;
+    transform:scale(1.7);
+  }
+
+}
+
+@keyframes focusFloat{
+
+  0%,
+  100%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-12px);
+  }
+
 }
 
 
@@ -2358,289 +1800,31 @@ IMPORTANT
 
 @media(hover:hover){
 
-  .focus-join-price__button:hover{
-    transform:
-      translateY(-4px);
+  .focus-button:hover,
+  .focus-discord-button:hover{
+    transform:translateY(-3px);
 
     box-shadow:
-      0 27px 55px
-      rgba(49,34,230,.34),
-      0 0 40px
-      rgba(97,78,255,.12),
-      inset 0 1px 0
-      rgba(255,255,255,.34);
-
-    filter:
-      brightness(1.06);
+      0 24px 46px rgba(0,0,0,.25),
+      0 0 32px rgba(111,99,220,.18),
+      inset 0 1px 0 rgba(255,255,255,.14);
   }
 
-  .focus-join-price__button:hover
-  .focus-join-price__button-arrow{
-    transform:
-      translateX(3px);
+  .focus-button:hover
+  .focus-button-arrow{
+    transform:translateX(3px);
   }
 
-  .focus-join-bottom__button:hover{
-    transform:
-      translateY(-3px);
-
-    box-shadow:
-      0 25px 50px
-      rgba(49,34,230,.31),
-      inset 0 1px 0
-      rgba(255,255,255,.28);
-  }
-
-  .focus-join-environment__areas > div:hover{
-    transform:
-      translateY(-2px);
-
-    border-color:
-      rgba(118,108,255,.24);
+  .focus-environment-button:hover{
+    transform:translateY(-2px);
 
     background:
-      rgba(118,108,255,.055);
-  }
-
-}
-
-
-/* ==================================================
-   ANIMATIONS
-================================================== */
-
-@keyframes focusJoinBorderFlow{
-
-  0%,
-  100%{
-    background-position:
-      0% 50%;
-  }
-
-  50%{
-    background-position:
-      100% 50%;
-  }
-
-}
-
-
-@keyframes focusJoinTextFlow{
-
-  0%,
-  100%{
-    background-position:
-      0% 50%;
-  }
-
-  50%{
-    background-position:
-      100% 50%;
-  }
-
-}
-
-
-@keyframes focusJoinButtonFlow{
-
-  0%,
-  100%{
-    background-position:
-      0% 50%;
-  }
-
-  50%{
-    background-position:
-      100% 50%;
-  }
-
-}
-
-
-@keyframes focusJoinButtonShine{
-
-  0%,
-  55%{
-    left:-35%;
-    opacity:0;
-  }
-
-  64%{
-    opacity:1;
-  }
-
-  82%{
-    left:120%;
-    opacity:0;
-  }
-
-  100%{
-    left:120%;
-    opacity:0;
-  }
-
-}
-
-
-@keyframes focusJoinPulse{
-
-  0%{
-    opacity:.8;
-    transform:scale(.5);
-  }
-
-  75%,
-  100%{
-    opacity:0;
-    transform:scale(1.7);
-  }
-
-}
-
-
-@keyframes focusJoinAmbientOne{
-
-  0%,
-  100%{
-    transform:
-      translateX(-50%)
-      translateY(0)
-      scale(1);
-  }
-
-  50%{
-    transform:
-      translateX(-50%)
-      translateY(25px)
-      scale(1.06);
-  }
-
-}
-
-
-@keyframes focusJoinAmbientTwo{
-
-  0%,
-  100%{
-    transform:
-      translate3d(0,0,0);
-  }
-
-  50%{
-    transform:
-      translate3d(-30px,-20px,0);
-  }
-
-}
-
-
-@keyframes focusJoinLineMove{
-
-  0%{
-    top:-100%;
-  }
-
-  100%{
-    top:100%;
-  }
-
-}
-
-
-@keyframes focusJoinEnvironmentFloat{
-
-  0%,
-  100%{
-    transform:
-      translateY(0);
-  }
-
-  50%{
-    transform:
-      translateY(-8px);
-  }
-
-}
-
-
-@keyframes focusJoinOrbit{
-
-  from{
-    transform:
-      translate(-50%,-50%)
-      rotate(-8deg);
-  }
-
-  to{
-    transform:
-      translate(-50%,-50%)
-      rotate(352deg);
-  }
-
-}
-
-
-@keyframes focusJoinMemberFloat{
-
-  0%,
-  100%{
-    transform:
-      translateY(0);
-  }
-
-  50%{
-    transform:
-      translateY(-4px);
-  }
-
-}
-
-
-/* ==================================================
-   TABLET
-================================================== */
-
-@media(
-  min-width:750px
-) and (
-  max-width:989px
-){
-
-  #focusJoinPriceV1{
-    padding:
-      55px
-      18px
-      115px;
-  }
-
-  .focus-join-price__main{
-    grid-template-columns:
-      1fr
-      1fr;
-
-    gap:
-      50px
-      35px;
-
-    padding:
-      50px
-      40px;
-  }
-
-  .focus-join-price__copy{
-    grid-column:
-      1 / -1;
-
-    text-align:center;
-  }
-
-  .focus-join-price__areas{
-    justify-content:center;
-  }
-
-  .focus-join-environment__areas{
-    grid-template-columns:
-      repeat(3,1fr);
+      linear-gradient(
+        90deg,
+        rgba(91,82,185,.38),
+        rgba(111,99,220,.55),
+        rgba(91,82,185,.38)
+      );
   }
 
 }
@@ -2652,267 +1836,188 @@ IMPORTANT
 
 @media(max-width:749px){
 
-  #focusJoinPriceV1{
+  .focus-intro{
     padding:
-      35px
+      max(45px,env(safe-area-inset-top))
       14px
-      100px;
+      50px;
   }
 
-
-  /* card */
-
-  .focus-join-price__wrap{
-    border-radius:27px;
-  }
-
-  .focus-join-price__meta{
-    padding:
-      13px
-      17px;
-
-    border-radius:
-      26px
-      26px
-      0
-      0;
-
-    font-size:6px;
-  }
-
-  .focus-join-price__meta-right{
-    display:none;
-  }
-
-  .focus-join-price__main{
-    grid-template-columns:1fr;
-
-    gap:39px;
-
-    padding:
-      42px
-      20px
-      27px;
-
-    border-radius:
-      0
-      0
-      26px
-      26px;
-
-    text-align:center;
-  }
-
-
-  /* copy */
-
-  .focus-join-price__eyebrow{
+  .focus-eyebrow{
     margin-bottom:14px;
-
-    font-size:7px;
+    font-size:8px;
   }
 
-  .focus-join-price__title{
-    font-size:
-      clamp(
-        37px,
-        11.4vw,
-        48px
-      );
-
-    line-height:1.14;
+  .focus-title-small{
+    font-size:27px;
   }
 
-  .focus-join-price__description{
-    margin-top:19px;
-
-    font-size:10px;
-
-    line-height:1.9;
+  .focus-title-main{
+    font-size:clamp(45px,13vw,58px);
   }
 
-  .focus-join-price__areas{
-    justify-content:center;
-
-    gap:5px;
-
-    margin-top:21px;
+  .focus-title-accent{
+    font-size:clamp(35px,10vw,43px);
   }
 
-  .focus-join-price__areas span{
-    min-height:21px;
-
-    padding:
-      5px
-      7px;
-
-    font-size:6px;
+  .focus-nameplate{
+    margin-top:29px;
+    padding:17px 16px 19px;
   }
 
-
-  /* pricing */
-
-  .focus-join-price__pricing{
-    min-width:0;
+  .focus-nameplate-main{
+    font-size:clamp(46px,14vw,61px);
   }
 
-  .focus-join-price__price strong{
-    font-size:64px;
-  }
-
-  .focus-join-price__members{
-    max-width:220px;
-
-    margin-top:25px;
-  }
-
-  .focus-join-price__members-current strong{
-    font-size:31px;
-  }
-
-  .focus-join-price__members-limit strong{
+  .focus-nameplate-bottom strong{
     font-size:17px;
   }
 
-
-  /* CTA */
-
-  .focus-join-price__button{
-    min-height:70px;
-
-    border-radius:17px;
-  }
-
-  .focus-join-price__button-content{
-    min-height:68px;
-
-    grid-template-columns:
-      1fr
-      42px;
-
-    padding:
-      10px
-      11px
-      10px
-      19px;
-  }
-
-  .focus-join-price__button-copy strong{
-    font-size:15px;
-  }
-
-
-  /* message */
-
-  #focusJoinMessageV1{
-    padding:
-      10px
-      17px
-      0;
-  }
-
-  .focus-join-message__line{
-    height:80px;
-
-    margin-bottom:52px;
-  }
-
-  .focus-join-message__eyebrow{
-    margin-bottom:18px;
-
-    font-size:7px;
-  }
-
-  .focus-join-message__content h2{
-    font-size:
-      clamp(
-        39px,
-        11.8vw,
-        53px
-      );
-
-    line-height:1.16;
-  }
-
-  .focus-join-message__description{
-    margin-top:26px;
-
-    font-size:10px;
-
-    line-height:2;
-  }
-
-
-  /* environment */
-
-  .focus-join-environment{
-    margin-top:70px;
-
-    padding:
-      19px
-      15px
-      20px;
-
-    border-radius:23px;
-  }
-
-  .focus-join-environment__top{
+  .focus-nameplate-bottom span{
     font-size:6px;
   }
 
-  .focus-join-environment__center{
-    min-height:220px;
-
-    padding:
-      30px
-      0
-      20px;
+  .focus-bridge{
+    height:125px;
   }
 
-  .focus-join-environment__brand strong{
-    font-size:
-      clamp(
-        61px,
-        20vw,
-        82px
+  .focus-offer-section{
+    padding:
+      0 12px
+      72px;
+  }
+
+  .focus-offer-head,
+  .focus-capacity,
+  .focus-price-area{
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  .focus-offer-head{
+    padding-top:25px;
+  }
+
+  .focus-offer-title{
+    font-size:clamp(27px,7.7vw,35px);
+  }
+
+  .focus-offer-description{
+    font-size:11px;
+  }
+
+  .focus-capacity{
+    padding-top:24px;
+    padding-bottom:25px;
+  }
+
+  .focus-capacity-current-value strong{
+    font-size:52px;
+  }
+
+  .focus-capacity-limit-value{
+    font-size:18px;
+  }
+
+  .focus-price-area{
+    padding-top:28px;
+  }
+
+  .focus-current-price strong{
+    font-size:74px;
+  }
+
+  .focus-action{
+    padding:
+      0 14px
+      25px;
+  }
+
+  .focus-button{
+    grid-template-columns:
+      38px
+      minmax(0,1fr)
+      38px;
+
+    min-height:67px;
+
+    gap:8px;
+  }
+
+  .focus-button-mark,
+  .focus-button-arrow{
+    width:38px;
+    height:38px;
+  }
+
+  .focus-button-text strong{
+    font-size:13px;
+  }
+
+  .focus-message{
+    padding:
+      67px 15px
+      78px;
+  }
+
+  .focus-message-title{
+    font-size:clamp(37px,10.5vw,49px);
+  }
+
+  .focus-environment{
+    padding:
+      0 12px
+      75px;
+  }
+
+  .focus-environment-inner{
+    padding:26px 20px;
+  }
+
+  .focus-environment-title{
+    font-size:clamp(27px,7.8vw,35px);
+  }
+
+  #focusDiscord{
+    padding:
+      70px 16px
+      max(
+        80px,
+        calc(
+          65px +
+          env(safe-area-inset-bottom)
+        )
       );
   }
 
-  .focus-join-environment__orbit{
-    width:260px;
-    height:135px;
+  .focus-discord-mark{
+    width:74px;
+    height:74px;
   }
 
-  .focus-join-environment__areas{
+  .focus-discord-mark::before{
+    font-size:38px;
+  }
+
+  .focus-discord-title{
+    font-size:clamp(34px,9.5vw,45px);
+  }
+
+  .focus-discord-button{
     grid-template-columns:
-      repeat(2,1fr);
+      38px
+      minmax(0,1fr)
+      38px;
 
-    gap:6px;
-  }
-
-  .focus-join-environment__areas > div{
-    min-height:50px;
-
-    text-align:left;
-  }
-
-
-  /* bottom */
-
-  .focus-join-bottom{
-    margin-top:72px;
-  }
-
-  .focus-join-bottom p{
-    font-size:15px;
-  }
-
-  .focus-join-bottom__button{
-    min-height:62px;
-
-    margin-top:27px;
+    min-height:67px;
 
     font-size:13px;
+  }
+
+  .focus-discord-button-icon,
+  .focus-discord-button-arrow{
+    width:38px;
+    height:38px;
   }
 
 }
@@ -2924,517 +2029,672 @@ IMPORTANT
 
 @media(prefers-reduced-motion:reduce){
 
-  .focus-join-reveal{
-    opacity:1;
-    filter:none;
-    transform:none;
-    transition:none;
+  .focus-title-accent,
+  .focus-current-price strong,
+  .focus-offer-kicker-dot,
+  .focus-progress-fill,
+  .focus-button-shine,
+  .focus-online-dot::after,
+  .focus-discord-mark{
+    animation:none;
   }
 
-  .focus-join-price__wrap,
-  .focus-join-price__title > span,
-  .focus-join-price__members-current strong,
-  .focus-join-price__button,
-  .focus-join-price__button-shine,
-  .focus-join-price__live-dot::after,
-  .focus-join-price__ambient-one,
-  .focus-join-price__ambient-two,
-  .focus-join-message__line span,
-  .focus-join-message__accent strong,
-  .focus-join-environment,
-  .focus-join-environment__brand strong,
-  .focus-join-environment__orbit,
-  .focus-join-bottom p strong span,
-  .focus-join-bottom__button,
-  .focus-join-bottom__button::before{
-    animation:none;
+  .focus-reveal{
+    opacity:1;
+    transform:none;
+    transition:none;
   }
 
 }
 
 </style>
 
+</head>
+
+
+<body>
+
+<div id="focusJoinPage">
+
+
+<!-- ==================================================
+     INTRO
+================================================== -->
+
+<section class="focus-intro">
+
+  <div class="focus-intro-inner focus-reveal">
+
+    <div class="focus-eyebrow">
+      BUILD YOURSELF. LIVE FREE.
+    </div>
+
+    <h1 class="focus-title">
+
+      <span class="focus-title-small">
+        変わりたいなら、
+      </span>
+
+      <span class="focus-title-main">
+        環境を変える。
+      </span>
+
+      <span class="focus-title-accent">
+        FOCUSへ。
+      </span>
+
+    </h1>
+
+
+    <div class="focus-nameplate">
+
+      <div class="focus-nameplate-top">
+
+        <span>
+          SELF DEVELOPMENT COMMUNITY
+        </span>
+
+        <span>
+          2026
+        </span>
+
+      </div>
+
+      <div class="focus-nameplate-line"></div>
+
+      <div class="focus-nameplate-main">
+        FOCUS
+      </div>
+
+      <div class="focus-nameplate-bottom">
+
+        <strong>
+          コミュニティ
+        </strong>
+
+        <span>
+          BUILD YOURSELF.<br>
+          LIVE FREE.
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ==================================================
+     CONNECTOR
+================================================== -->
+
+<div class="focus-bridge">
+
+  <span class="focus-bridge-dot"></span>
+  <span class="focus-bridge-line"></span>
+
+</div>
+
+
+<!-- ==================================================
+     PRICE / MEMBER LIMIT
+================================================== -->
+
+<section class="focus-offer-section">
+
+  <div class="focus-offer focus-reveal">
+
+
+    <!-- HEADER -->
+
+    <div class="focus-offer-head">
+
+      <div class="focus-offer-kicker">
+
+        <span class="focus-offer-kicker-dot"></span>
+
+        <span>
+          LIMITED MEMBERSHIP
+        </span>
+
+      </div>
+
+      <h2 class="focus-offer-title">
+        本気で変わりたい人が、<br>
+        <strong>集まる環境。</strong>
+      </h2>
+
+      <p class="focus-offer-description">
+        ビジネス、恋愛、筋トレ、外見、英語、自己規律。<br>
+        6つの領域を通して、自分自身を高め続けるコミュニティです。
+      </p>
+
+    </div>
+
+
+    <!-- CAPACITY -->
+
+    <div class="focus-capacity">
+
+      <div class="focus-capacity-top">
+
+        <div class="focus-capacity-current">
+
+          <span class="focus-capacity-current-label">
+            CURRENT MEMBERS
+          </span>
+
+          <div class="focus-capacity-current-value">
+
+            <strong id="focusMemberCount">
+              470
+            </strong>
+
+            <span>
+              名以上
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="focus-capacity-limit">
+
+          <span class="focus-capacity-limit-label">
+            MEMBER LIMIT
+          </span>
+
+          <div class="focus-capacity-limit-value">
+            500
+            <small>名</small>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="focus-progress"
+        aria-hidden="true"
+      >
+
+        <span
+          class="focus-progress-fill"
+          id="focusProgressFill"
+        ></span>
+
+      </div>
+
+
+      <div class="focus-remaining">
+
+        <span class="focus-remaining-copy">
+          現在の募集枠
+        </span>
+
+        <span class="focus-remaining-number">
+
+          <span>
+            残り
+          </span>
+
+          <strong id="focusRemainingCount">
+            30
+          </strong>
+
+          <small>
+            名
+          </small>
+
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- PRICE -->
+
+    <div class="focus-price-area">
+
+      <div class="focus-regular-price">
+
+        <span class="focus-regular-label">
+          通常
+        </span>
+
+        <strong class="focus-regular-value">
+          9,980
+        </strong>
+
+        <span class="focus-regular-yen">
+          円/月
+        </span>
+
+      </div>
+
+
+      <div class="focus-special-label">
+        今だけの参加価格
+      </div>
+
+
+      <div class="focus-current-price">
+
+        <strong>
+          4,980
+        </strong>
+
+        <span>
+          円
+        </span>
+
+      </div>
+
+
+      <div class="focus-price-month">
+        月額・税込
+      </div>
+
+    </div>
+
+
+    <!-- CTA -->
+
+    <div class="focus-action">
+
+      <div
+        class="focus-button-glow"
+        aria-hidden="true"
+      ></div>
+
+      <a
+        href="#focusDiscord"
+        class="focus-button"
+      >
+
+        <span
+          class="focus-button-shine"
+          aria-hidden="true"
+        ></span>
+
+        <span class="focus-button-mark">
+          F
+        </span>
+
+        <span class="focus-button-text">
+
+          <strong>
+            今すぐFOCUSに参加する
+          </strong>
+
+          <small>
+            JOIN THE COMMUNITY
+          </small>
+
+        </span>
+
+        <span class="focus-button-arrow">
+
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              d="m9 5 7 7-7 7"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+
+        </span>
+
+      </a>
+
+      <p class="focus-cancel">
+        いつでも解約できます。
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ==================================================
+     MESSAGE
+================================================== -->
+
+<section class="focus-message">
+
+  <div class="focus-message-inner focus-reveal">
+
+    <div class="focus-message-label">
+      WHY FOCUS
+    </div>
+
+    <h2 class="focus-message-title">
+
+      一人で変わろうと<br>
+
+      するのではなく、<br>
+
+      <span>
+        変わる環境に入る。
+      </span>
+
+    </h2>
+
+    <p class="focus-message-description">
+      同じように自分を高めようとしている人がいる。
+      行動し、学び、挑戦し続ける人がいる。
+      FOCUSは、そんな人間と共に前へ進むための環境です。
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ==================================================
+     24H ENVIRONMENT
+================================================== -->
+
+<section class="focus-environment">
+
+  <div class="focus-environment-inner focus-reveal">
+
+    <div class="focus-environment-top">
+
+      <span class="focus-online-dot"></span>
+
+      <span>
+        FOCUS COMMUNITY / ALWAYS OPEN
+      </span>
+
+    </div>
+
+    <div class="focus-environment-line"></div>
+
+    <h2 class="focus-environment-title">
+
+      24時間、<br>
+
+      <span>
+        高め合える環境へ。
+      </span>
+
+    </h2>
+
+    <p class="focus-environment-copy">
+      場所も時間も関係なく、FOCUSのメンバーとつながり、
+      学び、共有し、前へ進めます。
+    </p>
+
+    <a
+      href="#focusDiscord"
+      class="focus-environment-button"
+    >
+
+      <span>
+        FOCUSに参加する
+      </span>
+
+      <svg
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path
+          d="m9 5 7 7-7 7"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ==================================================
+     DISCORD CONNECTION
+================================================== -->
+
+<section id="focusDiscord">
+
+  <div class="focus-discord-inner focus-reveal">
+
+
+    <div
+      class="focus-discord-mark"
+      aria-hidden="true"
+    ></div>
+
+
+    <p class="focus-discord-eyebrow">
+      FOCUS COMMUNITY
+    </p>
+
+
+    <h2 class="focus-discord-title">
+
+      FOCUSへの参加は、<br>
+
+      <span>
+        Discordから。
+      </span>
+
+    </h2>
+
+
+    <p class="focus-discord-description">
+      下のボタンからFOCUSのDiscordへ進み、<br>
+      コミュニティへの参加を完了してください。
+    </p>
+
+
+    <div class="focus-discord-action">
+
+      <a
+        href="https://discord.com/invite/e27f5wKu6z"
+        class="focus-discord-button"
+        id="focusDiscordOpen"
+      >
+
+        <span class="focus-discord-button-icon">
+
+          <svg viewBox="0 0 24 24">
+
+            <path
+              fill="currentColor"
+              d="M19.54 5.34A16.3 16.3 0 0 0 15.44 4l-.5 1.02a15.1 15.1 0 0 0-5.87 0L8.55 4a16.5 16.5 0 0 0-4.1 1.35C1.85 9.2 1.15 12.95 1.5 16.65a16.6 16.6 0 0 0 5.03 2.53l1.21-1.66a10.2 10.2 0 0 1-1.9-.92l.46-.36c3.67 1.7 7.65 1.7 11.28 0l.47.36c-.61.36-1.25.67-1.91.92l1.21 1.66a16.7 16.7 0 0 0 5.04-2.53c.41-4.29-.7-8-2.85-11.31ZM8.52 14.4c-1.1 0-2-1.02-2-2.27s.88-2.28 2-2.28c1.13 0 2.02 1.03 2 2.28 0 1.25-.89 2.27-2 2.27Zm6.97 0c-1.1 0-2-1.02-2-2.27s.88-2.28 2-2.28c1.13 0 2.02 1.03 2 2.28 0 1.25-.87 2.27-2 2.27Z"
+            />
+
+          </svg>
+
+        </span>
+
+
+        <span>
+          DiscordでFOCUSに参加
+        </span>
+
+
+        <span class="focus-discord-button-arrow">
+
+          <svg viewBox="0 0 24 24">
+
+            <path
+              d="m9 5 7 7-7 7"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+
+          </svg>
+
+        </span>
+
+      </a>
+
+    </div>
+
+
+    <p class="focus-discord-note">
+      ボタンを押すとDiscordの招待画面へ移動します。
+    </p>
+
+  </div>
+
+</section>
+
+
+</div>
 
 
 <script>
-(()=>{
-  const ROOT_ID =
-    'focusJoinConnectedV1';
 
-  const PRICE_SECTION_ID =
-    'focusJoinPriceV1';
-
-  const COUNT_ID =
-    'focusJoinMemberCountV1';
-
-  const BOTTOM_COUNT_ID =
-    'focusJoinBottomCountV1';
-
-  const PROGRESS_ID =
-    'focusJoinMemberProgressV1';
-
-  const STORAGE_KEY =
-    'focusJoinMemberCountCacheV1';
-
-  const UPDATE_INTERVAL =
-    300000;
-
-  const REQUEST_TIMEOUT =
-    8000;
-
+(function(){
 
   /* ==================================================
-     ELEMENTS
+     MEMBER LIMIT
   ================================================== */
 
-  const getRoot=()=>{
-    return document.getElementById(
-      ROOT_ID
+  var memberCount = 470;
+  var memberLimit = 500;
+
+  var memberElement =
+    document.getElementById(
+      'focusMemberCount'
     );
-  };
 
-
-  const getPriceSection=()=>{
-    return document.getElementById(
-      PRICE_SECTION_ID
+  var remainingElement =
+    document.getElementById(
+      'focusRemainingCount'
     );
-  };
 
-
-  const getCountElement=()=>{
-    return document.getElementById(
-      COUNT_ID
+  var progressElement =
+    document.getElementById(
+      'focusProgressFill'
     );
-  };
 
 
-  const getBottomCountElement=()=>{
-    return document.getElementById(
-      BOTTOM_COUNT_ID
-    );
-  };
+  function updateMembers(){
 
-
-  const getProgressElement=()=>{
-    return document.getElementById(
-      PROGRESS_ID
-    );
-  };
-
-
-  /* ==================================================
-     MEMBER DATA
-  ================================================== */
-
-  const getMemberLimit=()=>{
-    const section=
-      getPriceSection();
-
-    if(!section){
-      return 500;
-    }
-
-    const value=
-      parseInt(
-        section.dataset.memberLimit,
-        10
+    var safeCount =
+      Math.max(
+        0,
+        Math.floor(memberCount)
       );
 
-    return Number.isFinite(value)
-      ? value
-      : 500;
-  };
-
-
-  const getDefaultMemberCount=()=>{
-    const section=
-      getPriceSection();
-
-    if(!section){
-      return 470;
-    }
-
-    const value=
-      parseInt(
-        section.dataset.defaultMemberCount,
-        10
+    var remaining =
+      Math.max(
+        0,
+        memberLimit - safeCount
       );
 
-    return Number.isFinite(value)
-      ? value
-      : 470;
-  };
-
-
-  const formatMemberCount=(value)=>{
-    return Math.max(
-      0,
-      Math.floor(value)
-    ).toLocaleString(
-      'ja-JP'
-    );
-  };
-
-
-  const updateProgress=(memberCount)=>{
-
-    const progress=
-      getProgressElement();
-
-    if(!progress){
-      return;
-    }
-
-    const memberLimit=
-      getMemberLimit();
-
-    const percent=
+    var percentage =
       Math.min(
         100,
         Math.max(
           0,
-          memberCount /
+          safeCount /
           memberLimit *
           100
         )
       );
 
-    requestAnimationFrame(
-      ()=>{
-        progress.style.width=
-          percent + '%';
+
+    if(memberElement){
+
+      memberElement.textContent =
+        safeCount.toLocaleString(
+          'ja-JP'
+        );
+
+    }
+
+
+    if(remainingElement){
+
+      remainingElement.textContent =
+        remaining.toLocaleString(
+          'ja-JP'
+        );
+
+    }
+
+
+    if(progressElement){
+
+      progressElement.style.width =
+        percentage + '%';
+
+    }
+
+  }
+
+
+  updateMembers();
+
+
+  /* ==================================================
+     FADE
+  ================================================== */
+
+  var revealElements =
+    document.querySelectorAll(
+      '#focusJoinPage .focus-reveal'
+    );
+
+
+  if(
+    !(
+      'IntersectionObserver'
+      in window
+    )
+  ){
+
+    revealElements.forEach(
+      function(element){
+
+        element.classList.add(
+          'show'
+        );
+
       }
     );
 
-  };
+    return;
 
+  }
 
-  const renderMemberCount=(
-    memberCount
-  )=>{
 
-    const formatted=
-      formatMemberCount(
-        memberCount
-      );
+  var observer =
+    new IntersectionObserver(
+      function(entries){
 
-    const count=
-      getCountElement();
+        entries.forEach(
+          function(entry){
 
-    const bottomCount=
-      getBottomCountElement();
-
-    if(count){
-      count.textContent=
-        formatted;
-    }
-
-    if(bottomCount){
-      bottomCount.textContent=
-        formatted;
-    }
-
-    updateProgress(
-      memberCount
-    );
-
-  };
-
-
-  /* ==================================================
-     CACHE
-  ================================================== */
-
-  const saveCache=(memberCount)=>{
-
-    try{
-
-      localStorage.setItem(
-        STORAGE_KEY,
-        JSON.stringify({
-          memberCount:
-            memberCount,
-          savedAt:
-            Date.now()
-        })
-      );
-
-    }catch(error){
-
-      console.warn(
-        'FOCUS member count cache error',
-        error
-      );
-
-    }
-
-  };
-
-
-  const loadCache=()=>{
-
-    try{
-
-      const raw=
-        localStorage.getItem(
-          STORAGE_KEY
-        );
-
-      if(!raw){
-        return false;
-      }
-
-      const data=
-        JSON.parse(raw);
-
-      if(
-        typeof data.memberCount
-          !== 'number' ||
-        !Number.isFinite(
-          data.memberCount
-        )
-      ){
-        return false;
-      }
-
-      renderMemberCount(
-        data.memberCount
-      );
-
-      return true;
-
-    }catch(error){
-
-      return false;
-
-    }
-
-  };
-
-
-  /* ==================================================
-     FETCH
-  ================================================== */
-
-  const fetchWithTimeout=
-    async(
-      url,
-      timeout
-    )=>{
-
-      const controller=
-        new AbortController();
-
-      const timeoutId=
-        setTimeout(
-          ()=>{
-            controller.abort();
-          },
-          timeout
-        );
-
-      const separator=
-        url.includes('?')
-          ? '&'
-          : '?';
-
-      const freshUrl=
-        url +
-        separator +
-        '_=' +
-        Date.now();
-
-      try{
-
-        return await fetch(
-          freshUrl,
-          {
-            method:'GET',
-            mode:'cors',
-            cache:'no-store',
-            headers:{
-              Accept:
-                'application/json'
-            },
-            signal:
-              controller.signal
-          }
-        );
-
-      }finally{
-
-        clearTimeout(
-          timeoutId
-        );
-
-      }
-
-    };
-
-
-  const updateMemberCount=
-    async()=>{
-
-      const section=
-        getPriceSection();
-
-      if(!section){
-        return;
-      }
-
-      const apiUrl=
-        section.dataset.memberCountApi;
-
-      /*
-        API未設定の場合は
-        Liquidの470名を使用
-      */
-
-      if(!apiUrl){
-
-        renderMemberCount(
-          getDefaultMemberCount()
-        );
-
-        return;
-
-      }
-
-
-      if(
-        window
-          .focusJoinMemberRequestRunningV1
-      ){
-        return;
-      }
-
-      window
-        .focusJoinMemberRequestRunningV1=
-          true;
-
-
-      try{
-
-        const response=
-          await fetchWithTimeout(
-            apiUrl,
-            REQUEST_TIMEOUT
-          );
-
-        if(!response.ok){
-
-          throw new Error(
-            'FOCUS member request failed'
-          );
-
-        }
-
-        const data=
-          await response.json();
-
-
-        if(
-          typeof data.memberCount
-            !== 'number' ||
-          !Number.isFinite(
-            data.memberCount
-          )
-        ){
-
-          throw new Error(
-            'Invalid FOCUS member count'
-          );
-
-        }
-
-
-        const memberCount=
-          Math.max(
-            0,
-            Math.floor(
-              data.memberCount
-            )
-          );
-
-
-        renderMemberCount(
-          memberCount
-        );
-
-        saveCache(
-          memberCount
-        );
-
-
-      }catch(error){
-
-        console.warn(
-          'FOCUS member count could not be loaded.',
-          error
-        );
-
-      }finally{
-
-        window
-          .focusJoinMemberRequestRunningV1=
-            false;
-
-      }
-
-    };
-
-
-  /* ==================================================
-     REVEAL
-  ================================================== */
-
-  const initReveal=()=>{
-
-    const root=
-      getRoot();
-
-    if(!root){
-      return;
-    }
-
-    const elements=
-      root.querySelectorAll(
-        '.focus-join-reveal'
-      );
-
-
-    if(
-      !(
-        'IntersectionObserver'
-        in window
-      )
-    ){
-
-      elements.forEach(
-        element=>{
-          element.classList.add(
-            'show'
-          );
-        }
-      );
-
-      return;
-
-    }
-
-
-    const observer=
-      new IntersectionObserver(
-        entries=>{
-
-          entries.forEach(
-            entry=>{
-
-              if(
-                !entry.isIntersecting
-              ){
-                return;
-              }
+            if(
+              entry.isIntersecting
+            ){
 
               entry.target
                 .classList
@@ -3447,275 +2707,33 @@ IMPORTANT
               );
 
             }
-          );
-
-        },
-        {
-          threshold:.12,
-          rootMargin:
-            '0px 0px -4% 0px'
-        }
-      );
-
-
-    elements.forEach(
-      element=>{
-
-        if(
-          !element.classList
-            .contains(
-              'show'
-            )
-        ){
-
-          observer.observe(
-            element
-          );
-
-        }
-
-      }
-    );
-
-  };
-
-
-  /* ==================================================
-     SCROLL RESTORE
-  ================================================== */
-
-  const initScrollRestore=()=>{
-
-    const root=
-      getRoot();
-
-    if(!root){
-      return;
-    }
-
-    const links=
-      root.querySelectorAll(
-        'a[href]'
-      );
-
-    const SCROLL_KEY=
-      'focusJoinScrollRestoreV1';
-
-    const FLAG_KEY=
-      'focusJoinShouldRestoreV1';
-
-
-    links.forEach(
-      link=>{
-
-        link.addEventListener(
-          'click',
-          ()=>{
-
-            sessionStorage.setItem(
-              SCROLL_KEY,
-              String(
-                window.scrollY ||
-                window.pageYOffset ||
-                0
-              )
-            );
-
-            sessionStorage.setItem(
-              FLAG_KEY,
-              '1'
-            );
 
           }
         );
 
-      }
-    );
-
-
-    if(
-      !window
-        .focusJoinPageShowBoundV1
-    ){
-
-      window.addEventListener(
-        'pageshow',
-        event=>{
-
-          const shouldRestore=
-            sessionStorage.getItem(
-              FLAG_KEY
-            ) === '1';
-
-          const saved=
-            sessionStorage.getItem(
-              SCROLL_KEY
-            );
-
-
-          if(
-            event.persisted &&
-            shouldRestore &&
-            saved !== null
-          ){
-
-            const y=
-              parseInt(
-                saved,
-                10
-              ) || 0;
-
-
-            requestAnimationFrame(
-              ()=>{
-                window.scrollTo(
-                  0,
-                  y
-                );
-              }
-            );
-
-
-            setTimeout(
-              ()=>{
-                window.scrollTo(
-                  0,
-                  y
-                );
-              },
-              80
-            );
-
-
-            setTimeout(
-              ()=>{
-
-                window.scrollTo(
-                  0,
-                  y
-                );
-
-                sessionStorage
-                  .removeItem(
-                    SCROLL_KEY
-                  );
-
-                sessionStorage
-                  .removeItem(
-                    FLAG_KEY
-                  );
-
-              },
-              220
-            );
-
-          }
-
-        }
-      );
-
-
-      window
-        .focusJoinPageShowBoundV1=
-          true;
-
-    }
-
-  };
-
-
-  /* ==================================================
-     INIT
-  ================================================== */
-
-  const init=()=>{
-
-    const root=
-      getRoot();
-
-    if(!root){
-      return;
-    }
-
-
-    initReveal();
-
-    initScrollRestore();
-
-
-    const cacheLoaded=
-      loadCache();
-
-
-    if(!cacheLoaded){
-
-      renderMemberCount(
-        getDefaultMemberCount()
-      );
-
-    }
-
-
-    updateMemberCount();
-
-
-    if(
-      window
-        .focusJoinMemberTimerV1
-    ){
-
-      clearInterval(
-        window
-          .focusJoinMemberTimerV1
-      );
-
-    }
-
-
-    window
-      .focusJoinMemberTimerV1=
-        setInterval(
-          ()=>{
-
-            if(
-              document.hidden
-            ){
-              return;
-            }
-
-            updateMemberCount();
-
-          },
-          UPDATE_INTERVAL
-        );
-
-  };
-
-
-  if(
-    document.readyState
-      === 'loading'
-  ){
-
-    document.addEventListener(
-      'DOMContentLoaded',
-      init,
+      },
       {
-        once:true
+        threshold:.12,
+        rootMargin:
+          '0px 0px -3% 0px'
       }
     );
 
-  }else{
 
-    init();
+  revealElements.forEach(
+    function(element){
 
-  }
+      observer.observe(
+        element
+      );
 
-
-  document.addEventListener(
-    'shopify:section:load',
-    init
+    }
   );
 
+
 })();
+
 </script>
+
+</body>
+</html>
