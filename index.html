@@ -1,1287 +1,2315 @@
 {% comment %}
 ==================================================
 FOCUS COMMUNITY
-MEMBER VOICES / REAL CHANGES
+JOIN / PRICE / CAPACITY SECTION
+
 Shopify Custom Liquid
 
-・参考画像準拠
-・470名以上 表示なし
-・右上 FOCUS 表示なし
-・冒頭：
-  FOCUSに参加した、
-  メンバーのリアルな声。
-・20件のコメントはそのまま
-・停止せず常に横方向へゆっくり流れる
-・縦スクロールを妨げない
-・指で自由に横スクロール可能
-・慣性スクロール対応
-・PCマウスドラッグ対応
-・右矢印 / ドット操作対応
-・スマホ / PC対応
-・下部余白なし
+DESIGN
+・FOCUS LP 黒 × 白 × 青紫
+・Discord感は前面に出さない
+・FOCUSという「環境」への参加を訴求
+・月額 2,980円
+・470+ MEMBERS
+・定員制 / 進捗表示
+・CTA → Discord参加ページ
+・スクロールフェード
+・常時上品な光 / グラデーションエフェクト
+・PC / TABLET / MOBILE
+
+IMPORTANT
+・focus_join_url をFOCUS用Discord参加ページへ変更
+・focus_member_count_api がある場合のみURLを設定
 ==================================================
 {% endcomment %}
 
 
-{% capture focusVoiceComment01 %}
-日本で七年ほど栄養士として働き、その後海外で暮らしています。歳を重ね甲状腺や関節炎などの問題と長年付き合って来ました。特に関節炎の痛みは大変なもので、この先の暮らしが不安でしかありませんでした。そんな中でCarnivore dietと出会いました。初めは兎に角驚きで信じ難いものでしたが、数多くのポジティブな経験談を聞いてから、まずは普段の食事にお肉を多く取り入れるようにしました。たったそれだけの事でしたが、身体の浮腫が消え頭が冴え、体調が良くなるのを実感しました。それから徐々に炭水化物や野菜を減らしていきました。わずか2週間足らずで関節炎の痛みが大分軽減されました。これまで指に巻いていたテーピングも必要ないくらい、痛くて弾けなくなったピアノも再開出来るようになりました。完全なCarnivoreまでは移行出来ていませんが、一ヶ月程度で、これだけのポジティブな成果を体感しています。気がついたら出来ていたもう一年くらいになる頑固な水ぶくれも、気がついたら平らになっていました。息子の酷い花粉症も全く症状が出ていません。これまでの理想と言われて来た食生活は何だったのか？本当に驚きでしかありません。Carnivore dietはこれからも継続していきますし、これからの変化と将来が楽しみでなりません。そしてネオさんの活動を心から応援しています。
-{% endcapture %}
+{% assign focus_join_url = "https://neocarnivore.github.io/Discord/" %}
 
-{% capture focusVoiceComment02 %}
-ねおさんの仰る通り、カーニボアメニューにしてからは体にエネルギーが満ち溢れているのを感じる。色々なことがプラスに転じているので、今後さらに楽しみです。
-{% endcapture %}
+{% assign focus_monthly_price = "2,980" %}
 
-{% capture focusVoiceComment03 %}
-カーニボア4ヶ月目だけど、肌がくっそ綺麗になった最高
-{% endcapture %}
+{% assign focus_member_count = 470 %}
 
-{% capture focusVoiceComment04 %}
-野菜中心の生活にしたらどんどん調子が悪くなっていって、肉食に切り替えたら毎日元気です。
-{% endcapture %}
+{% assign focus_member_limit = 500 %}
 
-{% capture focusVoiceComment05 %}
-頭の回転が目に見えて早くなっている実感があります。今までは、話す前にある程度文章を組み立てていたのですが、今ではそんなことをしなくてもスラスラと言葉が出てくるようになりました。これから起こる身体面や精神面の変化が楽しみで仕方がありません。
-{% endcapture %}
-
-{% capture focusVoiceComment06 %}
-肉食3日目だけど、まず寝起きが全然違う。5時間睡眠いつもならくっそ眠いのに、スッキリ起きれて、明らかな体感差に正直驚いた。人と喋るときの頭の回転も全然違う。米を食べていたときはむしる不調だったことに気がついた。
-{% endcapture %}
-
-{% capture focusVoiceComment07 %}
-スポーツも全然できる
-{% endcapture %}
-
-{% capture focusVoiceComment08 %}
-ねおくんの言うとおりでカーニボアしてても筋トレパフォーマンスは下がるどころかむしろ上がるよ<br>
-俺の場合だけどカーニボアを始める前の体重が105kgでベンチプレス130kg<br>
-カーニボアを初めて1年経って80kgまで減量してベンチ100kgに下がったけど<br>
-ケトーシスに適応してから体重を維持しながらベンチ120kg上がるようになった<br>
-個人的に食事は1日1回で運動前は何も食べてない<br>
-運動後1時間半あけてから1日分の食事を摂取してる
-{% endcapture %}
-
-{% capture focusVoiceComment09 %}
-肉食生活してたらニキビ出なくなったのに久しぶりに米食った次の日にニキビできたから確実に毒だわ
-{% endcapture %}
-
-{% capture focusVoiceComment10 %}
-高一でカーニボア三ヶ月間実践していますが、とっても調子がいいです。！
-{% endcapture %}
-
-{% capture focusVoiceComment11 %}
-彼女と同タイミングでカーニボア始めて、たまにどちらかが1週間くらい炭水化物食になるんですけどカーニボアの時はほぼ完全に無臭 炭水化物食べた時は明らかにめっちゃ臭くなります😂<br>
-匂いの判断は一人だと分かりにくいですよね
-{% endcapture %}
-
-{% capture focusVoiceComment12 %}
-今年の花粉の時期は大分症状が抑えられ快適に過ごせました<br>
-以前はマスクして鼻をティッシュで塞いでました<br>
-今年はノーマスクで過ごせてた
-{% endcapture %}
-
-{% capture focusVoiceComment13 %}
-マジでニキビ治った、4ヶ月目くらい。
-{% endcapture %}
-
-{% capture focusVoiceComment14 %}
-肉食移行して4週間目だけどマジで肌綺麗になった。最高
-{% endcapture %}
-
-{% capture focusVoiceComment15 %}
-ADHDだけど肉食してから不注意がマシになった。理解力、判断力もついた
-{% endcapture %}
-
-{% capture focusVoiceComment16 %}
-カーボニアで筋トレしてるけど前より<br>
-むしろ筋肉つきやすいかも。
-{% endcapture %}
-
-{% capture focusVoiceComment17 %}
-肉食に移行して2カ月経ちましたが代謝が大分良くなりました<br>
-おっさんなので暴飲暴食で身体にガタがつき始めていた頃だったので大分元気です😊
-{% endcapture %}
-
-{% capture focusVoiceComment18 %}
-食物繊維をどれたけ沢山摂取しても腸の炎症は悪化するだけで、糖質をそもそも摂らない生活をしたら腸の不調そのものが解決したから毒で間違いない
-{% endcapture %}
-
-{% capture focusVoiceComment19 %}
-野菜たくさん食べるようにしたら体調がイマイチになったけど、なんか納得した
-{% endcapture %}
-
-{% capture focusVoiceComment20 %}
-最近調味料とヨーグルトのトッピングのブルーベリー以外を肉食にしたら肌がめっちゃ綺麗になった
-{% endcapture %}
+{% assign focus_member_count_api = "" %}
 
 
-<section id="focusMemberVoicesV1">
+<div id="focusJoinConnectedV1">
 
-  <div class="focus-voices-inner">
+  <!-- ==================================================
+       PRICE / JOIN
+  ================================================== -->
 
-    <!-- ==============================
-         INTRO
-    ============================== -->
+  <section
+    id="focusJoinPriceV1"
+    data-member-count-api="{{ focus_member_count_api }}"
+    data-default-member-count="{{ focus_member_count }}"
+    data-member-limit="{{ focus_member_limit }}"
+  >
 
-    <div class="focus-voices-intro focus-voices-reveal">
+    <div class="focus-join-price__ambient" aria-hidden="true">
+      <span class="focus-join-price__ambient-one"></span>
+      <span class="focus-join-price__ambient-two"></span>
+    </div>
 
-      <div class="focus-voices-kicker">
 
-        <span class="focus-voices-kicker-dot"></span>
+    <div class="focus-join-price__wrap focus-join-reveal">
 
-        <span>REAL MEMBER VOICES</span>
+      <!-- TOP META -->
 
-        <i></i>
+      <div class="focus-join-price__meta">
+
+        <div class="focus-join-price__meta-left">
+          <span class="focus-join-price__live-dot"></span>
+
+          <span>
+            FOCUS MEMBERSHIP
+          </span>
+        </div>
+
+        <span class="focus-join-price__meta-right">
+          SELF DEVELOPMENT COMMUNITY
+        </span>
 
       </div>
 
 
-      <h2 class="focus-voices-title">
+      <!-- MAIN -->
 
-        <span class="focus-voices-title-first">
-          FOCUSに参加した、
-        </span>
+      <div class="focus-join-price__main">
 
-        <span class="focus-voices-title-second">
-          メンバーの
-          <strong>リアルな声。</strong>
-        </span>
+        <!-- COPY -->
 
-      </h2>
+        <div class="focus-join-price__copy">
 
-    </div>
+          <p class="focus-join-price__eyebrow">
+            CHANGE YOURSELF. CHANGE YOUR LIFE.
+          </p>
 
+          <h2 class="focus-join-price__title">
 
-    <!-- ==============================
-         SLIDER HEADER
-    ============================== -->
+            本気で変わるための、<br>
 
-    <div class="focus-voices-slider-head focus-voices-reveal">
+            <span>
+              環境に入る。
+            </span>
 
-      <div class="focus-voices-slider-label">
+          </h2>
 
-        <span>MEMBER STORIES</span>
-
-        <i></i>
-
-        <strong>01 — 20</strong>
-
-      </div>
-
-      <button
-        class="focus-voices-arrow"
-        type="button"
-        aria-label="次のコメントへ"
-      >
-
-        <span class="focus-voices-arrow-glow"></span>
-
-        <svg
-          viewBox="0 0 52 34"
-          fill="none"
-          aria-hidden="true"
-        >
-
-          <path
-            d="M4 17H44"
-            stroke="currentColor"
-            stroke-width="3"
-            stroke-linecap="round"
-          />
-
-          <path
-            d="M33 5L45 17L33 29"
-            stroke="currentColor"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-
-        </svg>
-
-      </button>
-
-    </div>
+          <p class="focus-join-price__description">
+            ビジネス、恋愛、身体、外見、英語、自己規律。<br>
+            人生を変える6つの領域を、FOCUSで。
+          </p>
 
 
-    <!-- ==============================
-         SLIDER
-    ============================== -->
+          <div class="focus-join-price__areas">
 
-    <div
-      class="focus-voices-slider focus-voices-reveal"
-      aria-roledescription="carousel"
-    >
+            <span>BUSINESS</span>
+            <span>LOVE</span>
+            <span>BODY</span>
+            <span>APPEARANCE</span>
+            <span>ENGLISH</span>
+            <span>DISCIPLINE</span>
 
-      <div class="focus-voices-viewport">
+          </div>
 
-        <div class="focus-voices-track">
+        </div>
 
-          {% for i in (1..20) %}
 
-            {% case i %}
-              {% when 1 %}
-                {% assign current_comment = focusVoiceComment01 %}
-              {% when 2 %}
-                {% assign current_comment = focusVoiceComment02 %}
-              {% when 3 %}
-                {% assign current_comment = focusVoiceComment03 %}
-              {% when 4 %}
-                {% assign current_comment = focusVoiceComment04 %}
-              {% when 5 %}
-                {% assign current_comment = focusVoiceComment05 %}
-              {% when 6 %}
-                {% assign current_comment = focusVoiceComment06 %}
-              {% when 7 %}
-                {% assign current_comment = focusVoiceComment07 %}
-              {% when 8 %}
-                {% assign current_comment = focusVoiceComment08 %}
-              {% when 9 %}
-                {% assign current_comment = focusVoiceComment09 %}
-              {% when 10 %}
-                {% assign current_comment = focusVoiceComment10 %}
-              {% when 11 %}
-                {% assign current_comment = focusVoiceComment11 %}
-              {% when 12 %}
-                {% assign current_comment = focusVoiceComment12 %}
-              {% when 13 %}
-                {% assign current_comment = focusVoiceComment13 %}
-              {% when 14 %}
-                {% assign current_comment = focusVoiceComment14 %}
-              {% when 15 %}
-                {% assign current_comment = focusVoiceComment15 %}
-              {% when 16 %}
-                {% assign current_comment = focusVoiceComment16 %}
-              {% when 17 %}
-                {% assign current_comment = focusVoiceComment17 %}
-              {% when 18 %}
-                {% assign current_comment = focusVoiceComment18 %}
-              {% when 19 %}
-                {% assign current_comment = focusVoiceComment19 %}
-              {% when 20 %}
-                {% assign current_comment = focusVoiceComment20 %}
-            {% endcase %}
+        <!-- PRICE -->
 
-            <div
-              class="focus-voices-slide"
-              data-real-index="{{ i | minus: 1 }}"
-              aria-label="{{ i }}件目のメンバーの声"
-            >
+        <div class="focus-join-price__pricing">
 
-              <article class="focus-voices-card">
+          <p class="focus-join-price__pricing-label">
+            MONTHLY MEMBERSHIP
+          </p>
 
-                <div class="focus-voices-card-top">
+          <div class="focus-join-price__price">
 
-                  <span>
-                    FOCUS MEMBER
-                  </span>
+            <span class="focus-join-price__yen">
+              ¥
+            </span>
 
-                  <span>
-                    {{ i | prepend: '0' | slice: -2, 2 }}
-                  </span>
+            <strong>
+              {{ focus_monthly_price }}
+            </strong>
 
-                </div>
+            <span class="focus-join-price__month">
+              / 月
+            </span>
 
-                <div class="focus-voices-card-line"></div>
+          </div>
 
-                <span
-                  class="focus-voices-quote focus-voices-quote-open"
-                  aria-hidden="true"
-                >
-                  “
+          <p class="focus-join-price__tax">
+            税込
+          </p>
+
+
+          <!-- MEMBERS -->
+
+          <div class="focus-join-price__members">
+
+            <div class="focus-join-price__members-top">
+
+              <div class="focus-join-price__members-current">
+
+                <span class="focus-join-price__members-label">
+                  CURRENT MEMBERS
                 </span>
 
-                <div class="focus-voices-comment">
+                <div>
 
-                  <p>
-                    {{ current_comment }}
-                  </p>
+                  <strong id="focusJoinMemberCountV1">
+                    {{ focus_member_count }}
+                  </strong>
+
+                  <span>
+                    +
+                  </span>
 
                 </div>
 
-                <span
-                  class="focus-voices-quote focus-voices-quote-close"
-                  aria-hidden="true"
-                >
-                  ”
+              </div>
+
+
+              <div class="focus-join-price__members-limit">
+
+                <span>
+                  LIMIT
                 </span>
 
-                <div class="focus-voices-card-bottom">
+                <strong>
+                  {{ focus_member_limit }}
+                </strong>
 
-                  <span class="focus-voices-card-dot"></span>
-
-                  <span>
-                    REAL VOICE
-                  </span>
-
-                  <i></i>
-
-                  <span>
-                    BUILD YOURSELF.
-                  </span>
-
-                </div>
-
-              </article>
+              </div>
 
             </div>
 
-          {% endfor %}
+
+            <div
+              class="focus-join-price__progress"
+              aria-hidden="true"
+            >
+
+              <span
+                id="focusJoinMemberProgressV1"
+                class="focus-join-price__progress-fill"
+              ></span>
+
+            </div>
+
+
+            <div class="focus-join-price__capacity-copy">
+
+              <span class="focus-join-price__capacity-dot"></span>
+
+              <span>
+                現在、参加枠を限定して募集しています。
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- CTA -->
+
+        <div class="focus-join-price__action">
+
+          <div class="focus-join-price__cta-glow" aria-hidden="true"></div>
+
+          <a
+            href="{{ focus_join_url }}"
+            class="focus-join-price__button"
+            id="focusJoinButtonV1"
+          >
+
+            <span
+              class="focus-join-price__button-shine"
+              aria-hidden="true"
+            ></span>
+
+            <span class="focus-join-price__button-content">
+
+              <span class="focus-join-price__button-copy">
+
+                <small>
+                  START YOUR CHANGE
+                </small>
+
+                <strong>
+                  FOCUSに参加する
+                </strong>
+
+              </span>
+
+
+              <span
+                class="focus-join-price__button-arrow"
+                aria-hidden="true"
+              >
+
+                <svg viewBox="0 0 24 24">
+
+                  <path
+                    d="m9 5 7 7-7 7"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+
+                </svg>
+
+              </span>
+
+            </span>
+
+          </a>
+
+
+          <div class="focus-join-price__action-meta">
+
+            <span>
+              いつでも解約できます
+            </span>
+
+            <i></i>
+
+            <span>
+              24H ACCESS
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================================================
+       NEXT MESSAGE
+  ================================================== -->
+
+  <section id="focusJoinMessageV1">
+
+    <div class="focus-join-message__inner">
+
+      <div class="focus-join-message__line focus-join-reveal">
+        <span></span>
+      </div>
+
+
+      <div class="focus-join-message__content focus-join-reveal">
+
+        <p class="focus-join-message__eyebrow">
+          THE ENVIRONMENT CHANGES YOU
+        </p>
+
+
+        <h2>
+
+          一人で変わろうとする<br>
+          必要はありません。
+
+          <span class="focus-join-message__accent">
+
+            <span class="focus-join-message__accent-glow"></span>
+
+            <strong>
+              変わり続ける環境へ。
+            </strong>
+
+          </span>
+
+        </h2>
+
+
+        <p class="focus-join-message__description">
+          同じように自分を高めようとしている人間がいる。<br>
+          学び、行動し、共有し、また次へ進む。<br>
+          FOCUSは、そのための場所です。
+        </p>
+
+      </div>
+
+
+      <!-- ENVIRONMENT CARD -->
+
+      <div class="focus-join-environment focus-join-reveal">
+
+        <div class="focus-join-environment__glow"></div>
+
+
+        <div class="focus-join-environment__top">
+
+          <div>
+
+            <span class="focus-join-environment__status-dot"></span>
+
+            <span>
+              FOCUS / ACTIVE
+            </span>
+
+          </div>
+
+          <span>
+            24 HOURS
+          </span>
+
+        </div>
+
+
+        <div class="focus-join-environment__center">
+
+          <div class="focus-join-environment__brand">
+
+            <span>
+              SELF DEVELOPMENT
+            </span>
+
+            <strong>
+              FOCUS
+            </strong>
+
+            <small>
+              COMMUNITY
+            </small>
+
+          </div>
+
+
+          <div class="focus-join-environment__orbit" aria-hidden="true">
+
+            <span class="focus-join-environment__orbit-line"></span>
+
+            <span class="focus-join-environment__orbit-dot dot-one"></span>
+            <span class="focus-join-environment__orbit-dot dot-two"></span>
+            <span class="focus-join-environment__orbit-dot dot-three"></span>
+
+          </div>
+
+        </div>
+
+
+        <div class="focus-join-environment__areas">
+
+          <div>
+            <span>01</span>
+            <strong>BUSINESS</strong>
+          </div>
+
+          <div>
+            <span>02</span>
+            <strong>LOVE</strong>
+          </div>
+
+          <div>
+            <span>03</span>
+            <strong>BODY</strong>
+          </div>
+
+          <div>
+            <span>04</span>
+            <strong>APPEARANCE</strong>
+          </div>
+
+          <div>
+            <span>05</span>
+            <strong>ENGLISH</strong>
+          </div>
+
+          <div>
+            <span>06</span>
+            <strong>DISCIPLINE</strong>
+          </div>
+
+        </div>
+
+
+        <div class="focus-join-environment__bottom">
+
+          <span>
+            BUILD YOURSELF.
+          </span>
+
+          <i></i>
+
+          <span>
+            LIVE FREE.
+          </span>
 
         </div>
 
       </div>
 
 
-      <!-- ==============================
-           PAGINATION
-      ============================== -->
+      <!-- BOTTOM CTA -->
 
-      <div
-        class="focus-voices-pagination"
-        aria-label="コメントの表示位置"
-      >
+      <div class="focus-join-bottom focus-join-reveal">
 
-        {% for i in (1..20) %}
+        <p>
+          すでに
+          <strong>
+            <span id="focusJoinBottomCountV1">
+              {{ focus_member_count }}
+            </span>名以上
+          </strong>
+          のメンバーが、<br>
+          本気で変わるために集まっています。
+        </p>
 
-          <button
-            class="focus-voices-pagination-dot{% if i == 1 %} is-active{% endif %}"
-            type="button"
-            aria-label="{{ i }}件目のコメントを表示"
-            data-slide="{{ i | minus: 1 }}"
-          ></button>
 
-        {% endfor %}
+        <a
+          href="{{ focus_join_url }}"
+          class="focus-join-bottom__button"
+        >
+
+          <span>
+            FOCUSに参加する
+          </span>
+
+          <svg viewBox="0 0 24 24">
+
+            <path
+              d="m9 5 7 7-7 7"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+
+          </svg>
+
+        </a>
 
       </div>
 
     </div>
 
+  </section>
 
-    <!-- ==============================
-         NEXT SECTION BRIDGE
-    ============================== -->
+</div>
 
-    <div class="focus-voices-next focus-voices-reveal">
-
-      <span class="focus-voices-next-line"></span>
-
-      <p class="focus-voices-next-small">
-        さらに、
-      </p>
-
-      <p class="focus-voices-next-main">
-        参加するだけで、<strong>即</strong>
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
 
 
 <style>
 
 /* ==================================================
-   BASE
+   GLOBAL
 ================================================== */
 
-#focusMemberVoicesV1,
-#focusMemberVoicesV1 * {
-  box-sizing: border-box;
+#focusJoinConnectedV1,
+#focusJoinConnectedV1 *{
+  box-sizing:border-box;
 }
 
-#focusMemberVoicesV1 {
-  position: relative;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+#focusJoinConnectedV1{
+  width:100%;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+
+  color:#f7f7fb;
 
   background:
-    radial-gradient(
-      ellipse at 50% 46%,
-      rgba(111,99,220,.045),
-      transparent 42%
-    ),
-    #ffffff;
-
-  color: #0d0d0f;
+    #08080b;
 
   font-family:
     -apple-system,
     BlinkMacSystemFont,
     "Helvetica Neue",
     "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans",
     "Yu Gothic",
     YuGothic,
     Meiryo,
     sans-serif;
 }
 
-#focusMemberVoicesV1 .focus-voices-inner {
-  width: min(1000px,100%);
-  margin: 0 auto;
-  padding: 72px 20px 0;
+#focusJoinConnectedV1 a{
+  text-decoration:none;
+  -webkit-tap-highlight-color:transparent;
 }
 
 
 /* ==================================================
-   KICKER
+   PRICE SECTION
 ================================================== */
 
-#focusMemberVoicesV1 .focus-voices-kicker {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+#focusJoinPriceV1{
+  position:relative;
 
-  width: 100%;
-  margin-bottom: 40px;
+  width:100%;
 
-  color: rgba(20,20,25,.48);
+  padding:
+    70px
+    20px
+    130px;
 
-  font-size: 8px;
-  font-weight: 900;
-  letter-spacing: .22em;
+  overflow:hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 15%,
+      rgba(93,76,255,.15),
+      transparent 31%
+    ),
+    radial-gradient(
+      circle at 93% 70%,
+      rgba(74,48,255,.08),
+      transparent 27%
+    ),
+    #08080b;
 }
 
-#focusMemberVoicesV1 .focus-voices-kicker-dot {
-  flex: 0 0 auto;
 
-  width: 7px;
-  height: 7px;
+/* ambient */
 
-  border-radius: 50%;
+.focus-join-price__ambient{
+  position:absolute;
+  inset:0;
 
-  background: #7468dc;
+  pointer-events:none;
+}
+
+.focus-join-price__ambient-one{
+  position:absolute;
+
+  top:5%;
+  left:50%;
+
+  width:620px;
+  height:620px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(91,74,255,.12),
+      transparent 68%
+    );
+
+  filter:blur(20px);
+
+  transform:
+    translateX(-50%);
+
+  animation:
+    focusJoinAmbientOne
+    8s
+    ease-in-out
+    infinite;
+}
+
+.focus-join-price__ambient-two{
+  position:absolute;
+
+  right:-180px;
+  bottom:-200px;
+
+  width:500px;
+  height:500px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(121,91,255,.10),
+      transparent 68%
+    );
+
+  filter:blur(25px);
+
+  animation:
+    focusJoinAmbientTwo
+    10s
+    ease-in-out
+    infinite;
+}
+
+
+/* outer */
+
+.focus-join-price__wrap{
+  position:relative;
+  z-index:2;
+
+  width:min(100%,1180px);
+
+  margin:0 auto;
+
+  padding:1px;
+
+  border-radius:34px;
+
+  background:
+    linear-gradient(
+      125deg,
+      rgba(255,255,255,.19),
+      rgba(103,84,255,.72),
+      rgba(255,255,255,.09),
+      rgba(87,68,255,.48),
+      rgba(255,255,255,.16)
+    );
+
+  background-size:
+    220% 220%;
 
   box-shadow:
-    0 0 0 4px rgba(116,104,220,.05),
-    0 0 13px rgba(116,104,220,.25);
+    0 40px 100px rgba(0,0,0,.40),
+    0 0 80px rgba(76,56,255,.08);
+
+  animation:
+    focusJoinBorderFlow
+    7s
+    ease-in-out
+    infinite;
 }
 
-#focusMemberVoicesV1 .focus-voices-kicker i {
-  display: block;
-  flex: 1;
-  height: 1px;
+
+/* meta */
+
+.focus-join-price__meta{
+  display:flex;
+
+  align-items:center;
+  justify-content:space-between;
+
+  gap:20px;
+
+  padding:
+    15px
+    25px;
+
+  border-radius:
+    33px
+    33px
+    0
+    0;
+
+  color:
+    rgba(255,255,255,.50);
+
+  background:
+    #0e0e13;
+
+  font-size:8px;
+
+  line-height:1.4;
+
+  letter-spacing:.17em;
+
+  font-weight:800;
+}
+
+.focus-join-price__meta-left{
+  display:flex;
+
+  align-items:center;
+
+  gap:9px;
+}
+
+.focus-join-price__live-dot{
+  position:relative;
+
+  width:6px;
+  height:6px;
+
+  border-radius:50%;
+
+  background:#766cff;
+
+  box-shadow:
+    0 0 12px rgba(118,108,255,.95);
+}
+
+.focus-join-price__live-dot::after{
+  content:"";
+
+  position:absolute;
+
+  inset:-5px;
+
+  border:
+    1px solid
+    rgba(118,108,255,.45);
+
+  border-radius:50%;
+
+  animation:
+    focusJoinPulse
+    2.2s
+    ease-out
+    infinite;
+}
+
+
+/* main */
+
+.focus-join-price__main{
+  position:relative;
+
+  display:grid;
+
+  grid-template-columns:
+    1.25fr
+    .7fr
+    .78fr;
+
+  align-items:center;
+
+  gap:45px;
+
+  padding:
+    58px
+    52px
+    55px;
+
+  overflow:hidden;
+
+  border-radius:
+    0
+    0
+    33px
+    33px;
 
   background:
     linear-gradient(
-      90deg,
-      rgba(91,80,190,.34),
-      rgba(91,80,190,.07)
+      145deg,
+      #101015 0%,
+      #0a0a0e 52%,
+      #0d0c14 100%
     );
 }
 
+.focus-join-price__main::before{
+  content:"";
 
-/* ==================================================
-   TITLE
-================================================== */
+  position:absolute;
 
-#focusMemberVoicesV1 .focus-voices-title {
-  margin: 0;
+  top:-250px;
+  left:-180px;
 
-  font-family:
-    "Yu Mincho",
-    "Hiragino Mincho ProN",
-    serif;
+  width:500px;
+  height:500px;
 
-  font-weight: 700;
-  letter-spacing: -.055em;
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(105,83,255,.12),
+      transparent 68%
+    );
+
+  pointer-events:none;
 }
 
-#focusMemberVoicesV1 .focus-voices-title-first,
-#focusMemberVoicesV1 .focus-voices-title-second {
-  display: block;
+.focus-join-price__main > *{
+  position:relative;
+  z-index:2;
 }
 
-#focusMemberVoicesV1 .focus-voices-title-first {
-  color: #101014;
+
+/* copy */
+
+.focus-join-price__eyebrow{
+  margin:
+    0
+    0
+    17px;
+
+  color:#8278ff;
+
+  font-size:9px;
+
+  line-height:1.5;
+
+  letter-spacing:.16em;
+
+  font-weight:850;
+}
+
+.focus-join-price__title{
+  margin:0;
+
+  color:#fff;
 
   font-size:
     clamp(
-      36px,
-      5.4vw,
-      61px
+      37px,
+      4.2vw,
+      56px
     );
 
-  line-height: 1.18;
+  line-height:1.13;
+
+  letter-spacing:-.055em;
+
+  font-weight:900;
 }
 
-#focusMemberVoicesV1 .focus-voices-title-second {
-  margin-top: 8px;
+.focus-join-price__title > span{
+  position:relative;
 
-  color: #101014;
+  display:inline-block;
 
-  font-size:
-    clamp(
-      36px,
-      5.4vw,
-      61px
-    );
+  margin-top:4px;
 
-  line-height: 1.18;
-}
-
-#focusMemberVoicesV1 .focus-voices-title-second strong {
-  display: inline-block;
-
-  font: inherit;
-  font-weight: 700;
+  padding-right:.05em;
 
   background:
     linear-gradient(
-      115deg,
-      #4438a3 0%,
-      #5e52c4 35%,
-      #8a7ce8 63%,
-      #5448b5 100%
+      110deg,
+      #ffffff 0%,
+      #dcd8ff 25%,
+      #8075ff 54%,
+      #c8c3ff 74%,
+      #ffffff 100%
     );
 
-  background-size: 180% 180%;
+  background-size:
+    220% 220%;
 
-  -webkit-background-clip: text;
-  background-clip: text;
+  -webkit-background-clip:text;
+  background-clip:text;
 
-  color: transparent;
-  -webkit-text-fill-color: transparent;
+  color:transparent;
+
+  -webkit-text-fill-color:
+    transparent;
 
   filter:
     drop-shadow(
-      0 5px 12px rgba(92,78,192,.10)
+      0
+      8px
+      24px
+      rgba(91,75,255,.18)
     );
 
   animation:
-    focusVoicesAccent
+    focusJoinTextFlow
     5s
     ease-in-out
     infinite;
 }
 
-@keyframes focusVoicesAccent {
-
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-}
-
-
-/* ==================================================
-   SLIDER HEADER
-================================================== */
-
-#focusMemberVoicesV1 .focus-voices-slider-head {
-  position: relative;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  gap: 24px;
-
-  margin-top: 62px;
-}
-
-#focusMemberVoicesV1 .focus-voices-slider-label {
-  display: flex;
-  align-items: center;
-
-  gap: 13px;
-  flex: 1;
-
-  color: rgba(15,15,20,.46);
-
-  font-size: 8px;
-  font-weight: 900;
-  letter-spacing: .20em;
-}
-
-#focusMemberVoicesV1 .focus-voices-slider-label i {
-  display: block;
-  flex: 0 1 110px;
-
-  height: 1px;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(45,41,95,.28),
-      rgba(45,41,95,.06)
-    );
-}
-
-#focusMemberVoicesV1 .focus-voices-slider-label strong {
-  color: #665ac5;
-
-  font-size: 8px;
-  font-weight: 900;
-}
-
-
-/* ==================================================
-   ARROW
-================================================== */
-
-#focusMemberVoicesV1 .focus-voices-arrow {
-  position: relative;
-
-  flex: 0 0 auto;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 74px;
-  height: 74px;
-
-  padding: 0;
-
-  overflow: visible;
-
-  border: 1px solid rgba(255,255,255,.24);
-  border-radius: 50%;
-
-  background:
-    radial-gradient(
-      circle at 30% 18%,
-      rgba(126,115,232,.22),
-      transparent 40%
-    ),
-    linear-gradient(
-      145deg,
-      #08080b,
-      #181820
-    );
-
-  color: #ffffff;
-
-  box-shadow:
-    0 12px 26px rgba(0,0,0,.18),
-    0 0 0 5px rgba(105,91,215,.08),
-    0 0 18px rgba(99,84,220,.30);
-
-  cursor: pointer;
-
-  -webkit-tap-highlight-color: transparent;
-
-  animation:
-    focusVoicesArrowFloat
-    4.8s
-    ease-in-out
-    infinite;
-}
-
-#focusMemberVoicesV1 .focus-voices-arrow:before {
-  content: "";
-
-  position: absolute;
-  inset: -6px;
-
-  border:
-    1px solid rgba(107,94,218,.30);
-
-  border-radius: 50%;
-
-  pointer-events: none;
-}
-
-#focusMemberVoicesV1 .focus-voices-arrow-glow {
-  position: absolute;
-
-  width: 40px;
-  height: 40px;
-
-  border-radius: 50%;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(128,114,236,.25),
-      transparent 70%
-    );
-
-  animation:
-    focusVoicesArrowGlow
-    2.8s
-    ease-in-out
-    infinite;
-}
-
-#focusMemberVoicesV1 .focus-voices-arrow svg {
-  position: relative;
-  z-index: 2;
-
-  display: block;
-
-  width: 34px;
-  height: auto;
-}
-
-@keyframes focusVoicesArrowFloat {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-4px);
-  }
-
-}
-
-@keyframes focusVoicesArrowGlow {
-
-  0%,
-  100% {
-    opacity: .45;
-    transform: scale(.9);
-  }
-
-  50% {
-    opacity: 1;
-    transform: scale(1.28);
-  }
-
-}
-
-
-/* ==================================================
-   SLIDER
-================================================== */
-
-#focusMemberVoicesV1 .focus-voices-slider {
-  width: 100%;
-  margin-top: 28px;
-}
-
-#focusMemberVoicesV1 .focus-voices-viewport {
-  position: relative;
-
-  width: calc(100% + 40px);
-  margin-left: -20px;
-
-  overflow: visible;
-
-  touch-action: pan-y;
-
-  cursor: grab;
-
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-#focusMemberVoicesV1
-.focus-voices-viewport.is-dragging {
-  cursor: grabbing;
-}
-
-#focusMemberVoicesV1 .focus-voices-track {
-  display: flex;
-  align-items: stretch;
-
-  width: max-content;
-
-  transform: translate3d(0,0,0);
-
-  transition: none;
-
-  will-change: transform;
-}
-
-#focusMemberVoicesV1 .focus-voices-slide {
-  flex: 0 0 auto;
-
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-
-  width:
-    calc(
-      min(900px,86vw)
-    );
-
-  padding: 0 15px;
-}
-
-
-/* ==================================================
-   VOICE CARD
-================================================== */
-
-#focusMemberVoicesV1 .focus-voices-card {
-  position: relative;
-
-  width: 100%;
-  min-height: 360px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  margin: 0 auto;
-
-  padding:
-    28px
-    36px
-    28px;
-
-  overflow: hidden;
-
-  border:
-    1px solid rgba(76,67,159,.14);
-
-  border-radius: 14px;
-
-  background:
-    radial-gradient(
-      circle at 100% 0%,
-      rgba(115,102,220,.055),
-      transparent 30%
-    ),
-    linear-gradient(
-      145deg,
-      rgba(255,255,255,.995),
-      rgba(250,250,253,.995)
-    );
-
-  box-shadow:
-    0 16px 36px rgba(24,20,53,.07),
-    0 3px 8px rgba(24,20,53,.04),
-    0 0 0 1px rgba(112,99,214,.025);
-}
-
-#focusMemberVoicesV1 .focus-voices-card:before {
-  content: "";
-
-  position: absolute;
-
-  top: -70px;
-  right: -65px;
-
-  width: 180px;
-  height: 180px;
-
-  border:
-    1px solid rgba(111,99,220,.07);
-
-  border-radius: 50%;
-}
-
-#focusMemberVoicesV1 .focus-voices-card:after {
-  content: "";
-
-  position: absolute;
-
-  top: -35px;
-  right: -32px;
-
-  width: 105px;
-  height: 105px;
-
-  border:
-    1px solid rgba(111,99,220,.065);
-
-  border-radius: 50%;
-}
-
-
-/* ==================================================
-   CARD TOP
-================================================== */
-
-#focusMemberVoicesV1 .focus-voices-card-top {
-  position: relative;
-  z-index: 3;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  color: rgba(22,20,34,.44);
-
-  font-size: 7px;
-  font-weight: 900;
-  letter-spacing: .20em;
-}
-
-#focusMemberVoicesV1
-.focus-voices-card-top span:last-child {
-  color: #6256bc;
-}
-
-#focusMemberVoicesV1 .focus-voices-card-line {
-  position: relative;
-  z-index: 3;
-
-  width: 100%;
-  height: 1px;
-
-  margin: 14px 0 28px;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(55,50,98,.23),
-      rgba(111,99,220,.12),
-      rgba(55,50,98,.03)
-    );
-}
-
-
-/* ==================================================
-   QUOTE
-================================================== */
-
-#focusMemberVoicesV1 .focus-voices-quote {
-  position: absolute;
-  z-index: 1;
-
-  color: rgba(115,101,219,.30);
-
-  font-family:
-    Georgia,
-    serif;
-
-  font-size: 78px;
-  font-weight: 900;
-  line-height: 1;
-}
-
-#focusMemberVoicesV1 .focus-voices-quote-open {
-  top: 57px;
-  left: 28px;
-}
-
-#focusMemberVoicesV1 .focus-voices-quote-close {
-  right: 27px;
-  bottom: 42px;
-}
-
-
-/* ==================================================
-   COMMENT
-================================================== */
-
-#focusMemberVoicesV1 .focus-voices-comment {
-  position: relative;
-  z-index: 2;
-
-  width: 100%;
-
-  padding:
-    13px
-    35px
-    15px;
-}
-
-#focusMemberVoicesV1 .focus-voices-comment p {
-  margin: 0;
-
-  color: #1b1a20;
-
-  font-family:
-    "Yu Mincho",
-    "Hiragino Mincho ProN",
-    serif;
-
-  font-size:
-    clamp(
-      13px,
-      1.35vw,
-      16px
-    );
-
-  font-weight: 600;
-
-  line-height: 1.95;
-
-  letter-spacing: -.01em;
-}
-
-
-/* ==================================================
-   CARD BOTTOM
-================================================== */
-
-#focusMemberVoicesV1 .focus-voices-card-bottom {
-  position: relative;
-  z-index: 3;
-
-  display: flex;
-  align-items: center;
-
-  gap: 9px;
-
-  margin-top: 27px;
-
-  padding-top: 15px;
-
-  border-top:
-    1px solid rgba(68,60,131,.12);
-
-  color: rgba(20,18,30,.38);
-
-  font-size: 6px;
-  font-weight: 900;
-  letter-spacing: .18em;
-}
-
-#focusMemberVoicesV1 .focus-voices-card-dot {
-  flex: 0 0 auto;
-
-  width: 7px;
-  height: 7px;
-
-  border-radius: 50%;
-
-  background: #7668dc;
-
-  box-shadow:
-    0 0 10px rgba(118,104,220,.38);
-}
-
-#focusMemberVoicesV1 .focus-voices-card-bottom i {
-  display: block;
-  flex: 1;
-
-  height: 1px;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(112,100,210,.28),
-      rgba(112,100,210,.04)
-    );
-}
-
-
-/* ==================================================
-   PAGINATION
-================================================== */
-
-#focusMemberVoicesV1 .focus-voices-pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-
-  width: 100%;
-
-  gap: 11px;
-
-  margin: 43px auto 0;
-}
-
-#focusMemberVoicesV1 .focus-voices-pagination-dot {
-  flex: 0 0 auto;
-
-  width: 8px;
-  height: 8px;
-
-  padding: 0;
-
-  border: 0;
-  border-radius: 50%;
-
-  background:
-    rgba(32,31,39,.15);
-
-  cursor: pointer;
-
-  transition:
-    background .35s ease,
-    transform .35s ease,
-    box-shadow .35s ease;
-
-  -webkit-tap-highlight-color:
-    transparent;
-}
-
-#focusMemberVoicesV1
-.focus-voices-pagination-dot.is-active {
-  background: #6255ca;
-
-  transform: scale(1.12);
-
-  box-shadow:
-    0 0 11px rgba(98,85,202,.30);
-}
-
-
-/* ==================================================
-   NEXT SECTION BRIDGE
-================================================== */
-
-#focusMemberVoicesV1 .focus-voices-next {
-  position: relative;
-
-  width: 100%;
-
-  padding:
-    48px
+.focus-join-price__description{
+  margin:
+    23px
     0
     0;
 
-  text-align: center;
+  color:
+    rgba(255,255,255,.55);
+
+  font-size:11px;
+
+  line-height:1.9;
+
+  letter-spacing:.01em;
 }
 
-#focusMemberVoicesV1 .focus-voices-next-line {
-  display: block;
 
-  width: 1px;
-  height: 55px;
+/* areas */
 
-  margin:
-    0
-    auto
-    27px;
+.focus-join-price__areas{
+  display:flex;
 
-  background:
-    linear-gradient(
-      180deg,
-      rgba(103,90,201,0),
-      rgba(103,90,201,.62)
-    );
+  flex-wrap:wrap;
+
+  gap:
+    6px
+    7px;
+
+  margin-top:24px;
 }
 
-#focusMemberVoicesV1 .focus-voices-next-small {
-  display: inline-block;
+.focus-join-price__areas span{
+  display:inline-flex;
 
-  margin:
-    0
-    0
+  align-items:center;
+
+  min-height:23px;
+
+  padding:
+    5px
     9px;
 
-  font-family:
-    "Yu Mincho",
-    "Hiragino Mincho ProN",
-    serif;
+  border:
+    1px solid
+    rgba(255,255,255,.09);
+
+  border-radius:999px;
+
+  color:
+    rgba(255,255,255,.48);
+
+  background:
+    rgba(255,255,255,.025);
+
+  font-size:7px;
+
+  line-height:1;
+
+  letter-spacing:.12em;
+
+  font-weight:800;
+}
+
+
+/* ==================================================
+   PRICE
+================================================== */
+
+.focus-join-price__pricing{
+  min-width:200px;
+
+  text-align:center;
+}
+
+.focus-join-price__pricing-label{
+  margin:0;
+
+  color:
+    rgba(255,255,255,.39);
+
+  font-size:8px;
+
+  line-height:1.4;
+
+  letter-spacing:.16em;
+
+  font-weight:800;
+}
+
+.focus-join-price__price{
+  display:flex;
+
+  align-items:flex-end;
+  justify-content:center;
+
+  gap:5px;
+
+  margin-top:10px;
+}
+
+.focus-join-price__yen{
+  margin-bottom:13px;
+
+  color:
+    rgba(255,255,255,.70);
+
+  font-size:18px;
+
+  font-weight:800;
+}
+
+.focus-join-price__price strong{
+  display:block;
+
+  padding-bottom:3px;
+
+  color:#fff;
 
   font-size:
     clamp(
-      28px,
-      4vw,
-      45px
+      51px,
+      5vw,
+      69px
     );
 
-  font-weight: 700;
+  line-height:1;
 
-  line-height: 1.15;
+  letter-spacing:-.065em;
 
-  letter-spacing: -.055em;
+  font-weight:950;
+
+  text-shadow:
+    0 0 28px
+    rgba(110,90,255,.14);
+}
+
+.focus-join-price__month{
+  margin-bottom:11px;
+
+  color:
+    rgba(255,255,255,.50);
+
+  font-size:11px;
+
+  font-weight:750;
+}
+
+.focus-join-price__tax{
+  margin:
+    4px
+    0
+    0;
+
+  color:
+    rgba(255,255,255,.28);
+
+  font-size:8px;
+}
+
+
+/* members */
+
+.focus-join-price__members{
+  width:100%;
+
+  max-width:205px;
+
+  margin:
+    27px
+    auto
+    0;
+
+  padding-top:19px;
+
+  border-top:
+    1px solid
+    rgba(255,255,255,.08);
+}
+
+.focus-join-price__members-top{
+  display:flex;
+
+  align-items:flex-end;
+  justify-content:space-between;
+
+  gap:15px;
+}
+
+.focus-join-price__members-current{
+  text-align:left;
+}
+
+.focus-join-price__members-label{
+  display:block;
+
+  margin-bottom:5px;
+
+  color:
+    rgba(255,255,255,.32);
+
+  font-size:6px;
+
+  line-height:1.2;
+
+  letter-spacing:.15em;
+
+  font-weight:850;
+}
+
+.focus-join-price__members-current > div{
+  display:flex;
+
+  align-items:baseline;
+
+  gap:2px;
+}
+
+.focus-join-price__members-current strong{
+  display:inline-block;
 
   background:
     linear-gradient(
       115deg,
-      #40369d,
-      #7467d7,
-      #5549b9
+      #ffffff,
+      #9188ff,
+      #ffffff
     );
 
-  background-size: 180% 180%;
+  background-size:
+    180% 180%;
 
-  -webkit-background-clip: text;
-  background-clip: text;
+  -webkit-background-clip:text;
+  background-clip:text;
 
-  color: transparent;
-  -webkit-text-fill-color: transparent;
+  color:transparent;
+
+  -webkit-text-fill-color:
+    transparent;
+
+  font-size:28px;
+
+  line-height:1;
+
+  letter-spacing:-.045em;
+
+  font-weight:950;
 
   filter:
     drop-shadow(
-      0 5px 10px rgba(92,78,192,.10)
+      0
+      4px
+      10px
+      rgba(91,75,255,.25)
     );
 
   animation:
-    focusVoicesNextAccent
+    focusJoinTextFlow
+    5s
+    ease-in-out
+    infinite;
+}
+
+.focus-join-price__members-current > div > span{
+  color:#8177ff;
+
+  font-size:13px;
+
+  font-weight:900;
+}
+
+.focus-join-price__members-limit{
+  text-align:right;
+}
+
+.focus-join-price__members-limit span{
+  display:block;
+
+  margin-bottom:5px;
+
+  color:
+    rgba(255,255,255,.28);
+
+  font-size:6px;
+
+  letter-spacing:.15em;
+
+  font-weight:800;
+}
+
+.focus-join-price__members-limit strong{
+  color:
+    rgba(255,255,255,.60);
+
+  font-size:16px;
+
+  line-height:1;
+
+  font-weight:850;
+}
+
+
+/* progress */
+
+.focus-join-price__progress{
+  position:relative;
+
+  width:100%;
+  height:4px;
+
+  margin-top:10px;
+
+  overflow:visible;
+
+  border-radius:999px;
+
+  background:
+    rgba(255,255,255,.07);
+}
+
+.focus-join-price__progress-fill{
+  position:absolute;
+
+  top:0;
+  left:0;
+
+  display:block;
+
+  width:0%;
+  height:100%;
+
+  border-radius:inherit;
+
+  background:
+    linear-gradient(
+      90deg,
+      #4a3cff,
+      #8177ff,
+      #c4beff
+    );
+
+  box-shadow:
+    0 0 11px
+    rgba(112,95,255,.48);
+
+  transition:
+    width
+    1.2s
+    cubic-bezier(.22,.8,.24,1);
+}
+
+.focus-join-price__progress-fill::after{
+  content:"";
+
+  position:absolute;
+
+  top:50%;
+  right:-2px;
+
+  width:7px;
+  height:7px;
+
+  border-radius:50%;
+
+  background:#fff;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(118,108,255,.16),
+    0 0 13px
+    rgba(118,108,255,.85);
+
+  transform:
+    translateY(-50%);
+}
+
+
+/* capacity */
+
+.focus-join-price__capacity-copy{
+  display:flex;
+
+  align-items:center;
+
+  gap:6px;
+
+  margin-top:10px;
+
+  color:
+    rgba(255,255,255,.37);
+
+  font-size:7px;
+
+  line-height:1.5;
+
+  text-align:left;
+}
+
+.focus-join-price__capacity-dot{
+  flex:0 0 auto;
+
+  width:5px;
+  height:5px;
+
+  border-radius:50%;
+
+  background:#766cff;
+
+  box-shadow:
+    0 0 8px
+    rgba(118,108,255,.8);
+}
+
+
+/* ==================================================
+   CTA
+================================================== */
+
+.focus-join-price__action{
+  position:relative;
+}
+
+.focus-join-price__cta-glow{
+  position:absolute;
+
+  top:50%;
+  left:50%;
+
+  width:130%;
+  height:130px;
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(91,73,255,.18),
+      transparent 69%
+    );
+
+  filter:blur(14px);
+
+  transform:
+    translate(-50%,-50%);
+
+  pointer-events:none;
+}
+
+.focus-join-price__button{
+  position:relative;
+
+  display:block;
+
+  width:100%;
+
+  min-height:72px;
+
+  padding:1px;
+
+  overflow:hidden;
+
+  border:
+    1px solid
+    rgba(139,126,255,.45);
+
+  border-radius:18px;
+
+  color:#fff;
+
+  background:
+    linear-gradient(
+      115deg,
+      #3526e6 0%,
+      #5847ff 28%,
+      #7769ff 52%,
+      #4b39ef 77%,
+      #2c20d5 100%
+    );
+
+  background-size:
+    220% 220%;
+
+  box-shadow:
+    0 20px 45px
+    rgba(49,34,230,.26),
+    0 0 30px
+    rgba(97,78,255,.09),
+    inset 0 1px 0
+    rgba(255,255,255,.30);
+
+  isolation:isolate;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    filter .25s ease;
+
+  animation:
+    focusJoinButtonFlow
+    5s
+    ease-in-out
+    infinite;
+}
+
+.focus-join-price__button-shine{
+  position:absolute;
+
+  z-index:1;
+
+  top:-80%;
+  left:-35%;
+
+  width:25%;
+  height:260%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.34),
+      transparent
+    );
+
+  transform:
+    rotate(19deg);
+
+  pointer-events:none;
+
+  animation:
+    focusJoinButtonShine
     4.8s
     ease-in-out
     infinite;
 }
 
-#focusMemberVoicesV1 .focus-voices-next-main {
-  margin: 0;
+.focus-join-price__button-content{
+  position:relative;
+  z-index:2;
 
-  color: #101014;
+  display:grid;
 
-  font-family:
-    "Yu Mincho",
-    "Hiragino Mincho ProN",
-    serif;
+  grid-template-columns:
+    1fr
+    42px;
 
-  font-size:
-    clamp(
-      38px,
-      5.8vw,
-      65px
-    );
+  width:100%;
+  min-height:70px;
 
-  font-weight: 700;
+  align-items:center;
 
-  line-height: 1.18;
+  gap:10px;
 
-  letter-spacing: -.065em;
+  padding:
+    11px
+    12px
+    11px
+    21px;
 }
 
-#focusMemberVoicesV1 .focus-voices-next-main strong {
-  display: inline-block;
+.focus-join-price__button-copy{
+  display:flex;
 
-  margin-left: .04em;
+  flex-direction:column;
 
-  color: #6558c4;
+  gap:3px;
 
-  font-size: 1.23em;
-  font-weight: 700;
+  text-align:left;
+}
 
-  line-height: .9;
+.focus-join-price__button-copy small{
+  color:
+    rgba(255,255,255,.57);
 
-  text-shadow:
-    0 6px 18px rgba(101,88,196,.10);
+  font-size:6px;
+
+  line-height:1.3;
+
+  letter-spacing:.17em;
+
+  font-weight:850;
+}
+
+.focus-join-price__button-copy strong{
+  color:#fff;
+
+  font-size:15px;
+
+  line-height:1.3;
+
+  letter-spacing:.01em;
+
+  font-weight:900;
+}
+
+.focus-join-price__button-arrow{
+  display:flex;
+
+  width:42px;
+  height:42px;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  color:#4c3cf0;
+
+  background:#fff;
+
+  box-shadow:
+    0 8px 20px
+    rgba(24,15,130,.27);
+
+  transition:
+    transform .25s ease;
+}
+
+.focus-join-price__button-arrow svg{
+  width:18px;
+  height:18px;
+}
+
+.focus-join-price__action-meta{
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  gap:8px;
+
+  margin-top:13px;
+
+  color:
+    rgba(255,255,255,.31);
+
+  font-size:7px;
+
+  letter-spacing:.08em;
+}
+
+.focus-join-price__action-meta i{
+  width:2px;
+  height:2px;
+
+  border-radius:50%;
+
+  background:
+    rgba(255,255,255,.28);
+}
+
+
+/* ==================================================
+   MESSAGE SECTION
+================================================== */
+
+#focusJoinMessageV1{
+  position:relative;
+
+  width:100%;
+
+  padding:
+    20px
+    20px
+    0;
+
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #08080b 0%,
+      #09090d 100%
+    );
+}
+
+.focus-join-message__inner{
+  width:min(100%,1180px);
+
+  margin:0 auto;
+}
+
+
+/* line */
+
+.focus-join-message__line{
+  position:relative;
+
+  width:1px;
+  height:100px;
+
+  margin:
+    0
+    auto
+    65px;
+
+  overflow:hidden;
+
+  background:
+    rgba(255,255,255,.07);
+}
+
+.focus-join-message__line span{
+  position:absolute;
+
+  top:-100%;
+  left:0;
+
+  width:100%;
+  height:100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      #766cff,
+      #fff,
+      transparent
+    );
 
   animation:
-    focusVoicesImmediate
-    3.8s
+    focusJoinLineMove
+    3.4s
     ease-in-out
     infinite;
 }
 
-@keyframes focusVoicesNextAccent {
 
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
+/* message */
 
-  50% {
-    background-position: 100% 50%;
-  }
+.focus-join-message__content{
+  max-width:850px;
 
+  margin:0 auto;
+
+  text-align:center;
 }
 
-@keyframes focusVoicesImmediate {
+.focus-join-message__eyebrow{
+  margin:
+    0
+    0
+    22px;
 
-  0%,
-  100% {
-    transform: translateY(0);
-    filter: drop-shadow(
-      0 0 0 rgba(101,88,196,0)
+  color:#766cff;
+
+  font-size:8px;
+
+  line-height:1.4;
+
+  letter-spacing:.22em;
+
+  font-weight:850;
+}
+
+.focus-join-message__content h2{
+  margin:0;
+
+  color:#fff;
+
+  font-size:
+    clamp(
+      42px,
+      6.5vw,
+      80px
     );
-  }
 
-  50% {
-    transform: translateY(-2px);
-    filter: drop-shadow(
-      0 5px 10px rgba(101,88,196,.12)
+  line-height:1.13;
+
+  letter-spacing:-.065em;
+
+  font-weight:900;
+}
+
+.focus-join-message__accent{
+  position:relative;
+
+  display:inline-block;
+
+  margin-top:9px;
+}
+
+.focus-join-message__accent strong{
+  position:relative;
+  z-index:2;
+
+  display:inline-block;
+
+  background:
+    linear-gradient(
+      110deg,
+      #fff 0%,
+      #9a91ff 30%,
+      #6e5eff 52%,
+      #c7c2ff 75%,
+      #fff 100%
     );
-  }
 
+  background-size:
+    220% 220%;
+
+  -webkit-background-clip:text;
+  background-clip:text;
+
+  color:transparent;
+
+  -webkit-text-fill-color:
+    transparent;
+
+  animation:
+    focusJoinTextFlow
+    5s
+    ease-in-out
+    infinite;
+}
+
+.focus-join-message__accent-glow{
+  position:absolute;
+
+  top:50%;
+  left:50%;
+
+  width:110%;
+  height:80%;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(97,78,255,.18),
+      transparent 70%
+    );
+
+  filter:blur(20px);
+
+  transform:
+    translate(-50%,-50%);
+
+  pointer-events:none;
+}
+
+.focus-join-message__description{
+  margin:
+    32px
+    0
+    0;
+
+  color:
+    rgba(255,255,255,.48);
+
+  font-size:11px;
+
+  line-height:2;
+
+  letter-spacing:.01em;
+}
+
+
+/* ==================================================
+   ENVIRONMENT
+================================================== */
+
+.focus-join-environment{
+  position:relative;
+
+  width:min(100%,900px);
+
+  margin:
+    90px
+    auto
+    0;
+
+  padding:
+    25px
+    28px
+    28px;
+
+  overflow:hidden;
+
+  border:
+    1px solid
+    rgba(255,255,255,.10);
+
+  border-radius:28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.035),
+      rgba(255,255,255,.012)
+    );
+
+  box-shadow:
+    0 30px 90px
+    rgba(0,0,0,.30),
+    inset 0 1px 0
+    rgba(255,255,255,.04);
+
+  animation:
+    focusJoinEnvironmentFloat
+    7s
+    ease-in-out
+    infinite;
+}
+
+.focus-join-environment__glow{
+  position:absolute;
+
+  top:15%;
+  left:50%;
+
+  width:500px;
+  height:350px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(91,72,255,.15),
+      transparent 67%
+    );
+
+  filter:blur(18px);
+
+  transform:
+    translateX(-50%);
+
+  pointer-events:none;
+}
+
+.focus-join-environment__top{
+  position:relative;
+  z-index:2;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:space-between;
+
+  gap:20px;
+
+  color:
+    rgba(255,255,255,.32);
+
+  font-size:7px;
+
+  letter-spacing:.15em;
+
+  font-weight:800;
+}
+
+.focus-join-environment__top > div{
+  display:flex;
+
+  align-items:center;
+
+  gap:8px;
+}
+
+.focus-join-environment__status-dot{
+  width:6px;
+  height:6px;
+
+  border-radius:50%;
+
+  background:#766cff;
+
+  box-shadow:
+    0 0 12px
+    rgba(118,108,255,.9);
+}
+
+
+/* center */
+
+.focus-join-environment__center{
+  position:relative;
+  z-index:2;
+
+  display:flex;
+
+  min-height:260px;
+
+  align-items:center;
+  justify-content:center;
+
+  padding:
+    35px
+    0
+    25px;
+}
+
+.focus-join-environment__brand{
+  position:relative;
+  z-index:4;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+}
+
+.focus-join-environment__brand > span{
+  color:
+    rgba(255,255,255,.38);
+
+  font-size:7px;
+
+  letter-spacing:.25em;
+
+  font-weight:800;
+}
+
+.focus-join-environment__brand strong{
+  margin-top:8px;
+
+  background:
+    linear-gradient(
+      110deg,
+      #fff,
+      #8479ff,
+      #fff
+    );
+
+  background-size:
+    200% 200%;
+
+  -webkit-background-clip:text;
+  background-clip:text;
+
+  color:transparent;
+
+  -webkit-text-fill-color:
+    transparent;
+
+  font-size:
+    clamp(
+      57px,
+      9vw,
+      105px
+    );
+
+  line-height:.95;
+
+  letter-spacing:-.075em;
+
+  font-weight:950;
+
+  filter:
+    drop-shadow(
+      0
+      12px
+      30px
+      rgba(83,64,255,.16)
+    );
+
+  animation:
+    focusJoinTextFlow
+    5s
+    ease-in-out
+    infinite;
+}
+
+.focus-join-environment__brand small{
+  margin-top:12px;
+
+  color:
+    rgba(255,255,255,.27);
+
+  font-size:7px;
+
+  letter-spacing:.35em;
+
+  font-weight:800;
+}
+
+
+/* orbit */
+
+.focus-join-environment__orbit{
+  position:absolute;
+
+  top:50%;
+  left:50%;
+
+  width:330px;
+  height:170px;
+
+  border:
+    1px solid
+    rgba(118,108,255,.16);
+
+  border-radius:50%;
+
+  transform:
+    translate(-50%,-50%)
+    rotate(-8deg);
+
+  animation:
+    focusJoinOrbit
+    13s
+    linear
+    infinite;
+}
+
+.focus-join-environment__orbit-line{
+  position:absolute;
+
+  inset:12px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.035);
+
+  border-radius:50%;
+}
+
+.focus-join-environment__orbit-dot{
+  position:absolute;
+
+  width:6px;
+  height:6px;
+
+  border-radius:50%;
+
+  background:#8177ff;
+
+  box-shadow:
+    0 0 12px
+    rgba(118,108,255,.85);
+}
+
+.focus-join-environment__orbit-dot.dot-one{
+  top:7%;
+  left:25%;
+}
+
+.focus-join-environment__orbit-dot.dot-two{
+  right:4%;
+  bottom:35%;
+}
+
+.focus-join-environment__orbit-dot.dot-three{
+  bottom:3%;
+  left:37%;
+}
+
+
+/* areas */
+
+.focus-join-environment__areas{
+  position:relative;
+  z-index:2;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(6,1fr);
+
+  gap:7px;
+}
+
+.focus-join-environment__areas > div{
+  display:flex;
+
+  min-height:55px;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+  gap:5px;
+
+  padding:
+    9px
+    10px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.06);
+
+  border-radius:11px;
+
+  background:
+    rgba(255,255,255,.018);
+
+  transition:
+    border-color .25s ease,
+    background .25s ease,
+    transform .25s ease;
+}
+
+.focus-join-environment__areas span{
+  color:#766cff;
+
+  font-size:7px;
+
+  font-weight:900;
+}
+
+.focus-join-environment__areas strong{
+  color:
+    rgba(255,255,255,.52);
+
+  font-size:7px;
+
+  letter-spacing:.07em;
+
+  font-weight:800;
+}
+
+
+/* bottom */
+
+.focus-join-environment__bottom{
+  position:relative;
+  z-index:2;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  gap:10px;
+
+  margin-top:19px;
+
+  color:
+    rgba(255,255,255,.24);
+
+  font-size:6px;
+
+  letter-spacing:.19em;
+
+  font-weight:800;
+}
+
+.focus-join-environment__bottom i{
+  width:20px;
+  height:1px;
+
+  background:
+    rgba(255,255,255,.12);
+}
+
+
+/* ==================================================
+   BOTTOM
+================================================== */
+
+.focus-join-bottom{
+  width:min(100%,650px);
+
+  margin:
+    90px
+    auto
+    0;
+
+  padding-bottom:0;
+
+  text-align:center;
+}
+
+.focus-join-bottom p{
+  margin:0;
+
+  color:
+    rgba(255,255,255,.54);
+
+  font-size:
+    clamp(
+      16px,
+      2.2vw,
+      20px
+    );
+
+  line-height:1.8;
+
+  font-weight:650;
+}
+
+.focus-join-bottom p strong{
+  color:#fff;
+
+  font-weight:900;
+}
+
+.focus-join-bottom p strong span{
+  display:inline-block;
+
+  color:#8d83ff;
+
+  font-size:1.25em;
+
+  animation:
+    focusJoinMemberFloat
+    3.5s
+    ease-in-out
+    infinite;
+}
+
+
+/* bottom button */
+
+.focus-join-bottom__button{
+  position:relative;
+
+  display:flex;
+
+  width:min(100%,430px);
+
+  min-height:66px;
+
+  margin:
+    31px
+    auto
+    0;
+
+  align-items:center;
+  justify-content:center;
+
+  gap:20px;
+
+  overflow:hidden;
+
+  border:
+    1px solid
+    rgba(121,107,255,.38);
+
+  border-radius:999px;
+
+  color:#fff;
+
+  background:
+    linear-gradient(
+      115deg,
+      #3324dc,
+      #5b49ff,
+      #766cff,
+      #4635e8
+    );
+
+  background-size:
+    200% 200%;
+
+  box-shadow:
+    0 18px 40px
+    rgba(49,34,230,.23),
+    inset 0 1px 0
+    rgba(255,255,255,.25);
+
+  font-size:14px;
+
+  font-weight:900;
+
+  animation:
+    focusJoinButtonFlow
+    5s
+    ease-in-out
+    infinite;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.focus-join-bottom__button::before{
+  content:"";
+
+  position:absolute;
+
+  top:-80%;
+  left:-35%;
+
+  width:22%;
+  height:260%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.30),
+      transparent
+    );
+
+  transform:
+    rotate(18deg);
+
+  animation:
+    focusJoinButtonShine
+    5s
+    ease-in-out
+    infinite;
+}
+
+.focus-join-bottom__button span,
+.focus-join-bottom__button svg{
+  position:relative;
+  z-index:2;
+}
+
+.focus-join-bottom__button svg{
+  width:18px;
+  height:18px;
 }
 
 
@@ -1289,31 +2317,282 @@ ADHDだけど肉食してから不注意がマシになった。理解力、判�
    REVEAL
 ================================================== */
 
-#focusMemberVoicesV1 .focus-voices-reveal {
-  opacity: 0;
+.focus-join-reveal{
+  opacity:0;
 
-  filter: blur(5px);
+  filter:blur(5px);
 
   transform:
     translateY(28px);
 
   transition:
-    opacity .9s ease,
-    filter 1s ease,
-    transform .9s
-    cubic-bezier(.18,.72,.2,1);
+    opacity
+    1s
+    ease,
+    transform
+    1.05s
+    cubic-bezier(.22,1,.36,1),
+    filter
+    1s
+    ease;
 
   will-change:
     opacity,
-    filter,
-    transform;
+    transform,
+    filter;
 }
 
-#focusMemberVoicesV1
-.focus-voices-reveal.focus-voices-visible {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateY(0);
+.focus-join-reveal.show{
+  opacity:1;
+
+  filter:blur(0);
+
+  transform:
+    translateY(0);
+}
+
+
+/* ==================================================
+   HOVER
+================================================== */
+
+@media(hover:hover){
+
+  .focus-join-price__button:hover{
+    transform:
+      translateY(-4px);
+
+    box-shadow:
+      0 27px 55px
+      rgba(49,34,230,.34),
+      0 0 40px
+      rgba(97,78,255,.12),
+      inset 0 1px 0
+      rgba(255,255,255,.34);
+
+    filter:
+      brightness(1.06);
+  }
+
+  .focus-join-price__button:hover
+  .focus-join-price__button-arrow{
+    transform:
+      translateX(3px);
+  }
+
+  .focus-join-bottom__button:hover{
+    transform:
+      translateY(-3px);
+
+    box-shadow:
+      0 25px 50px
+      rgba(49,34,230,.31),
+      inset 0 1px 0
+      rgba(255,255,255,.28);
+  }
+
+  .focus-join-environment__areas > div:hover{
+    transform:
+      translateY(-2px);
+
+    border-color:
+      rgba(118,108,255,.24);
+
+    background:
+      rgba(118,108,255,.055);
+  }
+
+}
+
+
+/* ==================================================
+   ANIMATIONS
+================================================== */
+
+@keyframes focusJoinBorderFlow{
+
+  0%,
+  100%{
+    background-position:
+      0% 50%;
+  }
+
+  50%{
+    background-position:
+      100% 50%;
+  }
+
+}
+
+
+@keyframes focusJoinTextFlow{
+
+  0%,
+  100%{
+    background-position:
+      0% 50%;
+  }
+
+  50%{
+    background-position:
+      100% 50%;
+  }
+
+}
+
+
+@keyframes focusJoinButtonFlow{
+
+  0%,
+  100%{
+    background-position:
+      0% 50%;
+  }
+
+  50%{
+    background-position:
+      100% 50%;
+  }
+
+}
+
+
+@keyframes focusJoinButtonShine{
+
+  0%,
+  55%{
+    left:-35%;
+    opacity:0;
+  }
+
+  64%{
+    opacity:1;
+  }
+
+  82%{
+    left:120%;
+    opacity:0;
+  }
+
+  100%{
+    left:120%;
+    opacity:0;
+  }
+
+}
+
+
+@keyframes focusJoinPulse{
+
+  0%{
+    opacity:.8;
+    transform:scale(.5);
+  }
+
+  75%,
+  100%{
+    opacity:0;
+    transform:scale(1.7);
+  }
+
+}
+
+
+@keyframes focusJoinAmbientOne{
+
+  0%,
+  100%{
+    transform:
+      translateX(-50%)
+      translateY(0)
+      scale(1);
+  }
+
+  50%{
+    transform:
+      translateX(-50%)
+      translateY(25px)
+      scale(1.06);
+  }
+
+}
+
+
+@keyframes focusJoinAmbientTwo{
+
+  0%,
+  100%{
+    transform:
+      translate3d(0,0,0);
+  }
+
+  50%{
+    transform:
+      translate3d(-30px,-20px,0);
+  }
+
+}
+
+
+@keyframes focusJoinLineMove{
+
+  0%{
+    top:-100%;
+  }
+
+  100%{
+    top:100%;
+  }
+
+}
+
+
+@keyframes focusJoinEnvironmentFloat{
+
+  0%,
+  100%{
+    transform:
+      translateY(0);
+  }
+
+  50%{
+    transform:
+      translateY(-8px);
+  }
+
+}
+
+
+@keyframes focusJoinOrbit{
+
+  from{
+    transform:
+      translate(-50%,-50%)
+      rotate(-8deg);
+  }
+
+  to{
+    transform:
+      translate(-50%,-50%)
+      rotate(352deg);
+  }
+
+}
+
+
+@keyframes focusJoinMemberFloat{
+
+  0%,
+  100%{
+    transform:
+      translateY(0);
+  }
+
+  50%{
+    transform:
+      translateY(-4px);
+  }
+
 }
 
 
@@ -1321,23 +2600,47 @@ ADHDだけど肉食してから不注意がマシになった。理解力、判�
    TABLET
 ================================================== */
 
-@media screen and (max-width:900px) {
+@media(
+  min-width:750px
+) and (
+  max-width:989px
+){
 
-  #focusMemberVoicesV1 .focus-voices-inner {
+  #focusJoinPriceV1{
     padding:
-      64px
-      16px
-      0;
+      55px
+      18px
+      115px;
   }
 
-  #focusMemberVoicesV1 .focus-voices-viewport {
-    width: calc(100% + 32px);
-    margin-left: -16px;
+  .focus-join-price__main{
+    grid-template-columns:
+      1fr
+      1fr;
+
+    gap:
+      50px
+      35px;
+
+    padding:
+      50px
+      40px;
   }
 
-  #focusMemberVoicesV1 .focus-voices-slide {
-    width: 88vw;
-    padding: 0 11px;
+  .focus-join-price__copy{
+    grid-column:
+      1 / -1;
+
+    text-align:center;
+  }
+
+  .focus-join-price__areas{
+    justify-content:center;
+  }
+
+  .focus-join-environment__areas{
+    grid-template-columns:
+      repeat(3,1fr);
   }
 
 }
@@ -1347,266 +2650,269 @@ ADHDだけど肉食してから不注意がマシになった。理解力、判�
    MOBILE
 ================================================== */
 
-@media screen and (max-width:640px) {
+@media(max-width:749px){
 
-  #focusMemberVoicesV1 .focus-voices-inner {
-    width: 100%;
+  #focusJoinPriceV1{
+    padding:
+      35px
+      14px
+      100px;
+  }
+
+
+  /* card */
+
+  .focus-join-price__wrap{
+    border-radius:27px;
+  }
+
+  .focus-join-price__meta{
+    padding:
+      13px
+      17px;
+
+    border-radius:
+      26px
+      26px
+      0
+      0;
+
+    font-size:6px;
+  }
+
+  .focus-join-price__meta-right{
+    display:none;
+  }
+
+  .focus-join-price__main{
+    grid-template-columns:1fr;
+
+    gap:39px;
 
     padding:
-      49px
-      12px
+      42px
+      20px
+      27px;
+
+    border-radius:
+      0
+      0
+      26px
+      26px;
+
+    text-align:center;
+  }
+
+
+  /* copy */
+
+  .focus-join-price__eyebrow{
+    margin-bottom:14px;
+
+    font-size:7px;
+  }
+
+  .focus-join-price__title{
+    font-size:
+      clamp(
+        37px,
+        11.4vw,
+        48px
+      );
+
+    line-height:1.14;
+  }
+
+  .focus-join-price__description{
+    margin-top:19px;
+
+    font-size:10px;
+
+    line-height:1.9;
+  }
+
+  .focus-join-price__areas{
+    justify-content:center;
+
+    gap:5px;
+
+    margin-top:21px;
+  }
+
+  .focus-join-price__areas span{
+    min-height:21px;
+
+    padding:
+      5px
+      7px;
+
+    font-size:6px;
+  }
+
+
+  /* pricing */
+
+  .focus-join-price__pricing{
+    min-width:0;
+  }
+
+  .focus-join-price__price strong{
+    font-size:64px;
+  }
+
+  .focus-join-price__members{
+    max-width:220px;
+
+    margin-top:25px;
+  }
+
+  .focus-join-price__members-current strong{
+    font-size:31px;
+  }
+
+  .focus-join-price__members-limit strong{
+    font-size:17px;
+  }
+
+
+  /* CTA */
+
+  .focus-join-price__button{
+    min-height:70px;
+
+    border-radius:17px;
+  }
+
+  .focus-join-price__button-content{
+    min-height:68px;
+
+    grid-template-columns:
+      1fr
+      42px;
+
+    padding:
+      10px
+      11px
+      10px
+      19px;
+  }
+
+  .focus-join-price__button-copy strong{
+    font-size:15px;
+  }
+
+
+  /* message */
+
+  #focusJoinMessageV1{
+    padding:
+      10px
+      17px
       0;
   }
 
+  .focus-join-message__line{
+    height:80px;
 
-  /* KICKER */
-
-  #focusMemberVoicesV1 .focus-voices-kicker {
-    gap: 9px;
-
-    margin-bottom: 32px;
-
-    font-size: 6.5px;
-
-    letter-spacing: .19em;
+    margin-bottom:52px;
   }
 
-  #focusMemberVoicesV1 .focus-voices-kicker-dot {
-    width: 6px;
-    height: 6px;
+  .focus-join-message__eyebrow{
+    margin-bottom:18px;
+
+    font-size:7px;
   }
 
-
-  /* TITLE */
-
-  #focusMemberVoicesV1 .focus-voices-title-first,
-  #focusMemberVoicesV1 .focus-voices-title-second {
+  .focus-join-message__content h2{
     font-size:
       clamp(
-        31px,
-        9.3vw,
-        42px
+        39px,
+        11.8vw,
+        53px
       );
+
+    line-height:1.16;
   }
 
-  #focusMemberVoicesV1 .focus-voices-title-second {
-    margin-top: 5px;
-  }
+  .focus-join-message__description{
+    margin-top:26px;
 
+    font-size:10px;
 
-  /* SLIDER HEAD */
-
-  #focusMemberVoicesV1 .focus-voices-slider-head {
-    margin-top: 48px;
-  }
-
-  #focusMemberVoicesV1 .focus-voices-slider-label {
-    gap: 7px;
-
-    font-size: 5.8px;
-
-    letter-spacing: .16em;
-  }
-
-  #focusMemberVoicesV1 .focus-voices-slider-label i {
-    flex-basis: 50px;
-  }
-
-  #focusMemberVoicesV1 .focus-voices-slider-label strong {
-    font-size: 5.8px;
+    line-height:2;
   }
 
 
-  /* ARROW */
+  /* environment */
 
-  #focusMemberVoicesV1 .focus-voices-arrow {
-    width: 58px;
-    height: 58px;
-
-    box-shadow:
-      0 9px 20px rgba(0,0,0,.17),
-      0 0 0 4px rgba(105,91,215,.08),
-      0 0 15px rgba(99,84,220,.26);
-  }
-
-  #focusMemberVoicesV1 .focus-voices-arrow:before {
-    inset: -5px;
-  }
-
-  #focusMemberVoicesV1 .focus-voices-arrow svg {
-    width: 28px;
-  }
-
-
-  /* SLIDER */
-
-  #focusMemberVoicesV1 .focus-voices-slider {
-    margin-top: 25px;
-  }
-
-  #focusMemberVoicesV1 .focus-voices-viewport {
-    width: calc(100% + 24px);
-    margin-left: -12px;
-  }
-
-  #focusMemberVoicesV1 .focus-voices-slide {
-    width: 88vw;
+  .focus-join-environment{
+    margin-top:70px;
 
     padding:
-      0
-      7px;
-  }
-
-
-  /* CARD */
-
-  #focusMemberVoicesV1 .focus-voices-card {
-    min-height: 310px;
-
-    padding:
-      20px
-      18px
-      21px;
-
-    border-radius: 11px;
-
-    box-shadow:
-      0 12px 28px rgba(24,20,53,.075),
-      0 2px 7px rgba(24,20,53,.04);
-  }
-
-  #focusMemberVoicesV1 .focus-voices-card-top {
-    font-size: 5.7px;
-  }
-
-  #focusMemberVoicesV1 .focus-voices-card-line {
-    margin:
-      11px
-      0
-      21px;
-  }
-
-  #focusMemberVoicesV1 .focus-voices-quote {
-    font-size: 53px;
-  }
-
-  #focusMemberVoicesV1 .focus-voices-quote-open {
-    top: 47px;
-    left: 15px;
-  }
-
-  #focusMemberVoicesV1 .focus-voices-quote-close {
-    right: 15px;
-    bottom: 34px;
-  }
-
-  #focusMemberVoicesV1 .focus-voices-comment {
-    padding:
-      9px
+      19px
       15px
-      11px;
+      20px;
+
+    border-radius:23px;
   }
 
-  #focusMemberVoicesV1 .focus-voices-comment p {
-    font-size: 10.3px;
-    line-height: 1.82;
+  .focus-join-environment__top{
+    font-size:6px;
   }
 
-  #focusMemberVoicesV1 .focus-voices-card-bottom {
-    margin-top: 20px;
+  .focus-join-environment__center{
+    min-height:220px;
 
-    padding-top: 12px;
-
-    gap: 6px;
-
-    font-size: 4.7px;
+    padding:
+      30px
+      0
+      20px;
   }
 
-  #focusMemberVoicesV1 .focus-voices-card-dot {
-    width: 6px;
-    height: 6px;
-  }
-
-
-  /* PAGINATION */
-
-  #focusMemberVoicesV1 .focus-voices-pagination {
-    gap: 8px;
-
-    margin-top: 30px;
-  }
-
-  #focusMemberVoicesV1 .focus-voices-pagination-dot {
-    width: 6px;
-    height: 6px;
-  }
-
-
-  /* NEXT */
-
-  #focusMemberVoicesV1 .focus-voices-next {
-    padding-top: 34px;
-  }
-
-  #focusMemberVoicesV1 .focus-voices-next-line {
-    height: 45px;
-
-    margin-bottom: 23px;
-  }
-
-  #focusMemberVoicesV1 .focus-voices-next-small {
-    margin-bottom: 7px;
-
+  .focus-join-environment__brand strong{
     font-size:
       clamp(
-        25px,
-        7.8vw,
-        33px
+        61px,
+        20vw,
+        82px
       );
   }
 
-  #focusMemberVoicesV1 .focus-voices-next-main {
-    font-size:
-      clamp(
-        32px,
-        9.7vw,
-        42px
-      );
+  .focus-join-environment__orbit{
+    width:260px;
+    height:135px;
   }
 
-}
+  .focus-join-environment__areas{
+    grid-template-columns:
+      repeat(2,1fr);
 
-
-/* ==================================================
-   SMALL MOBILE
-================================================== */
-
-@media screen and (max-width:380px) {
-
-  #focusMemberVoicesV1 .focus-voices-title-first,
-  #focusMemberVoicesV1 .focus-voices-title-second {
-    font-size: 30px;
+    gap:6px;
   }
 
-  #focusMemberVoicesV1 .focus-voices-slide {
-    width: 90vw;
+  .focus-join-environment__areas > div{
+    min-height:50px;
+
+    text-align:left;
   }
 
-  #focusMemberVoicesV1 .focus-voices-comment p {
-    font-size: 9.6px;
+
+  /* bottom */
+
+  .focus-join-bottom{
+    margin-top:72px;
   }
 
-  #focusMemberVoicesV1 .focus-voices-pagination {
-    gap: 7px;
+  .focus-join-bottom p{
+    font-size:15px;
   }
 
-  #focusMemberVoicesV1 .focus-voices-pagination-dot {
-    width: 5px;
-    height: 5px;
-  }
+  .focus-join-bottom__button{
+    min-height:62px;
 
-  #focusMemberVoicesV1 .focus-voices-next-main {
-    font-size: 31px;
+    margin-top:27px;
+
+    font-size:13px;
   }
 
 }
@@ -1616,21 +2922,32 @@ ADHDだけど肉食してから不注意がマシになった。理解力、判�
    REDUCED MOTION
 ================================================== */
 
-@media (prefers-reduced-motion:reduce) {
+@media(prefers-reduced-motion:reduce){
 
-  #focusMemberVoicesV1 .focus-voices-reveal {
-    opacity: 1;
-    filter: none;
-    transform: none;
-    transition: none;
+  .focus-join-reveal{
+    opacity:1;
+    filter:none;
+    transform:none;
+    transition:none;
   }
 
-  #focusMemberVoicesV1 .focus-voices-title-second strong,
-  #focusMemberVoicesV1 .focus-voices-arrow,
-  #focusMemberVoicesV1 .focus-voices-arrow-glow,
-  #focusMemberVoicesV1 .focus-voices-next-small,
-  #focusMemberVoicesV1 .focus-voices-next-main strong {
-    animation: none;
+  .focus-join-price__wrap,
+  .focus-join-price__title > span,
+  .focus-join-price__members-current strong,
+  .focus-join-price__button,
+  .focus-join-price__button-shine,
+  .focus-join-price__live-dot::after,
+  .focus-join-price__ambient-one,
+  .focus-join-price__ambient-two,
+  .focus-join-message__line span,
+  .focus-join-message__accent strong,
+  .focus-join-environment,
+  .focus-join-environment__brand strong,
+  .focus-join-environment__orbit,
+  .focus-join-bottom p strong span,
+  .focus-join-bottom__button,
+  .focus-join-bottom__button::before{
+    animation:none;
   }
 
 }
@@ -1638,1029 +2955,767 @@ ADHDだけど肉食してから不注意がマシになった。理解力、判�
 </style>
 
 
+
 <script>
+(()=>{
+  const ROOT_ID =
+    'focusJoinConnectedV1';
 
-(() => {
+  const PRICE_SECTION_ID =
+    'focusJoinPriceV1';
 
-  const section =
-    document.querySelector(
-      '#focusMemberVoicesV1'
+  const COUNT_ID =
+    'focusJoinMemberCountV1';
+
+  const BOTTOM_COUNT_ID =
+    'focusJoinBottomCountV1';
+
+  const PROGRESS_ID =
+    'focusJoinMemberProgressV1';
+
+  const STORAGE_KEY =
+    'focusJoinMemberCountCacheV1';
+
+  const UPDATE_INTERVAL =
+    300000;
+
+  const REQUEST_TIMEOUT =
+    8000;
+
+
+  /* ==================================================
+     ELEMENTS
+  ================================================== */
+
+  const getRoot=()=>{
+    return document.getElementById(
+      ROOT_ID
     );
+  };
 
-  if (!section) return;
 
-
-  /* ========================================
-     REVEAL
-  ======================================== */
-
-  const revealItems =
-    section.querySelectorAll(
-      '.focus-voices-reveal'
+  const getPriceSection=()=>{
+    return document.getElementById(
+      PRICE_SECTION_ID
     );
+  };
 
-  if (
-    !(
-      'IntersectionObserver'
-      in window
-    )
-  ) {
 
-    revealItems.forEach(
-      (item) => {
+  const getCountElement=()=>{
+    return document.getElementById(
+      COUNT_ID
+    );
+  };
 
-        item.classList.add(
-          'focus-voices-visible'
-        );
 
+  const getBottomCountElement=()=>{
+    return document.getElementById(
+      BOTTOM_COUNT_ID
+    );
+  };
+
+
+  const getProgressElement=()=>{
+    return document.getElementById(
+      PROGRESS_ID
+    );
+  };
+
+
+  /* ==================================================
+     MEMBER DATA
+  ================================================== */
+
+  const getMemberLimit=()=>{
+    const section=
+      getPriceSection();
+
+    if(!section){
+      return 500;
+    }
+
+    const value=
+      parseInt(
+        section.dataset.memberLimit,
+        10
+      );
+
+    return Number.isFinite(value)
+      ? value
+      : 500;
+  };
+
+
+  const getDefaultMemberCount=()=>{
+    const section=
+      getPriceSection();
+
+    if(!section){
+      return 470;
+    }
+
+    const value=
+      parseInt(
+        section.dataset.defaultMemberCount,
+        10
+      );
+
+    return Number.isFinite(value)
+      ? value
+      : 470;
+  };
+
+
+  const formatMemberCount=(value)=>{
+    return Math.max(
+      0,
+      Math.floor(value)
+    ).toLocaleString(
+      'ja-JP'
+    );
+  };
+
+
+  const updateProgress=(memberCount)=>{
+
+    const progress=
+      getProgressElement();
+
+    if(!progress){
+      return;
+    }
+
+    const memberLimit=
+      getMemberLimit();
+
+    const percent=
+      Math.min(
+        100,
+        Math.max(
+          0,
+          memberCount /
+          memberLimit *
+          100
+        )
+      );
+
+    requestAnimationFrame(
+      ()=>{
+        progress.style.width=
+          percent + '%';
       }
     );
 
-  } else {
+  };
 
-    const revealObserver =
-      new IntersectionObserver(
 
-        (
-          entries,
-          currentObserver
-        ) => {
+  const renderMemberCount=(
+    memberCount
+  )=>{
 
-          entries.forEach(
-            (entry) => {
+    const formatted=
+      formatMemberCount(
+        memberCount
+      );
 
-              if (
-                !entry.isIntersecting
-              ) return;
+    const count=
+      getCountElement();
 
-              entry.target
-                .classList
-                .add(
-                  'focus-voices-visible'
-                );
+    const bottomCount=
+      getBottomCountElement();
 
-              currentObserver
-                .unobserve(
-                  entry.target
-                );
+    if(count){
+      count.textContent=
+        formatted;
+    }
 
-            }
+    if(bottomCount){
+      bottomCount.textContent=
+        formatted;
+    }
+
+    updateProgress(
+      memberCount
+    );
+
+  };
+
+
+  /* ==================================================
+     CACHE
+  ================================================== */
+
+  const saveCache=(memberCount)=>{
+
+    try{
+
+      localStorage.setItem(
+        STORAGE_KEY,
+        JSON.stringify({
+          memberCount:
+            memberCount,
+          savedAt:
+            Date.now()
+        })
+      );
+
+    }catch(error){
+
+      console.warn(
+        'FOCUS member count cache error',
+        error
+      );
+
+    }
+
+  };
+
+
+  const loadCache=()=>{
+
+    try{
+
+      const raw=
+        localStorage.getItem(
+          STORAGE_KEY
+        );
+
+      if(!raw){
+        return false;
+      }
+
+      const data=
+        JSON.parse(raw);
+
+      if(
+        typeof data.memberCount
+          !== 'number' ||
+        !Number.isFinite(
+          data.memberCount
+        )
+      ){
+        return false;
+      }
+
+      renderMemberCount(
+        data.memberCount
+      );
+
+      return true;
+
+    }catch(error){
+
+      return false;
+
+    }
+
+  };
+
+
+  /* ==================================================
+     FETCH
+  ================================================== */
+
+  const fetchWithTimeout=
+    async(
+      url,
+      timeout
+    )=>{
+
+      const controller=
+        new AbortController();
+
+      const timeoutId=
+        setTimeout(
+          ()=>{
+            controller.abort();
+          },
+          timeout
+        );
+
+      const separator=
+        url.includes('?')
+          ? '&'
+          : '?';
+
+      const freshUrl=
+        url +
+        separator +
+        '_=' +
+        Date.now();
+
+      try{
+
+        return await fetch(
+          freshUrl,
+          {
+            method:'GET',
+            mode:'cors',
+            cache:'no-store',
+            headers:{
+              Accept:
+                'application/json'
+            },
+            signal:
+              controller.signal
+          }
+        );
+
+      }finally{
+
+        clearTimeout(
+          timeoutId
+        );
+
+      }
+
+    };
+
+
+  const updateMemberCount=
+    async()=>{
+
+      const section=
+        getPriceSection();
+
+      if(!section){
+        return;
+      }
+
+      const apiUrl=
+        section.dataset.memberCountApi;
+
+      /*
+        API未設定の場合は
+        Liquidの470名を使用
+      */
+
+      if(!apiUrl){
+
+        renderMemberCount(
+          getDefaultMemberCount()
+        );
+
+        return;
+
+      }
+
+
+      if(
+        window
+          .focusJoinMemberRequestRunningV1
+      ){
+        return;
+      }
+
+      window
+        .focusJoinMemberRequestRunningV1=
+          true;
+
+
+      try{
+
+        const response=
+          await fetchWithTimeout(
+            apiUrl,
+            REQUEST_TIMEOUT
           );
 
-        },
+        if(!response.ok){
 
-        {
-          threshold: .08,
-          rootMargin:
-            '0px 0px -20px 0px'
+          throw new Error(
+            'FOCUS member request failed'
+          );
+
         }
 
-      );
+        const data=
+          await response.json();
 
-    revealItems.forEach(
-      (
-        item,
-        index
-      ) => {
 
-        item.style.transitionDelay =
-          `${Math.min(
-            index * 70,
-            140
-          )}ms`;
+        if(
+          typeof data.memberCount
+            !== 'number' ||
+          !Number.isFinite(
+            data.memberCount
+          )
+        ){
 
-        revealObserver.observe(
-          item
+          throw new Error(
+            'Invalid FOCUS member count'
+          );
+
+        }
+
+
+        const memberCount=
+          Math.max(
+            0,
+            Math.floor(
+              data.memberCount
+            )
+          );
+
+
+        renderMemberCount(
+          memberCount
         );
 
+        saveCache(
+          memberCount
+        );
+
+
+      }catch(error){
+
+        console.warn(
+          'FOCUS member count could not be loaded.',
+          error
+        );
+
+      }finally{
+
+        window
+          .focusJoinMemberRequestRunningV1=
+            false;
+
       }
-    );
 
-  }
+    };
 
 
-  /* ========================================
-     SLIDER
-  ======================================== */
+  /* ==================================================
+     REVEAL
+  ================================================== */
 
-  const viewport =
-    section.querySelector(
-      '.focus-voices-viewport'
-    );
+  const initReveal=()=>{
 
-  const track =
-    section.querySelector(
-      '.focus-voices-track'
-    );
+    const root=
+      getRoot();
 
-  const originalSlides =
-    Array.from(
-      track.querySelectorAll(
-        '.focus-voices-slide'
+    if(!root){
+      return;
+    }
+
+    const elements=
+      root.querySelectorAll(
+        '.focus-join-reveal'
+      );
+
+
+    if(
+      !(
+        'IntersectionObserver'
+        in window
       )
-    );
+    ){
 
-  const dots =
-    Array.from(
-      section.querySelectorAll(
-        '.focus-voices-pagination-dot'
-      )
-    );
-
-  const arrowButton =
-    section.querySelector(
-      '.focus-voices-arrow'
-    );
-
-  if (
-    !viewport ||
-    !track ||
-    originalSlides.length === 0
-  ) return;
-
-
-  /* ========================================
-     CLONE FOR INFINITE LOOP
-  ======================================== */
-
-  const beforeFragment =
-    document.createDocumentFragment();
-
-  const afterFragment =
-    document.createDocumentFragment();
-
-  originalSlides.forEach(
-    (slide) => {
-
-      const beforeClone =
-        slide.cloneNode(true);
-
-      const afterClone =
-        slide.cloneNode(true);
-
-      beforeClone.setAttribute(
-        'aria-hidden',
-        'true'
+      elements.forEach(
+        element=>{
+          element.classList.add(
+            'show'
+          );
+        }
       );
-
-      afterClone.setAttribute(
-        'aria-hidden',
-        'true'
-      );
-
-      beforeFragment.appendChild(
-        beforeClone
-      );
-
-      afterFragment.appendChild(
-        afterClone
-      );
-
-    }
-  );
-
-  track.insertBefore(
-    beforeFragment,
-    track.firstChild
-  );
-
-  track.appendChild(
-    afterFragment
-  );
-
-
-  /* ========================================
-     STATE
-  ======================================== */
-
-  let slideWidth = 0;
-  let setWidth = 0;
-  let positionX = 0;
-
-  const automaticSpeed = 16;
-
-  let lastFrameTime =
-    performance.now();
-
-  let sectionVisible = true;
-
-  let dragging = false;
-
-  let directionLocked = false;
-  let dragDirection = null;
-
-  let startX = 0;
-  let startY = 0;
-
-  let previousX = 0;
-  let previousTime = 0;
-
-  let inertiaVelocity = 0;
-
-  let activePointerId = null;
-
-  const directionThreshold = 8;
-
-  const reducedMotionQuery =
-    window.matchMedia(
-      '(prefers-reduced-motion:reduce)'
-    );
-
-
-  /* ========================================
-     MEASURE
-  ======================================== */
-
-  const measureSlider = () => {
-
-    const referenceSlide =
-      track.querySelector(
-        '.focus-voices-slide'
-      );
-
-    if (!referenceSlide) return;
-
-    slideWidth =
-      referenceSlide
-        .getBoundingClientRect()
-        .width;
-
-    setWidth =
-      slideWidth *
-      originalSlides.length;
-
-    if (
-      !Number.isFinite(
-        positionX
-      ) ||
-      positionX === 0
-    ) {
-
-      positionX =
-        -setWidth;
-
-    } else {
-
-      normalisePosition();
-
-    }
-
-    renderTrack();
-
-  };
-
-
-  /* ========================================
-     NORMALISE
-  ======================================== */
-
-  const normalisePosition = () => {
-
-    if (!setWidth) return;
-
-    while (
-      positionX >= 0
-    ) {
-
-      positionX -=
-        setWidth;
-
-    }
-
-    while (
-      positionX <
-      -setWidth * 2
-    ) {
-
-      positionX +=
-        setWidth;
-
-    }
-
-  };
-
-
-  /* ========================================
-     RENDER
-  ======================================== */
-
-  const renderTrack = () => {
-
-    track.style.transform =
-      `translate3d(${positionX}px,0,0)`;
-
-  };
-
-
-  /* ========================================
-     CURRENT INDEX
-  ======================================== */
-
-  const getCurrentIndex = () => {
-
-    if (
-      !slideWidth ||
-      !setWidth
-    ) return 0;
-
-    const viewportCentre =
-      viewport.clientWidth / 2;
-
-    const rawIndex =
-      Math.round(
-        (
-          viewportCentre -
-          positionX -
-          slideWidth / 2
-        ) /
-        slideWidth
-      );
-
-    return (
-      rawIndex %
-      originalSlides.length +
-      originalSlides.length
-    ) %
-    originalSlides.length;
-
-  };
-
-
-  let previousDotIndex = -1;
-
-
-  /* ========================================
-     DOTS
-  ======================================== */
-
-  const updateDots = () => {
-
-    const currentIndex =
-      getCurrentIndex();
-
-    if (
-      currentIndex ===
-      previousDotIndex
-    ) return;
-
-    previousDotIndex =
-      currentIndex;
-
-    dots.forEach(
-      (
-        dot,
-        index
-      ) => {
-
-        const active =
-          index ===
-          currentIndex;
-
-        dot.classList.toggle(
-          'is-active',
-          active
-        );
-
-        dot.setAttribute(
-          'aria-current',
-          active
-            ? 'true'
-            : 'false'
-        );
-
-      }
-    );
-
-  };
-
-
-  /* ========================================
-     ANIMATION
-  ======================================== */
-
-  const animate = (
-    currentTime
-  ) => {
-
-    const elapsedMilliseconds =
-      Math.min(
-        50,
-        currentTime -
-        lastFrameTime
-      );
-
-    const elapsedSeconds =
-      elapsedMilliseconds /
-      1000;
-
-    lastFrameTime =
-      currentTime;
-
-    if (
-      sectionVisible &&
-      !document.hidden &&
-      !dragging &&
-      !reducedMotionQuery.matches
-    ) {
-
-      positionX +=
-        (
-          -automaticSpeed +
-          inertiaVelocity
-        ) *
-        elapsedSeconds;
-
-      inertiaVelocity *=
-        Math.pow(
-          0.003,
-          elapsedSeconds
-        );
-
-      if (
-        Math.abs(
-          inertiaVelocity
-        ) < .5
-      ) {
-
-        inertiaVelocity = 0;
-
-      }
-
-      normalisePosition();
-      renderTrack();
-
-    }
-
-    updateDots();
-
-    window.requestAnimationFrame(
-      animate
-    );
-
-  };
-
-
-  /* ========================================
-     BEGIN DRAG
-  ======================================== */
-
-  const beginDrag = (
-    clientX,
-    clientY,
-    pointerId = null
-  ) => {
-
-    dragging = true;
-
-    directionLocked = false;
-    dragDirection = null;
-
-    startX = clientX;
-    startY = clientY;
-
-    previousX = clientX;
-
-    previousTime =
-      performance.now();
-
-    inertiaVelocity = 0;
-
-    activePointerId =
-      pointerId;
-
-    viewport.classList.add(
-      'is-dragging'
-    );
-
-  };
-
-
-  /* ========================================
-     DIRECTION
-  ======================================== */
-
-  const determineDirection = (
-    clientX,
-    clientY
-  ) => {
-
-    if (
-      directionLocked
-    ) return;
-
-    const movementX =
-      clientX -
-      startX;
-
-    const movementY =
-      clientY -
-      startY;
-
-    if (
-      Math.abs(
-        movementX
-      ) <
-        directionThreshold &&
-      Math.abs(
-        movementY
-      ) <
-        directionThreshold
-    ) {
 
       return;
 
     }
 
-    directionLocked = true;
 
-    if (
-      Math.abs(
-        movementY
-      ) >
-      Math.abs(
-        movementX
-      )
-    ) {
-
-      dragDirection =
-        'vertical';
-
-      viewport.classList.remove(
-        'is-dragging'
-      );
-
-    } else {
-
-      dragDirection =
-        'horizontal';
-
-      viewport.classList.add(
-        'is-dragging'
-      );
-
-    }
-
-  };
-
-
-  /* ========================================
-     MOVE DRAG
-  ======================================== */
-
-  const moveDrag = (
-    clientX,
-    clientY
-  ) => {
-
-    if (!dragging) return;
-
-    determineDirection(
-      clientX,
-      clientY
-    );
-
-    if (
-      dragDirection !==
-      'horizontal'
-    ) return;
-
-    const currentTime =
-      performance.now();
-
-    const differenceX =
-      clientX -
-      previousX;
-
-    const differenceTime =
-      Math.max(
-        8,
-        currentTime -
-        previousTime
-      );
-
-    positionX +=
-      differenceX;
-
-    const instantaneousVelocity =
-      (
-        differenceX /
-        differenceTime
-      ) *
-      1000;
-
-    inertiaVelocity =
-      inertiaVelocity *
-      .72 +
-      instantaneousVelocity *
-      .28;
-
-    previousX =
-      clientX;
-
-    previousTime =
-      currentTime;
-
-    normalisePosition();
-    renderTrack();
-    updateDots();
-
-  };
-
-
-  /* ========================================
-     END DRAG
-  ======================================== */
-
-  const endDrag = () => {
-
-    if (!dragging) return;
-
-    dragging = false;
-
-    directionLocked = false;
-
-    if (
-      dragDirection !==
-      'horizontal'
-    ) {
-
-      inertiaVelocity = 0;
-
-    }
-
-    inertiaVelocity =
-      Math.max(
-        -1150,
-        Math.min(
-          1150,
-          inertiaVelocity
-        )
-      );
-
-    dragDirection = null;
-    activePointerId = null;
-
-    viewport.classList.remove(
-      'is-dragging'
-    );
-
-    lastFrameTime =
-      performance.now();
-
-  };
-
-
-  /* ========================================
-     TOUCH
-  ======================================== */
-
-  viewport.addEventListener(
-    'touchstart',
-
-    (event) => {
-
-      if (
-        event.touches.length !== 1
-      ) return;
-
-      const touch =
-        event.touches[0];
-
-      beginDrag(
-        touch.clientX,
-        touch.clientY
-      );
-
-    },
-
-    {
-      passive: true
-    }
-  );
-
-
-  viewport.addEventListener(
-    'touchmove',
-
-    (event) => {
-
-      if (
-        !dragging ||
-        event.touches.length !== 1
-      ) return;
-
-      const touch =
-        event.touches[0];
-
-      determineDirection(
-        touch.clientX,
-        touch.clientY
-      );
-
-      if (
-        dragDirection ===
-        'horizontal'
-      ) {
-
-        event.preventDefault();
-
-        moveDrag(
-          touch.clientX,
-          touch.clientY
-        );
-
-      }
-
-    },
-
-    {
-      passive: false
-    }
-  );
-
-
-  viewport.addEventListener(
-    'touchend',
-    endDrag
-  );
-
-  viewport.addEventListener(
-    'touchcancel',
-    endDrag
-  );
-
-
-  /* ========================================
-     MOUSE
-  ======================================== */
-
-  viewport.addEventListener(
-    'pointerdown',
-
-    (event) => {
-
-      if (
-        event.pointerType !==
-        'mouse'
-      ) return;
-
-      event.preventDefault();
-
-      beginDrag(
-        event.clientX,
-        event.clientY,
-        event.pointerId
-      );
-
-      try {
-
-        viewport
-          .setPointerCapture(
-            event.pointerId
-          );
-
-      } catch (error) {}
-
-    }
-  );
-
-
-  viewport.addEventListener(
-    'pointermove',
-
-    (event) => {
-
-      if (
-        !dragging ||
-        event.pointerType !==
-          'mouse' ||
-        activePointerId !==
-          event.pointerId
-      ) return;
-
-      moveDrag(
-        event.clientX,
-        event.clientY
-      );
-
-    }
-  );
-
-
-  const finishPointerDrag =
-    (event) => {
-
-      if (
-        event.pointerType !==
-          'mouse' ||
-        activePointerId !==
-          event.pointerId
-      ) return;
-
-      try {
-
-        viewport
-          .releasePointerCapture(
-            event.pointerId
-          );
-
-      } catch (error) {}
-
-      endDrag();
-
-    };
-
-
-  viewport.addEventListener(
-    'pointerup',
-    finishPointerDrag
-  );
-
-  viewport.addEventListener(
-    'pointercancel',
-    finishPointerDrag
-  );
-
-
-  /* ========================================
-     ARROW
-  ======================================== */
-
-  if (arrowButton) {
-
-    arrowButton.addEventListener(
-      'click',
-      () => {
-
-        inertiaVelocity =
-          Math.max(
-            -850,
-            inertiaVelocity -
-            520
-          );
-
-      }
-    );
-
-  }
-
-
-  /* ========================================
-     DOT CLICK
-  ======================================== */
-
-  dots.forEach(
-    (dot) => {
-
-      dot.addEventListener(
-        'click',
-        () => {
-
-          const requestedIndex =
-            Number(
-              dot.dataset.slide ||
-              0
-            );
-
-          if (
-            !Number.isFinite(
-              requestedIndex
-            ) ||
-            !slideWidth ||
-            !setWidth
-          ) return;
-
-          const currentIndex =
-            getCurrentIndex();
-
-          let difference =
-            requestedIndex -
-            currentIndex;
-
-          if (
-            difference >
-            originalSlides.length /
-            2
-          ) {
-
-            difference -=
-              originalSlides.length;
-
-          }
-
-          if (
-            difference <
-            -originalSlides.length /
-            2
-          ) {
-
-            difference +=
-              originalSlides.length;
-
-          }
-
-          positionX -=
-            difference *
-            slideWidth;
-
-          inertiaVelocity = 0;
-
-          normalisePosition();
-          renderTrack();
-          updateDots();
-
-        }
-      );
-
-    }
-  );
-
-
-  /* ========================================
-     VISIBILITY
-  ======================================== */
-
-  if (
-    'IntersectionObserver'
-    in window
-  ) {
-
-    const visibilityObserver =
+    const observer=
       new IntersectionObserver(
+        entries=>{
 
-        (entries) => {
+          entries.forEach(
+            entry=>{
 
-          sectionVisible =
-            entries[0]
-              .isIntersecting;
+              if(
+                !entry.isIntersecting
+              ){
+                return;
+              }
 
-          lastFrameTime =
-            performance.now();
+              entry.target
+                .classList
+                .add(
+                  'show'
+                );
 
-        },
-
-        {
-          threshold: 0
-        }
-
-      );
-
-    visibilityObserver.observe(
-      section
-    );
-
-  }
-
-
-  /* ========================================
-     RESIZE
-  ======================================== */
-
-  let resizeFrame = null;
-
-  window.addEventListener(
-    'resize',
-    () => {
-
-      if (
-        resizeFrame
-      ) {
-
-        window
-          .cancelAnimationFrame(
-            resizeFrame
-          );
-
-      }
-
-      resizeFrame =
-        window
-          .requestAnimationFrame(
-            () => {
-
-              measureSlider();
-
-              lastFrameTime =
-                performance.now();
+              observer.unobserve(
+                entry.target
+              );
 
             }
           );
 
+        },
+        {
+          threshold:.12,
+          rootMargin:
+            '0px 0px -4% 0px'
+        }
+      );
+
+
+    elements.forEach(
+      element=>{
+
+        if(
+          !element.classList
+            .contains(
+              'show'
+            )
+        ){
+
+          observer.observe(
+            element
+          );
+
+        }
+
+      }
+    );
+
+  };
+
+
+  /* ==================================================
+     SCROLL RESTORE
+  ================================================== */
+
+  const initScrollRestore=()=>{
+
+    const root=
+      getRoot();
+
+    if(!root){
+      return;
     }
-  );
+
+    const links=
+      root.querySelectorAll(
+        'a[href]'
+      );
+
+    const SCROLL_KEY=
+      'focusJoinScrollRestoreV1';
+
+    const FLAG_KEY=
+      'focusJoinShouldRestoreV1';
 
 
-  /* ========================================
+    links.forEach(
+      link=>{
+
+        link.addEventListener(
+          'click',
+          ()=>{
+
+            sessionStorage.setItem(
+              SCROLL_KEY,
+              String(
+                window.scrollY ||
+                window.pageYOffset ||
+                0
+              )
+            );
+
+            sessionStorage.setItem(
+              FLAG_KEY,
+              '1'
+            );
+
+          }
+        );
+
+      }
+    );
+
+
+    if(
+      !window
+        .focusJoinPageShowBoundV1
+    ){
+
+      window.addEventListener(
+        'pageshow',
+        event=>{
+
+          const shouldRestore=
+            sessionStorage.getItem(
+              FLAG_KEY
+            ) === '1';
+
+          const saved=
+            sessionStorage.getItem(
+              SCROLL_KEY
+            );
+
+
+          if(
+            event.persisted &&
+            shouldRestore &&
+            saved !== null
+          ){
+
+            const y=
+              parseInt(
+                saved,
+                10
+              ) || 0;
+
+
+            requestAnimationFrame(
+              ()=>{
+                window.scrollTo(
+                  0,
+                  y
+                );
+              }
+            );
+
+
+            setTimeout(
+              ()=>{
+                window.scrollTo(
+                  0,
+                  y
+                );
+              },
+              80
+            );
+
+
+            setTimeout(
+              ()=>{
+
+                window.scrollTo(
+                  0,
+                  y
+                );
+
+                sessionStorage
+                  .removeItem(
+                    SCROLL_KEY
+                  );
+
+                sessionStorage
+                  .removeItem(
+                    FLAG_KEY
+                  );
+
+              },
+              220
+            );
+
+          }
+
+        }
+      );
+
+
+      window
+        .focusJoinPageShowBoundV1=
+          true;
+
+    }
+
+  };
+
+
+  /* ==================================================
      INIT
-  ======================================== */
+  ================================================== */
 
-  measureSlider();
-  updateDots();
+  const init=()=>{
 
-  window.requestAnimationFrame(
-    animate
+    const root=
+      getRoot();
+
+    if(!root){
+      return;
+    }
+
+
+    initReveal();
+
+    initScrollRestore();
+
+
+    const cacheLoaded=
+      loadCache();
+
+
+    if(!cacheLoaded){
+
+      renderMemberCount(
+        getDefaultMemberCount()
+      );
+
+    }
+
+
+    updateMemberCount();
+
+
+    if(
+      window
+        .focusJoinMemberTimerV1
+    ){
+
+      clearInterval(
+        window
+          .focusJoinMemberTimerV1
+      );
+
+    }
+
+
+    window
+      .focusJoinMemberTimerV1=
+        setInterval(
+          ()=>{
+
+            if(
+              document.hidden
+            ){
+              return;
+            }
+
+            updateMemberCount();
+
+          },
+          UPDATE_INTERVAL
+        );
+
+  };
+
+
+  if(
+    document.readyState
+      === 'loading'
+  ){
+
+    document.addEventListener(
+      'DOMContentLoaded',
+      init,
+      {
+        once:true
+      }
+    );
+
+  }else{
+
+    init();
+
+  }
+
+
+  document.addEventListener(
+    'shopify:section:load',
+    init
   );
 
 })();
-
 </script>
